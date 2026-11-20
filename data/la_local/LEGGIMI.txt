@@ -1,0 +1,176 @@
+LEGGIMI - data/la_local
+=======================
+
+Stanze di "The Legend of Zelda: Link's Awakening DX" (USA v1.0, Game Boy Color) estratte dalla ROM
+e convertite nelle 11 categorie di tile di LevelEdit. Tutto quello che c'e' qui e' GENERATO dagli
+script in src/la_extract/ (dettagli in src/la_extract/README.md): non modificare a mano, rigenerare.
+
+  data/la_local/
+    LEGGIMI.txt          questo file
+    rooms/               LE STANZE: dati principali (JSON, immagini, dataset.npz, report)
+    review/              fogli di controllo visivo (grafica originale + codifica sovrapposta)
+    legend/legend.html   legenda con immagini: categoria, simbolo e nome di ogni blocco del gioco
+    census/              censimento grezzo degli oggetti della ROM (serve solo a rivedere i mapping)
+
+Contengono grafica del gioco: original.png, overview_original.png, review/, legend/, census/atlas_*.png.
+
+
+1. CONCETTI DI BASE
+-------------------
+Stanza = una schermata del gioco = griglia di 8 righe x 10 colonne. Ogni cella e' un blocco 16x16 px
+(le immagini sono 160x128 px). Coordinate (x, y): x = colonna 0..9 da sinistra, y = riga 0..7 dall'alto.
+Nelle griglie numeriche si accede con grid[y][x]; nelle griglie ASCII con grid_ascii[y][x].
+
+room_id = esadecimale a 3 cifre:
+  000-0FF  overworld (256 schermate, mappa 16x16: x = id & 0xF, y = id >> 4)
+  100-1FF  interni, tabella A        200-2FE  interni, tabella B        300-315  Color Dungeon
+
+Categorie (codice, simbolo ASCII, nome, attraversabile):
+   0  ' '  fuori mappa    no   cielo/orizzonte, riempimento fuori dai muri, roccia esterna delle caverne
+   1  '#'  muro           no   muri, statue, torce, mobili, forzieri, alberi, scogliere, case, rocce
+   2  '.'  pavimento      si   pavimento, gradini, acqua bassa, erba, sentieri, varchi aperti
+   3  '~'  acqua          no   acqua profonda, buche, lava, spuntoni
+   4  '='  ponte          si   ponti
+   5  'D'  porta chiusa   con chiave   porte con serratura, porta del boss, blocchi-serratura
+   6  'K'  chiave         si   (mai presente nelle griglie: le chiavi sono solo in key_sources)
+   7  'B'  blocco         no   blocchi spingibili, vasi, cristalli, cespugli
+   8  'E'  scale          si   solo scale/uscite presenti nel gioco
+   9  'P'  giocatore      si   unica aggiunta (vedi sotto)
+  10  'M'  nemico         no   nemici, miniboss, boss
+Elenco completo blocco -> categoria: src/la_extract/LEGEND.md e src/la_extract/mappings/*.json
+
+Regole della conversione (mappatura 1:1 con il gioco):
+  - Un blocco 16x16 del gioco = una cella. Nulla viene inventato.
+  - Unica aggiunta: il giocatore P, nel punto in cui il gioco fa entrare Link (arrivo da warp) o nella
+    cella interna accanto a un varco d'ingresso. Le scale E non vengono MAI aggiunte.
+  - I bordi NON sono chiusi: porte, varchi e corridoi verso le stanze vicine restano come nel gioco.
+  - Ogni porta/varco nei muri e' largo 1 cella: nel gioco e' largo 16 px ma centrato tra due celle,
+    quindi la meta' sinistra/alta e' il passaggio (o D) e la meta' destra/bassa e' muro. Stessa convenzione
+    in tutte le stanze: i varchi di stanze adiacenti restano allineati.
+  - I nemici M sono messi solo su celle di pavimento; statue/oggetti solidi -> muro, oggetti sollevabili -> blocco.
+
+valid / brief_valid:
+  valid        = stanza fedele e utilizzabile. Sono scartate (valid=false) le stanze a scorrimento laterale (2D),
+                 vuote o non usate, con tile speciali da scartare (interruttori, blocchi a interruttore, nastri,
+                 sabbie mobili, teletrasporti, blocchi mobili, piastrelle colorate) o senza pavimento per il giocatore.
+  brief_valid  = valid E rispetta anche tutte le regole del brief (almeno una scala raggiungibile, bordi chiusi,
+                 al massimo 2 porte). Con la mappatura fedele le rispettano pochissime stanze.
+Numeri attuali (stanze totali, valide, scartate, motivi): rooms/report.md
+
+
+2. rooms/  (dati principali)
+----------------------------
+  rooms/
+    index.json           elenco di tutte le stanze con percorso e stato (vedi sotto)
+    dataset.npz          tutte le griglie in un unico file numpy (vedi sotto)
+    report.json/.md      conteggi: valide/scartate, motivi di scarto, regole del brief, per gruppo
+    overworld/                       256 stanze
+    dungeons/D1_tail_cave/ ... D8_turtle_rock/, D9_windfishs_egg/, D0_color_dungeon/
+    indoor/house/, cave_b/, cave_c/, cave_water/, shop/, minigame/, kanalet/, doghouse/,
+           dream_shrine/, library/, ghost_house/, bowwow_hideout/, s_face_shrine/
+
+  Ogni gruppo (cartella overworld, dungeons/<D..>, indoor/<tipo>) contiene:
+    group.json             {group, rooms: [id...], valid: n, overview_positions: {id: [col, riga]}}
+    overview_original.png  mosaico delle stanze con la grafica del gioco (dungeon nella disposizione della minimappa)
+    overview_mapped.png    stesso mosaico con la codifica; bordo rosso = stanza scartata
+    room_XXX/              una cartella per stanza (XXX = room_id)
+
+  Ogni room_XXX/ contiene:
+    original.png   la stanza con la grafica del gioco (160x128)
+    mapped.png     la griglia finale (campo "grid") disegnata con colori e simboli delle categorie (160x128)
+    room.json      tutti i dati della stanza:
+
+    campo                    contenuto
+    ----------------------   -------------------------------------------------------------------------
+    schema                   "leveledit_la_room/1"
+    room_id, region          id esadecimale; region = overworld | indoor | color
+    group, group_name        cartella del gruppo e nome leggibile (es. "Tail Cave")
+    map_id                   id della mappa interna del gioco (hex) o null per l'overworld
+    position.table           (x, y) nella mappa 16x16 (overworld o tabella interni A/B)
+    position.layout          {layout, x, y} nella minimappa 8x8 del dungeon, o null
+    sidescroll               true = stanza a scorrimento laterale (2D)
+    valid, discard_reasons   stanza utilizzabile? e perche' no
+    notes                    note leggibili (segnalazioni, celle convertite, entita' non messe in griglia)
+    grid_ascii               GRIGLIA FINALE in ASCII: layout + P + M  (8 stringhe da 10 caratteri)
+    grid_no_entities_ascii   stessa griglia SENZA giocatore e nemici (solo il layout)
+    grid                     griglia finale, 8x10 interi 0..10
+    grid_no_entities         griglia senza P e M, 8x10 interi
+    grid_raw                 tile + entita', prima di aggiungere il giocatore
+    grid_tiles               solo i tile del gioco, senza entita'
+    fixes                    aggiunte fatte (solo {"type": "add_player", x, y, source})
+    openings                 varchi sul bordo: {x, y, side: top|bottom|left|right, kind: door|corridor}
+    doors                    numero di porte chiuse (gruppi di celle D)
+    brief_checks, brief_valid  regole del brief: one_player, has_stairs, stairs_reachable, border_closed,
+                             max_doors_ok, all_ok (solo verificate, la griglia non viene modificata)
+    objects                  8x10 object id originali del gioco (hex) -> vedi mappings/objects_*.json
+    physics                  8x10 physics flag del gioco (hex)
+    passage                  8x10 bool: cella che nel gioco e' un varco verso un'altra stanza
+    specials                 celle/entita' speciali (interruttori, nastri, teletrasporti, spuntoni...)
+    unmapped                 oggetti senza mapping (normalmente vuoto, tranne le stanze 2D)
+    entities                 entita' della stanza: {x, y, entity_id, name, class, placed_as, skipped?}
+    key_sources              fonti di chiavi: forzieri con chiave piccola/del boss, chiavi che cadono
+    chest                    contenuto del forziere della stanza e celle dei forzieri, o null
+    warps                    uscite della stanza: {warp_type, map_id, target_room, target_x, target_y}
+    arrivals                 da quali stanze si arriva qui e in che cella compare Link
+    stats                    conteggi per categoria, numero di oggetti/entita'/nemici, tag
+    render, images           dati di rendering e nomi delle due immagini
+
+  index.json:  {schema, rom_sha1, rooms: [...]}; ogni voce: room_id, region, group, path (relativo a rooms/),
+               valid, brief_valid, brief_checks, discard_reasons, flags, num_enemies, fixes, openings (numero),
+               table_pos, layout_pos.
+
+  dataset.npz  (N = 789 stanze, tutte, nello stesso ordine di index.json):
+    grid, grid_no_entities, grid_raw, grid_tiles   (N, 8, 10) int8    codici categoria 0..10
+    objects                                        (N, 8, 10) uint8   object id del gioco
+    room_id (int16), region (str), group (str), map_id (int16, -1 = overworld)
+    table_x, table_y, layout, layout_x, layout_y   (int8, -1 = assente)
+    valid, brief_valid                             (bool)
+    notes                                          (str) motivi di scarto + note
+  Per usare solo le stanze buone: filtrare con valid (o brief_valid).
+
+
+3. review/  (controllo visivo)
+------------------------------
+  <gruppo>_NN.png: fino a 64 stanze per foglio, ognuna con la grafica originale e sopra la codifica:
+  muro grigio tratteggiato, fuori mappa nero, acqua blu, ponte arancio, D rosso, B marrone, E verde,
+  P azzurro, M magenta; il pavimento resta scoperto. Etichetta: room_id + V (valida) o X + motivo.
+
+
+4. legend/legend.html
+---------------------
+  Pagina unica (immagini incorporate) con: regole di conversione; le 11 categorie con esempi dal gioco;
+  tabelle di tutti i blocchi overworld, interni e Color Dungeon (immagine, simbolo, id, nome, categoria,
+  tag, physics, numero di celle nel gioco); entita' con classe e simbolo. Versione testuale senza immagini:
+  src/la_extract/LEGEND.md
+
+
+5. census/  (revisione dei mapping)
+-----------------------------------
+  census.json: per regione (overworld, indoor, color) ogni object id usato -> {cells, rooms, physics,
+               disasm_name, examples ["stanza@x,y"]}; sidescroll_objects; entities -> {name, count, rooms, ...}.
+  atlas_<regione>_NN.png: per ogni object id 3 esempi con contesto 3x3 (cella al centro in rosso),
+               id, physics flag, numero di celle e nome del disassembly.
+  E' il dato grezzo della ROM: non dipende dai mapping e non cambia se si modificano i JSON.
+
+
+6. COME RIGENERARE (dalla radice del repository)
+------------------------------------------------
+  Requisiti: ROM LADX (U) v1.0 in src/rom/, LADXR in third_party/LADXR (vedi src/la_extract/README.md).
+    python src/la_extract/extract_rooms.py --clean   -> rooms/   (ricrea solo rooms/, circa 15 s)
+    python src/la_extract/make_legend.py             -> legend/  + src/la_extract/LEGEND.md
+    python src/la_extract/review_sheets.py           -> review/
+    python src/la_extract/census.py                  -> census/
+  Per cambiare una conversione: modificare src/la_extract/mappings/*.json e rilanciare i comandi sopra.
+
+
+7. ESEMPIO D'USO (Python)
+-------------------------
+  import json, numpy as np
+  z = np.load("data/la_local/rooms/dataset.npz")
+  grids  = z["grid"][z["valid"]]              # griglie con P e M delle stanze valide
+  layout = z["grid_no_entities"][z["valid"]]  # stesse stanze, solo layout
+  ids    = [f"{r:03X}" for r in z["room_id"][z["valid"]]]
+
+  idx  = json.load(open("data/la_local/rooms/index.json"))
+  room = json.load(open("data/la_local/rooms/" + idx["rooms"][0]["path"] + "/room.json"))
+  print("\n".join(room["grid_ascii"]))
