@@ -1,0 +1,23 @@
+{
+ "group": "indoor/minigame",
+ "rooms": [
+  "2A0",
+  "2B1",
+  "2F5"
+ ],
+ "valid": 0,
+ "overview_positions": {
+  "2A0": [
+   0,
+   0
+  ],
+  "2B1": [
+   1,
+   1
+  ],
+  "2F5": [
+   2,
+   2
+  ]
+ }
+}

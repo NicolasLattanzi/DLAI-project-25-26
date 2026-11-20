@@ -1,0 +1,1783 @@
+{
+ "schema": "leveledit_objects/1",
+ "region": "indoor",
+ "description": "Oggetti (blocchi 16x16) delle stanze interne: dungeon, caverne, case. Chiave = object id esadecimale.",
+ "fields": "name, category (codice LevelEdit), ascii, tags, special (vedi special_policy), passage (varco verso un'altra stanza), physics (flag del gioco), disasm (nome nel disassembly), cells_in_game",
+ "objects": {
+  "00": {
+   "name": "floor (sand/earth variant)",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 553
+  },
+  "01": {
+   "name": "pit",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "pit"
+   ],
+   "physics": "50",
+   "cells_in_game": 767
+  },
+  "03": {
+   "name": "blank filler outside the room (flat color)",
+   "category": 0,
+   "ascii": " ",
+   "physics": "00",
+   "cells_in_game": 911,
+   "tags": [
+    "filler"
+   ],
+   "note": "riempimento a tinta unita fuori dai muri (angoli delle stanze, lati dei corridoi): su tutte le stanze solo 3 celle sono adiacenti a pavimento vero -> fuori mappa"
+  },
+  "05": {
+   "name": "floor (cave ground)",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 1383
+  },
+  "06": {
+   "name": "lava",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "lava"
+   ],
+   "physics": "0B",
+   "cells_in_game": 273
+  },
+  "07": {
+   "name": "floor (checkered)",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 332
+  },
+  "08": {
+   "name": "open doorway, bottom wall (right half)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "open_door",
+    "door_half2"
+   ],
+   "physics": "7D",
+   "cells_in_game": 28,
+   "pair": "8C",
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (8C), questa cella e' muro."
+  },
+  "09": {
+   "name": "open doorway, left wall (top half)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "open_door",
+    "door_half1"
+   ],
+   "passage": true,
+   "physics": "7E",
+   "cells_in_game": 18,
+   "pair": "0A",
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (0A) e' muro."
+  },
+  "0A": {
+   "name": "open doorway, left wall (bottom half)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "open_door",
+    "door_half2"
+   ],
+   "physics": "7F",
+   "cells_in_game": 18,
+   "pair": "09",
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (09), questa cella e' muro."
+  },
+  "0B": {
+   "name": "open doorway, right wall (top half)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "open_door",
+    "door_half1"
+   ],
+   "passage": true,
+   "physics": "7E",
+   "cells_in_game": 16,
+   "pair": "0C",
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (0C) e' muro."
+  },
+  "0C": {
+   "name": "open doorway, right wall (bottom half)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "open_door",
+    "door_half2"
+   ],
+   "physics": "7F",
+   "cells_in_game": 16,
+   "pair": "0B",
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (0B), questa cella e' muro."
+  },
+  "0D": {
+   "name": "floor (standard dungeon floor)",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "disasm": "OBJECT_FLOOR_OD",
+   "cells_in_game": 9357
+  },
+  "0E": {
+   "name": "deep water",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "deep_water"
+   ],
+   "physics": "07",
+   "cells_in_game": 352
+  },
+  "0F": {
+   "name": "floor (patterned tiles)",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 1803
+  },
+  "10": {
+   "name": "raised-floor border, side/corner (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision"
+   ],
+   "note": "collisione su meta' cella: approssimato a muro",
+   "physics": "81",
+   "cells_in_game": 145
+  },
+  "11": {
+   "name": "raised-floor border, side/corner (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision"
+   ],
+   "note": "collisione su meta' cella: approssimato a muro",
+   "physics": "80",
+   "cells_in_game": 150
+  },
+  "12": {
+   "name": "raised-floor border, side/corner (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision"
+   ],
+   "note": "collisione su meta' cella: approssimato a muro",
+   "physics": "82",
+   "cells_in_game": 216
+  },
+  "13": {
+   "name": "raised-floor border, side/corner (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision"
+   ],
+   "note": "collisione su meta' cella: approssimato a muro",
+   "physics": "83",
+   "cells_in_game": 202
+  },
+  "14": {
+   "name": "raised-floor border, side/corner (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision"
+   ],
+   "note": "collisione su meta' cella: approssimato a muro",
+   "physics": "84",
+   "cells_in_game": 25
+  },
+  "15": {
+   "name": "raised-floor border, side/corner (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision"
+   ],
+   "note": "collisione su meta' cella: approssimato a muro",
+   "physics": "85",
+   "cells_in_game": 21
+  },
+  "16": {
+   "name": "raised-floor border, side/corner (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision"
+   ],
+   "note": "collisione su meta' cella: approssimato a muro",
+   "physics": "86",
+   "cells_in_game": 24
+  },
+  "17": {
+   "name": "raised-floor border, side/corner (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision"
+   ],
+   "note": "collisione su meta' cella: approssimato a muro",
+   "physics": "87",
+   "cells_in_game": 21
+  },
+  "1B": {
+   "name": "shallow water",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shallow_water"
+   ],
+   "physics": "05",
+   "cells_in_game": 783
+  },
+  "1C": {
+   "name": "pit dropping to the floor below",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "pit",
+    "pit_warp"
+   ],
+   "physics": "51",
+   "cells_in_game": 146
+  },
+  "1D": {
+   "name": "pit dropping to the floor below",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "pit",
+    "pit_warp"
+   ],
+   "physics": "51",
+   "cells_in_game": 22
+  },
+  "1E": {
+   "name": "pit dropping to the floor below",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "pit",
+    "pit_warp"
+   ],
+   "physics": "51",
+   "cells_in_game": 17
+  },
+  "1F": {
+   "name": "pit dropping to the floor below",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "pit",
+    "pit_warp"
+   ],
+   "physics": "51",
+   "cells_in_game": 18
+  },
+  "20": {
+   "name": "liftable pot",
+   "category": 7,
+   "ascii": "B",
+   "tags": [
+    "liftable"
+   ],
+   "physics": "30",
+   "disasm": "OBJECT_LIFTABLE_POT",
+   "cells_in_game": 431
+  },
+  "21": {
+   "name": "wall (top)",
+   "category": 1,
+   "ascii": "#",
+   "physics": "D3",
+   "disasm": "OBJECT_WALL_TOP",
+   "cells_in_game": 2462
+  },
+  "22": {
+   "name": "wall (bottom)",
+   "category": 1,
+   "ascii": "#",
+   "physics": "D2",
+   "disasm": "OBJECT_WALL_BOTTOM",
+   "cells_in_game": 2455
+  },
+  "23": {
+   "name": "wall (left)",
+   "category": 1,
+   "ascii": "#",
+   "physics": "D0",
+   "disasm": "OBJECT_WALL_LEFT",
+   "cells_in_game": 1988
+  },
+  "24": {
+   "name": "wall (right)",
+   "category": 1,
+   "ascii": "#",
+   "physics": "D1",
+   "disasm": "OBJECT_WALL_RIGHT",
+   "cells_in_game": 2016
+  },
+  "25": {
+   "name": "wall outer corner (top-left)",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 612
+  },
+  "26": {
+   "name": "wall outer corner (top-right)",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 619
+  },
+  "27": {
+   "name": "wall outer corner (bottom-left)",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 507
+  },
+  "28": {
+   "name": "wall outer corner (bottom-right)",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 500
+  },
+  "29": {
+   "name": "wall inner corner",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 416
+  },
+  "2A": {
+   "name": "wall inner corner",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 428
+  },
+  "2B": {
+   "name": "wall inner corner",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 309
+  },
+  "2C": {
+   "name": "wall inner corner",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 306
+  },
+  "2D": {
+   "name": "locked key door, top wall (half 1)",
+   "category": 5,
+   "ascii": "D",
+   "tags": [
+    "key_door",
+    "door_half1"
+   ],
+   "passage": true,
+   "physics": "90",
+   "cells_in_game": 10,
+   "pair": "2E",
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (2E) e' muro."
+  },
+  "2E": {
+   "name": "locked key door, top wall (half 2)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "key_door",
+    "door_half2"
+   ],
+   "physics": "90",
+   "cells_in_game": 10,
+   "pair": "2D",
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (2D), questa cella e' muro."
+  },
+  "2F": {
+   "name": "locked key door, bottom wall (half 1)",
+   "category": 5,
+   "ascii": "D",
+   "tags": [
+    "key_door",
+    "door_half1"
+   ],
+   "passage": true,
+   "physics": "91",
+   "cells_in_game": 9,
+   "pair": "30",
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (30) e' muro."
+  },
+  "30": {
+   "name": "locked key door, bottom wall (half 2)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "key_door",
+    "door_half2"
+   ],
+   "physics": "91",
+   "cells_in_game": 9,
+   "pair": "2F",
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (2F), questa cella e' muro."
+  },
+  "31": {
+   "name": "locked key door, left wall (half 1)",
+   "category": 5,
+   "ascii": "D",
+   "tags": [
+    "key_door",
+    "door_half1"
+   ],
+   "passage": true,
+   "physics": "92",
+   "cells_in_game": 10,
+   "pair": "32",
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (32) e' muro."
+  },
+  "32": {
+   "name": "locked key door, left wall (half 2)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "key_door",
+    "door_half2"
+   ],
+   "physics": "92",
+   "cells_in_game": 10,
+   "pair": "31",
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (31), questa cella e' muro."
+  },
+  "33": {
+   "name": "locked key door, right wall (half 1)",
+   "category": 5,
+   "ascii": "D",
+   "tags": [
+    "key_door",
+    "door_half1"
+   ],
+   "passage": true,
+   "physics": "93",
+   "cells_in_game": 9,
+   "pair": "34",
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (34) e' muro."
+  },
+  "34": {
+   "name": "locked key door, right wall (half 2)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "key_door",
+    "door_half2"
+   ],
+   "physics": "93",
+   "cells_in_game": 9,
+   "pair": "33",
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (33), questa cella e' muro."
+  },
+  "35": {
+   "name": "shutter door, top wall (half 1)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shutter_door",
+    "door_half1"
+   ],
+   "passage": true,
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (36) e' muro.",
+   "physics": "D3",
+   "cells_in_game": 46,
+   "pair": "36"
+  },
+  "36": {
+   "name": "shutter door, top wall (half 2)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "shutter_door",
+    "door_half2"
+   ],
+   "physics": "D3",
+   "cells_in_game": 46,
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (35), questa cella e' muro.",
+   "pair": "35"
+  },
+  "37": {
+   "name": "shutter door, bottom wall (half 1)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shutter_door",
+    "door_half1"
+   ],
+   "passage": true,
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (38) e' muro.",
+   "physics": "D2",
+   "cells_in_game": 38,
+   "pair": "38"
+  },
+  "38": {
+   "name": "shutter door, bottom wall (half 2)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "shutter_door",
+    "door_half2"
+   ],
+   "physics": "D2",
+   "cells_in_game": 38,
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (37), questa cella e' muro.",
+   "pair": "37"
+  },
+  "39": {
+   "name": "shutter door, left wall (half 1)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shutter_door",
+    "door_half1"
+   ],
+   "passage": true,
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (3A) e' muro.",
+   "physics": "D0",
+   "cells_in_game": 28,
+   "pair": "3A"
+  },
+  "3A": {
+   "name": "shutter door, left wall (half 2)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "shutter_door",
+    "door_half2"
+   ],
+   "physics": "D0",
+   "cells_in_game": 28,
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (39), questa cella e' muro.",
+   "pair": "39"
+  },
+  "3B": {
+   "name": "shutter door, right wall (half 1)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shutter_door",
+    "door_half1"
+   ],
+   "passage": true,
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (3C) e' muro.",
+   "physics": "D1",
+   "cells_in_game": 32,
+   "pair": "3C"
+  },
+  "3C": {
+   "name": "shutter door, right wall (half 2)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "shutter_door",
+    "door_half2"
+   ],
+   "physics": "D1",
+   "cells_in_game": 32,
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (3B), questa cella e' muro.",
+   "pair": "3B"
+  },
+  "3D": {
+   "name": "bombed passage (vertical, open)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "bombed_passage"
+   ],
+   "passage": true,
+   "physics": "00",
+   "disasm": "OBJECT_BOMBED_PASSAGE_VERTICAL",
+   "cells_in_game": 4
+  },
+  "3E": {
+   "name": "bombed passage (horizontal, open)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "bombed_passage"
+   ],
+   "passage": true,
+   "physics": "00",
+   "disasm": "OBJECT_BOMBED_PASSAGE_HORIZONTAL",
+   "cells_in_game": 2
+  },
+  "3F": {
+   "name": "bombable cracked wall (top)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "bombable"
+   ],
+   "passage": true,
+   "physics": "99",
+   "disasm": "OBJECT_BOMBABLE_WALL_TOP",
+   "cells_in_game": 3
+  },
+  "40": {
+   "name": "bombable cracked wall (bottom)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "bombable"
+   ],
+   "passage": true,
+   "physics": "9A",
+   "disasm": "OBJECT_BOMBABLE_WALL_BOTTOM",
+   "cells_in_game": 7
+  },
+  "41": {
+   "name": "bombable cracked wall (left)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "bombable"
+   ],
+   "passage": true,
+   "physics": "9B",
+   "disasm": "OBJECT_BOMBABLE_WALL_LEFT",
+   "cells_in_game": 5
+  },
+  "42": {
+   "name": "bombable cracked wall (right)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "bombable"
+   ],
+   "passage": true,
+   "physics": "9C",
+   "disasm": "OBJECT_BOMBABLE_WALL_RIGHT",
+   "cells_in_game": 3
+  },
+  "43": {
+   "name": "open doorway, top wall (left half)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "open_door",
+    "door_half1"
+   ],
+   "passage": true,
+   "physics": "7C",
+   "cells_in_game": 8,
+   "pair": "44",
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (44) e' muro."
+  },
+  "44": {
+   "name": "open doorway, top wall (right half)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "open_door",
+    "door_half2"
+   ],
+   "physics": "7D",
+   "cells_in_game": 8,
+   "pair": "43",
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (43), questa cella e' muro."
+  },
+  "45": {
+   "name": "one-way door, top wall (half 1)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "one_way_door",
+    "door_half1"
+   ],
+   "passage": true,
+   "physics": "01",
+   "cells_in_game": 7,
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (46) e' muro.",
+   "pair": "46"
+  },
+  "46": {
+   "name": "one-way door, top wall (half 2)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "one_way_door",
+    "door_half2"
+   ],
+   "physics": "01",
+   "cells_in_game": 7,
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (45), questa cella e' muro.",
+   "pair": "45"
+  },
+  "47": {
+   "name": "hidden bombable wall (top)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "bombable",
+    "hidden"
+   ],
+   "passage": true,
+   "physics": "99",
+   "disasm": "OBJECT_HIDDEN_BOMBABLE_WALL_TOP",
+   "cells_in_game": 8
+  },
+  "48": {
+   "name": "hidden bombable wall (bottom)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "bombable",
+    "hidden"
+   ],
+   "passage": true,
+   "physics": "9A",
+   "disasm": "OBJECT_HIDDEN_BOMBABLE_WALL_BOTTOM",
+   "cells_in_game": 3
+  },
+  "49": {
+   "name": "hidden bombable wall (left)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "bombable",
+    "hidden"
+   ],
+   "passage": true,
+   "physics": "9B",
+   "disasm": "OBJECT_HIDDEN_BOMBABLE_WALL_LEFT",
+   "cells_in_game": 3
+  },
+  "4A": {
+   "name": "hidden bombable wall (right)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "bombable",
+    "hidden"
+   ],
+   "passage": true,
+   "physics": "9C",
+   "disasm": "OBJECT_HIDDEN_BOMBABLE_WALL_RIGHT",
+   "cells_in_game": 5
+  },
+  "4E": {
+   "name": "crystal rock (breakable with Pegasus Boots dash)",
+   "category": 7,
+   "ascii": "B",
+   "tags": [
+    "removable"
+   ],
+   "physics": "60",
+   "disasm": "OBJECT_DASHABLE_ROCK_1",
+   "cells_in_game": 15
+  },
+  "4F": {
+   "name": "crystal rock (breakable with Pegasus Boots dash)",
+   "category": 7,
+   "ascii": "B",
+   "tags": [
+    "removable"
+   ],
+   "physics": "60",
+   "disasm": "OBJECT_DASHABLE_ROCK_2",
+   "cells_in_game": 10
+  },
+  "86": {
+   "name": "stone statue (pair)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "statue"
+   ],
+   "physics": "01",
+   "cells_in_game": 3
+  },
+  "87": {
+   "name": "stone statue",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "statue"
+   ],
+   "physics": "01",
+   "cells_in_game": 12
+  },
+  "88": {
+   "name": "crystal rock (breakable with Pegasus Boots dash)",
+   "category": 7,
+   "ascii": "B",
+   "tags": [
+    "removable"
+   ],
+   "physics": "60",
+   "disasm": "OBJECT_DASHABLE_ROCK_3",
+   "cells_in_game": 17
+  },
+  "8B": {
+   "name": "decorative solid tile",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 8
+  },
+  "8C": {
+   "name": "open doorway, bottom wall (left half)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "open_door",
+    "door_half1"
+   ],
+   "passage": true,
+   "physics": "7C",
+   "cells_in_game": 28,
+   "pair": "08",
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (08) e' muro."
+  },
+  "8D": {
+   "name": "floor pad/marking",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 10
+  },
+  "8E": {
+   "name": "pot hiding a floor switch",
+   "category": 7,
+   "ascii": "B",
+   "tags": [
+    "liftable"
+   ],
+   "special": "switch",
+   "physics": "30",
+   "disasm": "OBJECT_POT_WITH_SWITCH",
+   "cells_in_game": 3
+  },
+  "90": {
+   "name": "wall ornament",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 2
+  },
+  "93": {
+   "name": "raised-floor border, outer corner (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision"
+   ],
+   "physics": "88",
+   "cells_in_game": 16
+  },
+  "94": {
+   "name": "raised-floor border, outer corner (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision"
+   ],
+   "physics": "89",
+   "cells_in_game": 12
+  },
+  "95": {
+   "name": "raised-floor border, outer corner (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision"
+   ],
+   "physics": "8A",
+   "cells_in_game": 10
+  },
+  "96": {
+   "name": "raised-floor border, outer corner (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision"
+   ],
+   "physics": "8B",
+   "cells_in_game": 8
+  },
+  "97": {
+   "name": "wide steps between floor levels",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "steps"
+   ],
+   "note": "gradini percorribili dentro la stanza, non un'uscita (alternativa: scale)",
+   "physics": "0A",
+   "cells_in_game": 44
+  },
+  "98": {
+   "name": "steps between floor levels",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "steps"
+   ],
+   "note": "gradini percorribili dentro la stanza, non un'uscita (alternativa: scale)",
+   "physics": "02",
+   "cells_in_game": 63
+  },
+  "99": {
+   "name": "furniture (cabinet)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "furniture"
+   ],
+   "physics": "01",
+   "cells_in_game": 44
+  },
+  "9A": {
+   "name": "furniture (lower part of a dresser/cabinet)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "furniture"
+   ],
+   "physics": "7E",
+   "cells_in_game": 44,
+   "note": "physics 7E = meta' superiore solida: e' la parte bassa di un mobile appoggiato al muro, non una porta"
+  },
+  "9B": {
+   "name": "furniture (bed/sofa)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "furniture"
+   ],
+   "physics": "01",
+   "cells_in_game": 15
+  },
+  "9C": {
+   "name": "furniture (bed/sofa)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "furniture"
+   ],
+   "physics": "01",
+   "cells_in_game": 13
+  },
+  "9E": {
+   "name": "ladder/hookshot-bridge marker",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "ladder"
+   ],
+   "note": "incerto: raro (2 celle)",
+   "physics": "00",
+   "disasm": "OBJECT_HOOKSHOT_BRIDGE_PULL_DOWN",
+   "cells_in_game": 2
+  },
+  "9F": {
+   "name": "ladder/hookshot-bridge marker",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "ladder"
+   ],
+   "note": "incerto: raro (1 cella)",
+   "physics": "00",
+   "disasm": "OBJECT_HOOKSHOT_BRIDGE_PULL_UP",
+   "cells_in_game": 1
+  },
+  "A0": {
+   "name": "treasure chest (closed)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "chest"
+   ],
+   "physics": "60",
+   "disasm": "OBJECT_CHEST_CLOSED",
+   "cells_in_game": 83
+  },
+  "A1": {
+   "name": "treasure chest (open)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "chest"
+   ],
+   "physics": "60",
+   "disasm": "OBJECT_CHEST_OPEN",
+   "cells_in_game": 21
+  },
+  "A2": {
+   "name": "staircase in wall (exit to another floor)",
+   "category": 8,
+   "ascii": "E",
+   "tags": [
+    "exit"
+   ],
+   "physics": "03",
+   "cells_in_game": 4
+  },
+  "A3": {
+   "name": "staircase in wall (exit to another floor)",
+   "category": 8,
+   "ascii": "E",
+   "tags": [
+    "exit"
+   ],
+   "physics": "03",
+   "cells_in_game": 12
+  },
+  "A4": {
+   "name": "boss door (nightmare key), half 1",
+   "category": 5,
+   "ascii": "D",
+   "tags": [
+    "boss_door",
+    "door_half1"
+   ],
+   "passage": true,
+   "physics": "98",
+   "cells_in_game": 8,
+   "pair": "A5",
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (A5) e' muro."
+  },
+  "A5": {
+   "name": "boss door (nightmare key), half 2",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "boss_door",
+    "door_half2"
+   ],
+   "physics": "98",
+   "cells_in_game": 8,
+   "pair": "A4",
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (A4), questa cella e' muro."
+  },
+  "A6": {
+   "name": "stone block (immovable)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "stone_block"
+   ],
+   "physics": "60",
+   "cells_in_game": 486
+  },
+  "A7": {
+   "name": "pushable block",
+   "category": 7,
+   "ascii": "B",
+   "tags": [
+    "pushable"
+   ],
+   "physics": "60",
+   "disasm": "OBJECT_PUSHABLE_BLOCK",
+   "cells_in_game": 147
+  },
+  "A8": {
+   "name": "staircase in wall (exit to another floor)",
+   "category": 8,
+   "ascii": "E",
+   "tags": [
+    "exit"
+   ],
+   "physics": "03",
+   "cells_in_game": 2
+  },
+  "A9": {
+   "name": "bombable block",
+   "category": 7,
+   "ascii": "B",
+   "tags": [
+    "removable"
+   ],
+   "physics": "30",
+   "disasm": "OBJECT_BOMBABLE_BLOCK",
+   "cells_in_game": 14
+  },
+  "AA": {
+   "name": "floor switch",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "switch"
+   ],
+   "special": "switch",
+   "physics": "00",
+   "disasm": "OBJECT_SWITCH_BUTTON",
+   "cells_in_game": 5
+  },
+  "AB": {
+   "name": "torch (unlit)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "torch"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_TORCH_UNLIT",
+   "cells_in_game": 40
+  },
+  "AC": {
+   "name": "torch (lit)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "torch"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_TORCH_LIT",
+   "cells_in_game": 246
+  },
+  "AE": {
+   "name": "pit (edge variant)",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "pit"
+   ],
+   "physics": "50",
+   "cells_in_game": 202
+  },
+  "AF": {
+   "name": "pit (edge variant)",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "pit"
+   ],
+   "physics": "50",
+   "cells_in_game": 219
+  },
+  "B0": {
+   "name": "pit (edge variant)",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "pit"
+   ],
+   "physics": "50",
+   "cells_in_game": 254
+  },
+  "B1": {
+   "name": "flip wall / rotating door (half 1)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "flip_wall",
+    "door_half1"
+   ],
+   "passage": true,
+   "physics": "7C",
+   "cells_in_game": 7,
+   "pair": "B2",
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (B2) e' muro."
+  },
+  "B2": {
+   "name": "flip wall / rotating door (half 2)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "flip_wall",
+    "door_half2"
+   ],
+   "physics": "7D",
+   "cells_in_game": 7,
+   "pair": "B1",
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (B1), questa cella e' muro."
+  },
+  "B3": {
+   "name": "dungeon entrance: floor",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 14
+  },
+  "B4": {
+   "name": "dungeon entrance: floor",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 26
+  },
+  "B5": {
+   "name": "dungeon entrance: floor",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 14
+  },
+  "B6": {
+   "name": "dungeon entrance: frame (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision"
+   ],
+   "physics": "8B",
+   "cells_in_game": 12
+  },
+  "B7": {
+   "name": "dungeon entrance: archway walkway (8x8 collision)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "fine_collision",
+    "dungeon_entrance",
+    "door_half1"
+   ],
+   "physics": "8A",
+   "cells_in_game": 12,
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (B8) e' muro.",
+   "pair": "B8"
+  },
+  "B8": {
+   "name": "dungeon entrance: archway walkway (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision",
+    "dungeon_entrance",
+    "door_half2"
+   ],
+   "physics": "8B",
+   "cells_in_game": 12,
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (B7), questa cella e' muro.",
+   "pair": "B7"
+  },
+  "B9": {
+   "name": "dungeon entrance: frame (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision"
+   ],
+   "physics": "8A",
+   "cells_in_game": 12
+  },
+  "BA": {
+   "name": "dungeon entrance: frame",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 12
+  },
+  "BB": {
+   "name": "dungeon entrance doorway (half 1)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "dungeon_entrance",
+    "door_half1"
+   ],
+   "passage": true,
+   "physics": "7C",
+   "cells_in_game": 12,
+   "pair": "BC",
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (BC) e' muro."
+  },
+  "BC": {
+   "name": "dungeon entrance doorway (half 2)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "dungeon_entrance",
+    "door_half2"
+   ],
+   "physics": "7D",
+   "cells_in_game": 12,
+   "pair": "BB",
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (BB), questa cella e' muro."
+  },
+  "BD": {
+   "name": "dungeon entrance: frame",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 12
+  },
+  "BE": {
+   "name": "stairs down",
+   "category": 8,
+   "ascii": "E",
+   "tags": [
+    "stairs_down"
+   ],
+   "physics": "00",
+   "disasm": "OBJECT_STAIRS_DOWN",
+   "cells_in_game": 43
+  },
+  "BF": {
+   "name": "hidden stairs down (appear after an event)",
+   "category": 8,
+   "ascii": "E",
+   "tags": [
+    "stairs_down"
+   ],
+   "special": "hidden_stairs",
+   "physics": "00",
+   "disasm": "OBJECT_HIDDEN_STAIRS_DOWN",
+   "cells_in_game": 6
+  },
+  "C0": {
+   "name": "one-eyed statue",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "statue"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_ONE_EYED_STATUE",
+   "cells_in_game": 252
+  },
+  "C1": {
+   "name": "exit doorway to outside, bottom wall (half 1)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "exit_door",
+    "door_half1"
+   ],
+   "passage": true,
+   "physics": "7C",
+   "cells_in_game": 72,
+   "pair": "C2",
+   "note": "varco largo 16 px (un blocco) centrato sul confine tra due celle: ogni meta' e' mezza muro e mezza passaggio. Il varco e' rappresentato da questa cella (meta' 1, sinistra/alto); la meta' 2 (C2) e' muro."
+  },
+  "C2": {
+   "name": "exit doorway to outside, bottom wall (half 2)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "exit_door",
+    "door_half2"
+   ],
+   "physics": "7D",
+   "cells_in_game": 72,
+   "pair": "C1",
+   "note": "meta' 2 (destra/basso) di un varco largo 16 px: il varco e' rappresentato dalla meta' 1 (C1), questa cella e' muro."
+  },
+  "C5": {
+   "name": "furniture (bed)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "furniture"
+   ],
+   "physics": "01",
+   "cells_in_game": 29
+  },
+  "C6": {
+   "name": "furniture (bed)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "furniture"
+   ],
+   "physics": "01",
+   "cells_in_game": 29
+  },
+  "C7": {
+   "name": "wall with ornament (top)",
+   "category": 1,
+   "ascii": "#",
+   "physics": "D3",
+   "cells_in_game": 235
+  },
+  "C8": {
+   "name": "wall with ornament (bottom)",
+   "category": 1,
+   "ascii": "#",
+   "physics": "D2",
+   "cells_in_game": 90
+  },
+  "C9": {
+   "name": "wall with ornament (left)",
+   "category": 1,
+   "ascii": "#",
+   "physics": "D0",
+   "cells_in_game": 65
+  },
+  "CA": {
+   "name": "wall with ornament (right)",
+   "category": 1,
+   "ascii": "#",
+   "physics": "D1",
+   "cells_in_game": 52
+  },
+  "CB": {
+   "name": "stairs up",
+   "category": 8,
+   "ascii": "E",
+   "tags": [
+    "stairs_up"
+   ],
+   "physics": "08",
+   "disasm": "OBJECT_STAIRS_UP",
+   "cells_in_game": 44
+  },
+  "CD": {
+   "name": "minigame counter (end)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "counter"
+   ],
+   "physics": "7E",
+   "cells_in_game": 9
+  },
+  "CE": {
+   "name": "statue / counter decoration",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "statue"
+   ],
+   "physics": "01",
+   "cells_in_game": 39
+  },
+  "CF": {
+   "name": "conveyor belt (down)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "conveyor"
+   ],
+   "special": "conveyor",
+   "physics": "F0",
+   "disasm": "OBJECT_CONVEYOR_BOTTOM",
+   "cells_in_game": 28
+  },
+  "D0": {
+   "name": "conveyor belt (up)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "conveyor"
+   ],
+   "special": "conveyor",
+   "physics": "F1",
+   "disasm": "OBJECT_CONVEYOR_TOP",
+   "cells_in_game": 28
+  },
+  "D1": {
+   "name": "conveyor belt (right)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "conveyor"
+   ],
+   "special": "conveyor",
+   "physics": "F2",
+   "disasm": "OBJECT_CONVEYOR_RIGHT",
+   "cells_in_game": 37
+  },
+  "D2": {
+   "name": "conveyor belt (left)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "conveyor"
+   ],
+   "special": "conveyor",
+   "physics": "F3",
+   "disasm": "OBJECT_CONVEYOR_LEFT",
+   "cells_in_game": 40
+  },
+  "D3": {
+   "name": "minigame counter (border)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "counter"
+   ],
+   "physics": "7F",
+   "disasm": "OBJECT_TRENDY_GAME_BORDER",
+   "cells_in_game": 7
+  },
+  "D4": {
+   "name": "spikes",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "spikes"
+   ],
+   "special": "spikes",
+   "note": "pericolo percorribile con danno: approssimato a non attraversabile",
+   "physics": "E0",
+   "cells_in_game": 50
+  },
+  "DA": {
+   "name": "floor (studded tiles)",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 48
+  },
+  "DB": {
+   "name": "switch block (lowered)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "switch_block"
+   ],
+   "special": "switch_block",
+   "physics": "04",
+   "disasm": "OBJECT_LOWERED_BLOCK",
+   "cells_in_game": 225
+  },
+  "DC": {
+   "name": "switch block (raised)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "switch_block"
+   ],
+   "special": "switch_block",
+   "physics": "04",
+   "disasm": "OBJECT_RAISED_BLOCK",
+   "cells_in_game": 226
+  },
+  "DD": {
+   "name": "crystal (breakable with sword)",
+   "category": 7,
+   "ascii": "B",
+   "tags": [
+    "removable"
+   ],
+   "physics": "30",
+   "cells_in_game": 60
+  },
+  "DE": {
+   "name": "keyhole block (opens with small key)",
+   "category": 5,
+   "ascii": "D",
+   "tags": [
+    "keyhole_block"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_KEYHOLE_BLOCK",
+   "cells_in_game": 17
+  },
+  "DF": {
+   "name": "floor (cracked/textured)",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 1195
+  },
+  "E7": {
+   "name": "floor art (Wind Fish's Egg)",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 1
+  },
+  "E8": {
+   "name": "floor art (Wind Fish's Egg)",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 1
+  },
+  "E9": {
+   "name": "floor art (Wind Fish's Egg)",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 1
+  },
+  "EA": {
+   "name": "floor art (Wind Fish's Egg)",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 1
+  }
+ },
+ "color_dungeon_overrides": {
+  "_doc": "Nella Color Dungeon (stanze 0x300-0x315) gli oggetti 0x50-0x6D hanno physics diverse (tabella Indoors2): queste voci sostituiscono quelle sopra.",
+  "50": {
+   "name": "color tile (changes color when stepped on)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "color_tile"
+   ],
+   "special": "color_tile"
+  },
+  "51": {
+   "name": "color tile (changes color when stepped on)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "color_tile"
+   ],
+   "special": "color_tile"
+  },
+  "52": {
+   "name": "color tile (changes color when stepped on)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "color_tile"
+   ],
+   "special": "color_tile"
+  },
+  "53": {
+   "name": "color tile (changes color when stepped on)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "color_tile"
+   ],
+   "special": "color_tile"
+  },
+  "54": {
+   "name": "color tile (changes color when stepped on)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "color_tile"
+   ],
+   "special": "color_tile"
+  },
+  "55": {
+   "name": "color tile (changes color when stepped on)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "color_tile"
+   ],
+   "special": "color_tile"
+  },
+  "56": {
+   "name": "color tile (changes color when stepped on)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "color_tile"
+   ],
+   "special": "color_tile"
+  },
+  "57": {
+   "name": "color tile (changes color when stepped on)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "color_tile"
+   ],
+   "special": "color_tile"
+  },
+  "58": {
+   "name": "floor art (Color Dungeon)",
+   "category": 2,
+   "ascii": "."
+  },
+  "59": {
+   "name": "floor art (Color Dungeon)",
+   "category": 2,
+   "ascii": "."
+  },
+  "5A": {
+   "name": "floor art (Color Dungeon)",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "pit"
+   ]
+  },
+  "5B": {
+   "name": "floor art (Color Dungeon)",
+   "category": 2,
+   "ascii": "."
+  },
+  "5C": {
+   "name": "floor art (Color Dungeon)",
+   "category": 2,
+   "ascii": "."
+  },
+  "5D": {
+   "name": "floor art (Color Dungeon)",
+   "category": 2,
+   "ascii": "."
+  },
+  "5E": {
+   "name": "floor art (Color Dungeon)",
+   "category": 2,
+   "ascii": "."
+  },
+  "5F": {
+   "name": "floor art (Color Dungeon)",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "pit"
+   ]
+  },
+  "60": {
+   "name": "floor art (Color Dungeon)",
+   "category": 2,
+   "ascii": "."
+  },
+  "61": {
+   "name": "floor art (Color Dungeon)",
+   "category": 2,
+   "ascii": "."
+  },
+  "62": {
+   "name": "floor art (Color Dungeon)",
+   "category": 2,
+   "ascii": "."
+  },
+  "63": {
+   "name": "floor art (Color Dungeon)",
+   "category": 2,
+   "ascii": "."
+  },
+  "64": {
+   "name": "floor art (Color Dungeon)",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "pit"
+   ]
+  },
+  "65": {
+   "name": "floor art (Color Dungeon)",
+   "category": 2,
+   "ascii": "."
+  },
+  "66": {
+   "name": "floor art (Color Dungeon)",
+   "category": 2,
+   "ascii": "."
+  }
+ }
+}

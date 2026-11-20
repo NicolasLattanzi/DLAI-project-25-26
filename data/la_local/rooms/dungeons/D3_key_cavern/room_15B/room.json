@@ -1,0 +1,1124 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "15B",
+ "region": "indoor",
+ "group": "dungeons/D3_key_cavern",
+ "group_name": "Key Cavern",
+ "map_id": "02",
+ "position": {
+  "table": {
+   "x": 11,
+   "y": 5
+  },
+  "layout": {
+   "layout": 2,
+   "x": 6,
+   "y": 7
+  },
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "valid": false,
+ "discard_reasons": [
+  "special:conveyor"
+ ],
+ "notes": [
+  "entita' KEESE in (3,1) non messa in griglia: cella 'wall' non sovrascrivibile",
+  "entita' KEESE in (5,2) non messa in griglia: cella 'wall' non sovrascrivibile",
+  "entita' KEESE in (2,4) non messa in griglia: cella 'wall' non sovrascrivibile",
+  "entita' KEESE in (5,5) non messa in griglia: cella 'wall' non sovrascrivibile",
+  "entita' KEESE in (7,6) non messa in griglia: cella 'wall' non sovrascrivibile"
+ ],
+ "grid_ascii": [
+  "####D#####",
+  "#..#.....#",
+  "#....#.#.#",
+  "#...#..#P.",
+  "#.#...#..#",
+  "#...##..##",
+  "###....###",
+  "##########"
+ ],
+ "grid_no_entities_ascii": [
+  "####D#####",
+  "#..#.....#",
+  "#....#.#.#",
+  "#...#..#..",
+  "#.#...#..#",
+  "#...##..##",
+  "###....###",
+  "##########"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 8,
+   "y": 3,
+   "source": "border_opening"
+  }
+ ],
+ "openings": [
+  {
+   "x": 4,
+   "y": 0,
+   "side": "top",
+   "kind": "door"
+  },
+  {
+   "x": 9,
+   "y": 3,
+   "side": "right",
+   "kind": "door"
+  }
+ ],
+ "doors": 1,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   1,
+   1,
+   1,
+   1,
+   5,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   1,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1,
+   9,
+   2
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   1,
+   1,
+   1,
+   1,
+   5,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   1,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1,
+   2,
+   2
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   1,
+   1,
+   1,
+   1,
+   5,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   1,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1,
+   2,
+   2
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   1,
+   1,
+   1,
+   1,
+   5,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   1,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1,
+   2,
+   2
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "25",
+   "21",
+   "21",
+   "C7",
+   "A4",
+   "A5",
+   "C7",
+   "21",
+   "21",
+   "26"
+  ],
+  [
+   "23",
+   "CF",
+   "D1",
+   "C0",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "CF",
+   "24"
+  ],
+  [
+   "23",
+   "D2",
+   "D0",
+   "D2",
+   "D0",
+   "C0",
+   "D0",
+   "C0",
+   "CF",
+   "24"
+  ],
+  [
+   "23",
+   "D2",
+   "D0",
+   "CF",
+   "C0",
+   "D2",
+   "D0",
+   "C0",
+   "CF",
+   "0B"
+  ],
+  [
+   "23",
+   "D0",
+   "C0",
+   "D2",
+   "D2",
+   "D0",
+   "C0",
+   "CF",
+   "D1",
+   "0C"
+  ],
+  [
+   "23",
+   "D0",
+   "D1",
+   "D0",
+   "C0",
+   "C0",
+   "CF",
+   "D1",
+   "C0",
+   "24"
+  ],
+  [
+   "23",
+   "C0",
+   "C0",
+   "D0",
+   "D1",
+   "D1",
+   "D1",
+   "C0",
+   "C0",
+   "24"
+  ],
+  [
+   "27",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "28"
+  ]
+ ],
+ "physics": [
+  [
+   "01",
+   "D3",
+   "D3",
+   "D3",
+   "98",
+   "98",
+   "D3",
+   "D3",
+   "D3",
+   "01"
+  ],
+  [
+   "D0",
+   "F0",
+   "F2",
+   "01",
+   "F3",
+   "F3",
+   "F3",
+   "F3",
+   "F0",
+   "D1"
+  ],
+  [
+   "D0",
+   "F3",
+   "F1",
+   "F3",
+   "F1",
+   "01",
+   "F1",
+   "01",
+   "F0",
+   "D1"
+  ],
+  [
+   "D0",
+   "F3",
+   "F1",
+   "F0",
+   "01",
+   "F3",
+   "F1",
+   "01",
+   "F0",
+   "7E"
+  ],
+  [
+   "D0",
+   "F1",
+   "01",
+   "F3",
+   "F3",
+   "F1",
+   "01",
+   "F0",
+   "F2",
+   "7F"
+  ],
+  [
+   "D0",
+   "F1",
+   "F2",
+   "F1",
+   "01",
+   "01",
+   "F0",
+   "F2",
+   "01",
+   "D1"
+  ],
+  [
+   "D0",
+   "01",
+   "01",
+   "F1",
+   "F2",
+   "F2",
+   "F2",
+   "01",
+   "01",
+   "D1"
+  ],
+  [
+   "01",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   true,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   true
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [
+  {
+   "x": 1,
+   "y": 1,
+   "special": "conveyor",
+   "source": "object",
+   "object": "CF",
+   "name": "conveyor belt (down)"
+  },
+  {
+   "x": 2,
+   "y": 1,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D1",
+   "name": "conveyor belt (right)"
+  },
+  {
+   "x": 4,
+   "y": 1,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D2",
+   "name": "conveyor belt (left)"
+  },
+  {
+   "x": 5,
+   "y": 1,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D2",
+   "name": "conveyor belt (left)"
+  },
+  {
+   "x": 6,
+   "y": 1,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D2",
+   "name": "conveyor belt (left)"
+  },
+  {
+   "x": 7,
+   "y": 1,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D2",
+   "name": "conveyor belt (left)"
+  },
+  {
+   "x": 8,
+   "y": 1,
+   "special": "conveyor",
+   "source": "object",
+   "object": "CF",
+   "name": "conveyor belt (down)"
+  },
+  {
+   "x": 1,
+   "y": 2,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D2",
+   "name": "conveyor belt (left)"
+  },
+  {
+   "x": 2,
+   "y": 2,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D0",
+   "name": "conveyor belt (up)"
+  },
+  {
+   "x": 3,
+   "y": 2,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D2",
+   "name": "conveyor belt (left)"
+  },
+  {
+   "x": 4,
+   "y": 2,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D0",
+   "name": "conveyor belt (up)"
+  },
+  {
+   "x": 6,
+   "y": 2,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D0",
+   "name": "conveyor belt (up)"
+  },
+  {
+   "x": 8,
+   "y": 2,
+   "special": "conveyor",
+   "source": "object",
+   "object": "CF",
+   "name": "conveyor belt (down)"
+  },
+  {
+   "x": 1,
+   "y": 3,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D2",
+   "name": "conveyor belt (left)"
+  },
+  {
+   "x": 2,
+   "y": 3,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D0",
+   "name": "conveyor belt (up)"
+  },
+  {
+   "x": 3,
+   "y": 3,
+   "special": "conveyor",
+   "source": "object",
+   "object": "CF",
+   "name": "conveyor belt (down)"
+  },
+  {
+   "x": 5,
+   "y": 3,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D2",
+   "name": "conveyor belt (left)"
+  },
+  {
+   "x": 6,
+   "y": 3,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D0",
+   "name": "conveyor belt (up)"
+  },
+  {
+   "x": 8,
+   "y": 3,
+   "special": "conveyor",
+   "source": "object",
+   "object": "CF",
+   "name": "conveyor belt (down)"
+  },
+  {
+   "x": 1,
+   "y": 4,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D0",
+   "name": "conveyor belt (up)"
+  },
+  {
+   "x": 3,
+   "y": 4,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D2",
+   "name": "conveyor belt (left)"
+  },
+  {
+   "x": 4,
+   "y": 4,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D2",
+   "name": "conveyor belt (left)"
+  },
+  {
+   "x": 5,
+   "y": 4,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D0",
+   "name": "conveyor belt (up)"
+  },
+  {
+   "x": 7,
+   "y": 4,
+   "special": "conveyor",
+   "source": "object",
+   "object": "CF",
+   "name": "conveyor belt (down)"
+  },
+  {
+   "x": 8,
+   "y": 4,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D1",
+   "name": "conveyor belt (right)"
+  },
+  {
+   "x": 1,
+   "y": 5,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D0",
+   "name": "conveyor belt (up)"
+  },
+  {
+   "x": 2,
+   "y": 5,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D1",
+   "name": "conveyor belt (right)"
+  },
+  {
+   "x": 3,
+   "y": 5,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D0",
+   "name": "conveyor belt (up)"
+  },
+  {
+   "x": 6,
+   "y": 5,
+   "special": "conveyor",
+   "source": "object",
+   "object": "CF",
+   "name": "conveyor belt (down)"
+  },
+  {
+   "x": 7,
+   "y": 5,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D1",
+   "name": "conveyor belt (right)"
+  },
+  {
+   "x": 3,
+   "y": 6,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D0",
+   "name": "conveyor belt (up)"
+  },
+  {
+   "x": 4,
+   "y": 6,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D1",
+   "name": "conveyor belt (right)"
+  },
+  {
+   "x": 5,
+   "y": 6,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D1",
+   "name": "conveyor belt (right)"
+  },
+  {
+   "x": 6,
+   "y": 6,
+   "special": "conveyor",
+   "source": "object",
+   "object": "D1",
+   "name": "conveyor belt (right)"
+  }
+ ],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 3,
+   "y": 1,
+   "entity_id": "19",
+   "name": "KEESE",
+   "class": "enemy",
+   "placed_as": null,
+   "skipped": "cella 'wall' non sovrascrivibile"
+  },
+  {
+   "x": 5,
+   "y": 2,
+   "entity_id": "19",
+   "name": "KEESE",
+   "class": "enemy",
+   "placed_as": null,
+   "skipped": "cella 'wall' non sovrascrivibile"
+  },
+  {
+   "x": 2,
+   "y": 4,
+   "entity_id": "19",
+   "name": "KEESE",
+   "class": "enemy",
+   "placed_as": null,
+   "skipped": "cella 'wall' non sovrascrivibile"
+  },
+  {
+   "x": 5,
+   "y": 5,
+   "entity_id": "19",
+   "name": "KEESE",
+   "class": "enemy",
+   "placed_as": null,
+   "skipped": "cella 'wall' non sovrascrivibile"
+  },
+  {
+   "x": 7,
+   "y": 6,
+   "entity_id": "19",
+   "name": "KEESE",
+   "class": "enemy",
+   "placed_as": null,
+   "skipped": "cella 'wall' non sovrascrivibile"
+  }
+ ],
+ "key_sources": [],
+ "chest": null,
+ "warps": [],
+ "arrivals": [],
+ "stats": {
+  "category_counts": {
+   "wall": 44,
+   "floor": 34,
+   "door": 1,
+   "player": 1
+  },
+  "num_room_objects": 38,
+  "num_entities": 5,
+  "num_enemies": 0,
+  "tags": {
+   "boss_door": 2,
+   "door_half1": 2,
+   "door_half2": 2,
+   "conveyor": 34,
+   "statue": 14,
+   "open_door": 2
+  }
+ },
+ "render": {
+  "animation_id": 7,
+  "floor_object": "0D"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

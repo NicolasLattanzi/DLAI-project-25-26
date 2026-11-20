@@ -1,0 +1,846 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "160",
+ "region": "indoor",
+ "group": "dungeons/D4_anglers_tunnel",
+ "group_name": "Angler's Tunnel",
+ "map_id": "03",
+ "position": {
+  "table": {
+   "x": 0,
+   "y": 6
+  },
+  "layout": {
+   "layout": 3,
+   "x": 3,
+   "y": 1
+  },
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "valid": true,
+ "discard_reasons": [],
+ "notes": [
+  "entita' FIREBALL_SHOOTER in (3,0) non messa in griglia: cella 'wall' non sovrascrivibile",
+  "entita' FIREBALL_SHOOTER in (5,0) non messa in griglia: cella 'wall' non sovrascrivibile"
+ ],
+ "grid_ascii": [
+  "######### ",
+  "######### ",
+  "#.#####.##",
+  "#.##.##...",
+  "#.##.##..#",
+  "#..M.M..##",
+  "#...P...# ",
+  "####.#### "
+ ],
+ "grid_no_entities_ascii": [
+  "######### ",
+  "######### ",
+  "#.#####.##",
+  "#.##.##...",
+  "#.##.##..#",
+  "#.......##",
+  "#.......# ",
+  "####.#### "
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 4,
+   "y": 6,
+   "source": "border_opening"
+  }
+ ],
+ "openings": [
+  {
+   "x": 9,
+   "y": 3,
+   "side": "right",
+   "kind": "door"
+  },
+  {
+   "x": 4,
+   "y": 7,
+   "side": "bottom",
+   "kind": "door"
+  }
+ ],
+ "doors": 0,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   10,
+   2,
+   10,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   9,
+   2,
+   2,
+   2,
+   1,
+   0
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   0
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   0
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   0
+  ]
+ ],
+ "grid_raw": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   10,
+   2,
+   10,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   0
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   0
+  ]
+ ],
+ "grid_tiles": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   0
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   0
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   0
+  ]
+ ],
+ "objects": [
+  [
+   "25",
+   "21",
+   "26",
+   "C0",
+   "C0",
+   "C0",
+   "25",
+   "21",
+   "26",
+   "03"
+  ],
+  [
+   "23",
+   "C0",
+   "24",
+   "17",
+   "12",
+   "16",
+   "23",
+   "C0",
+   "24",
+   "03"
+  ],
+  [
+   "23",
+   "0D",
+   "24",
+   "11",
+   "A0",
+   "10",
+   "23",
+   "0D",
+   "2A",
+   "26"
+  ],
+  [
+   "23",
+   "0D",
+   "24",
+   "15",
+   "0D",
+   "14",
+   "23",
+   "0D",
+   "0D",
+   "3B"
+  ],
+  [
+   "23",
+   "0D",
+   "2A",
+   "C7",
+   "98",
+   "C7",
+   "29",
+   "0D",
+   "0D",
+   "3C"
+  ],
+  [
+   "23",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "2C",
+   "28"
+  ],
+  [
+   "23",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "24",
+   "03"
+  ],
+  [
+   "27",
+   "22",
+   "22",
+   "22",
+   "37",
+   "38",
+   "22",
+   "22",
+   "28",
+   "03"
+  ]
+ ],
+ "physics": [
+  [
+   "01",
+   "D3",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "D3",
+   "01",
+   "00"
+  ],
+  [
+   "D0",
+   "01",
+   "D1",
+   "87",
+   "82",
+   "86",
+   "D0",
+   "01",
+   "D1",
+   "00"
+  ],
+  [
+   "D0",
+   "00",
+   "D1",
+   "80",
+   "60",
+   "81",
+   "D0",
+   "00",
+   "01",
+   "01"
+  ],
+  [
+   "D0",
+   "00",
+   "D1",
+   "85",
+   "00",
+   "84",
+   "D0",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "01",
+   "D3",
+   "02",
+   "D3",
+   "01",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "01",
+   "01"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "D1",
+   "00"
+  ],
+  [
+   "01",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "01",
+   "00"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   true
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   true,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 3,
+   "y": 0,
+   "entity_id": "9E",
+   "name": "FIREBALL_SHOOTER",
+   "class": "enemy",
+   "placed_as": null,
+   "skipped": "cella 'wall' non sovrascrivibile"
+  },
+  {
+   "x": 5,
+   "y": 0,
+   "entity_id": "9E",
+   "name": "FIREBALL_SHOOTER",
+   "class": "enemy",
+   "placed_as": null,
+   "skipped": "cella 'wall' non sovrascrivibile"
+  },
+  {
+   "x": 3,
+   "y": 5,
+   "entity_id": "1B",
+   "name": "GEL",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 5,
+   "y": 5,
+   "entity_id": "1B",
+   "name": "GEL",
+   "class": "enemy",
+   "placed_as": 10
+  }
+ ],
+ "key_sources": [],
+ "chest": {
+  "item": "FLIPPERS",
+  "cells": [
+   [
+    4,
+    2
+   ]
+  ]
+ },
+ "warps": [],
+ "arrivals": [],
+ "stats": {
+  "category_counts": {
+   "void": 4,
+   "wall": 50,
+   "floor": 23,
+   "player": 1,
+   "enemy": 2
+  },
+  "num_room_objects": 32,
+  "num_entities": 4,
+  "num_enemies": 2,
+  "tags": {
+   "statue": 5,
+   "filler": 4,
+   "fine_collision": 7,
+   "chest": 1,
+   "shutter_door": 4,
+   "door_half1": 2,
+   "steps": 1,
+   "door_half2": 2
+  }
+ },
+ "render": {
+  "animation_id": 12,
+  "floor_object": "0D"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

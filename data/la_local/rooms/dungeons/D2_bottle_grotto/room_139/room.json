@@ -1,0 +1,996 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "139",
+ "region": "indoor",
+ "group": "dungeons/D2_bottle_grotto",
+ "group_name": "Bottle Grotto",
+ "map_id": "01",
+ "position": {
+  "table": {
+   "x": 9,
+   "y": 3
+  },
+  "layout": {
+   "layout": 1,
+   "x": 5,
+   "y": 7
+  },
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "valid": false,
+ "discard_reasons": [
+  "special:switch",
+  "special:switch_block"
+ ],
+ "notes": [],
+ "grid_ascii": [
+  "####..####",
+  "#B#~..#~.#",
+  "#B#~~~~~##",
+  "#~~~.~#~.#",
+  ".P.~.~.~~#",
+  "..#~#~.~.#",
+  "#..~#~#~.#",
+  "##########"
+ ],
+ "grid_no_entities_ascii": [
+  "####..####",
+  "#B#~..#~.#",
+  "#B#~~~~~##",
+  "#~~~.~#~.#",
+  "...~.~.~~#",
+  "..#~#~.~.#",
+  "#..~#~#~.#",
+  "##########"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 1,
+   "y": 4,
+   "source": "border_opening"
+  }
+ ],
+ "openings": [
+  {
+   "x": 4,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 5,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 0,
+   "y": 4,
+   "side": "left",
+   "kind": "corridor"
+  },
+  {
+   "x": 0,
+   "y": 5,
+   "side": "left",
+   "kind": "corridor"
+  }
+ ],
+ "doors": 0,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   3,
+   2,
+   2,
+   1,
+   3,
+   2,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   3,
+   1,
+   3,
+   2,
+   1
+  ],
+  [
+   2,
+   9,
+   2,
+   3,
+   2,
+   3,
+   2,
+   3,
+   3,
+   1
+  ],
+  [
+   2,
+   2,
+   1,
+   3,
+   1,
+   3,
+   2,
+   3,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   3,
+   1,
+   3,
+   1,
+   3,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   3,
+   2,
+   2,
+   1,
+   3,
+   2,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   3,
+   1,
+   3,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   3,
+   2,
+   3,
+   2,
+   3,
+   3,
+   1
+  ],
+  [
+   2,
+   2,
+   1,
+   3,
+   1,
+   3,
+   2,
+   3,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   3,
+   1,
+   3,
+   1,
+   3,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   3,
+   2,
+   2,
+   1,
+   3,
+   2,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   3,
+   1,
+   3,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   3,
+   2,
+   3,
+   2,
+   3,
+   3,
+   1
+  ],
+  [
+   2,
+   2,
+   1,
+   3,
+   1,
+   3,
+   2,
+   3,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   3,
+   1,
+   3,
+   1,
+   3,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   3,
+   2,
+   2,
+   1,
+   3,
+   2,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   3,
+   1,
+   3,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   3,
+   2,
+   3,
+   2,
+   3,
+   3,
+   1
+  ],
+  [
+   2,
+   2,
+   1,
+   3,
+   1,
+   3,
+   2,
+   3,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   3,
+   1,
+   3,
+   1,
+   3,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "25",
+   "21",
+   "C7",
+   "29",
+   "0D",
+   "0D",
+   "2A",
+   "C7",
+   "21",
+   "26"
+  ],
+  [
+   "23",
+   "20",
+   "DC",
+   "01",
+   "0D",
+   "0D",
+   "DC",
+   "01",
+   "0D",
+   "24"
+  ],
+  [
+   "23",
+   "20",
+   "DC",
+   "01",
+   "AE",
+   "AF",
+   "AE",
+   "01",
+   "A1",
+   "24"
+  ],
+  [
+   "29",
+   "AE",
+   "AE",
+   "01",
+   "DB",
+   "01",
+   "DC",
+   "01",
+   "0D",
+   "24"
+  ],
+  [
+   "0D",
+   "DB",
+   "DB",
+   "01",
+   "DB",
+   "01",
+   "DB",
+   "01",
+   "AE",
+   "24"
+  ],
+  [
+   "0D",
+   "0D",
+   "DC",
+   "01",
+   "DC",
+   "01",
+   "DB",
+   "01",
+   "AA",
+   "24"
+  ],
+  [
+   "2B",
+   "0D",
+   "DB",
+   "01",
+   "DC",
+   "01",
+   "DC",
+   "01",
+   "0D",
+   "24"
+  ],
+  [
+   "27",
+   "22",
+   "C8",
+   "22",
+   "22",
+   "22",
+   "22",
+   "C8",
+   "22",
+   "28"
+  ]
+ ],
+ "physics": [
+  [
+   "01",
+   "D3",
+   "D3",
+   "01",
+   "00",
+   "00",
+   "01",
+   "D3",
+   "D3",
+   "01"
+  ],
+  [
+   "D0",
+   "30",
+   "04",
+   "50",
+   "00",
+   "00",
+   "04",
+   "50",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "30",
+   "04",
+   "50",
+   "50",
+   "50",
+   "50",
+   "50",
+   "60",
+   "D1"
+  ],
+  [
+   "01",
+   "50",
+   "50",
+   "50",
+   "04",
+   "50",
+   "04",
+   "50",
+   "00",
+   "D1"
+  ],
+  [
+   "00",
+   "04",
+   "04",
+   "50",
+   "04",
+   "50",
+   "04",
+   "50",
+   "50",
+   "D1"
+  ],
+  [
+   "00",
+   "00",
+   "04",
+   "50",
+   "04",
+   "50",
+   "04",
+   "50",
+   "00",
+   "D1"
+  ],
+  [
+   "01",
+   "00",
+   "04",
+   "50",
+   "04",
+   "50",
+   "04",
+   "50",
+   "00",
+   "D1"
+  ],
+  [
+   "01",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [
+  {
+   "x": 2,
+   "y": 1,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 6,
+   "y": 1,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 2,
+   "y": 2,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 4,
+   "y": 3,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 6,
+   "y": 3,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 1,
+   "y": 4,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 2,
+   "y": 4,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 4,
+   "y": 4,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 6,
+   "y": 4,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 2,
+   "y": 5,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 4,
+   "y": 5,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 6,
+   "y": 5,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 8,
+   "y": 5,
+   "special": "switch",
+   "source": "object",
+   "object": "AA",
+   "name": "floor switch"
+  },
+  {
+   "x": 2,
+   "y": 6,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 4,
+   "y": 6,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 6,
+   "y": 6,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 8,
+   "y": 6,
+   "special": "switch",
+   "source": "entity",
+   "name": "CRYSTAL_SWITCH"
+  }
+ ],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 8,
+   "y": 6,
+   "entity_id": "66",
+   "name": "CRYSTAL_SWITCH",
+   "class": "mechanism",
+   "placed_as": null
+  },
+  {
+   "x": 1,
+   "y": 1,
+   "entity_id": "2D",
+   "name": "DROPPABLE_HEART",
+   "class": "item",
+   "placed_as": null
+  },
+  {
+   "x": 1,
+   "y": 2,
+   "entity_id": "2D",
+   "name": "DROPPABLE_HEART",
+   "class": "item",
+   "placed_as": null
+  },
+  {
+   "x": 5,
+   "y": 4,
+   "entity_id": "86",
+   "name": "FLOATING_ITEM",
+   "class": "item",
+   "placed_as": null
+  }
+ ],
+ "key_sources": [
+  {
+   "type": "chest",
+   "name": "KEY",
+   "x": 8,
+   "y": 2
+  }
+ ],
+ "chest": {
+  "item": "KEY",
+  "cells": [
+   [
+    8,
+    2
+   ]
+  ]
+ },
+ "warps": [],
+ "arrivals": [],
+ "stats": {
+  "category_counts": {
+   "wall": 37,
+   "floor": 18,
+   "water": 22,
+   "block": 2,
+   "player": 1
+  },
+  "num_room_objects": 36,
+  "num_entities": 4,
+  "num_enemies": 0,
+  "tags": {
+   "liftable": 2,
+   "switch_block": 15,
+   "pit": 22,
+   "chest": 1,
+   "switch": 1
+  }
+ },
+ "render": {
+  "animation_id": 4,
+  "floor_object": "0D"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

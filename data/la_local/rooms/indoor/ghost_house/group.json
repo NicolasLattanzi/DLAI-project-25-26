@@ -1,0 +1,13 @@
+{
+ "group": "indoor/ghost_house",
+ "rooms": [
+  "1E3"
+ ],
+ "valid": 1,
+ "overview_positions": {
+  "1E3": [
+   0,
+   0
+  ]
+ }
+}

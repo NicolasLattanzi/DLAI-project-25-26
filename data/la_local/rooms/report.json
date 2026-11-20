@@ -1,0 +1,156 @@
+{
+ "rooms_total": 789,
+ "rooms_valid": 605,
+ "rooms_discarded": 184,
+ "rooms_brief_valid": 8,
+ "brief_rule_failures_on_valid_rooms": {
+  "border_closed": 595,
+  "stairs_reachable": 443,
+  "has_stairs": 430,
+  "max_doors_ok": 1
+ },
+ "discard_reasons": {
+  "sidescroll": 56,
+  "special:switch_block": 47,
+  "special:switch": 29,
+  "special:teleport": 21,
+  "no_floor_for_player": 19,
+  "empty_room": 10,
+  "special:color_tile": 8,
+  "special:conveyor": 7,
+  "special:tractor_device": 4,
+  "special:moving_block": 2,
+  "special:quicksand": 1
+ },
+ "flags_on_rooms": {
+  "special:spikes": 8,
+  "special:hidden_stairs": 6,
+  "special:keyhole": 5
+ },
+ "fixes_applied": {
+  "add_player": 770
+ },
+ "by_group": {
+  "dungeons/D0_color_dungeon": {
+   "rooms": 22,
+   "valid": 10,
+   "brief_valid": 0
+  },
+  "dungeons/D1_tail_cave": {
+   "rooms": 29,
+   "valid": 22,
+   "brief_valid": 0
+  },
+  "dungeons/D2_bottle_grotto": {
+   "rooms": 33,
+   "valid": 16,
+   "brief_valid": 0
+  },
+  "dungeons/D3_key_cavern": {
+   "rooms": 31,
+   "valid": 19,
+   "brief_valid": 0
+  },
+  "dungeons/D4_anglers_tunnel": {
+   "rooms": 38,
+   "valid": 24,
+   "brief_valid": 0
+  },
+  "dungeons/D5_catfishs_maw": {
+   "rooms": 45,
+   "valid": 31,
+   "brief_valid": 1
+  },
+  "dungeons/D6_face_shrine": {
+   "rooms": 49,
+   "valid": 24,
+   "brief_valid": 1
+  },
+  "dungeons/D7_eagles_tower": {
+   "rooms": 49,
+   "valid": 17,
+   "brief_valid": 0
+  },
+  "dungeons/D8_turtle_rock": {
+   "rooms": 60,
+   "valid": 40,
+   "brief_valid": 0
+  },
+  "dungeons/D9_windfishs_egg": {
+   "rooms": 7,
+   "valid": 7,
+   "brief_valid": 0
+  },
+  "indoor/bowwow_hideout": {
+   "rooms": 4,
+   "valid": 4,
+   "brief_valid": 0
+  },
+  "indoor/cave_b": {
+   "rooms": 63,
+   "valid": 61,
+   "brief_valid": 0
+  },
+  "indoor/cave_c": {
+   "rooms": 18,
+   "valid": 16,
+   "brief_valid": 3
+  },
+  "indoor/cave_water": {
+   "rooms": 28,
+   "valid": 24,
+   "brief_valid": 3
+  },
+  "indoor/doghouse": {
+   "rooms": 1,
+   "valid": 1,
+   "brief_valid": 0
+  },
+  "indoor/dream_shrine": {
+   "rooms": 5,
+   "valid": 5,
+   "brief_valid": 0
+  },
+  "indoor/ghost_house": {
+   "rooms": 1,
+   "valid": 1,
+   "brief_valid": 0
+  },
+  "indoor/house": {
+   "rooms": 27,
+   "valid": 26,
+   "brief_valid": 0
+  },
+  "indoor/kanalet": {
+   "rooms": 10,
+   "valid": 9,
+   "brief_valid": 0
+  },
+  "indoor/library": {
+   "rooms": 1,
+   "valid": 1,
+   "brief_valid": 0
+  },
+  "indoor/minigame": {
+   "rooms": 3,
+   "valid": 0,
+   "brief_valid": 0
+  },
+  "indoor/s_face_shrine": {
+   "rooms": 6,
+   "valid": 6,
+   "brief_valid": 0
+  },
+  "indoor/shop": {
+   "rooms": 3,
+   "valid": 3,
+   "brief_valid": 0
+  },
+  "overworld": {
+   "rooms": 256,
+   "valid": 238,
+   "brief_valid": 0
+  }
+ },
+ "seconds": 15.5
+}

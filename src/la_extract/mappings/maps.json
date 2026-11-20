@@ -1,0 +1,209 @@
+{
+ "schema": "leveledit_maps/1",
+ "description": "Map id degli interni (hMapId) -> nome e cartella di output. Fonte: src/constants/maps.asm del disassembly.",
+ "overworld": {
+  "name": "Overworld (Koholint)",
+  "group": "overworld",
+  "folder": "overworld"
+ },
+ "maps": {
+  "00": {
+   "const": "MAP_TAIL_CAVE",
+   "name": "Tail Cave",
+   "group": "dungeons",
+   "folder": "dungeons/D1_tail_cave"
+  },
+  "01": {
+   "const": "MAP_BOTTLE_GROTTO",
+   "name": "Bottle Grotto",
+   "group": "dungeons",
+   "folder": "dungeons/D2_bottle_grotto"
+  },
+  "02": {
+   "const": "MAP_KEY_CAVERN",
+   "name": "Key Cavern",
+   "group": "dungeons",
+   "folder": "dungeons/D3_key_cavern"
+  },
+  "03": {
+   "const": "MAP_ANGLERS_TUNNEL",
+   "name": "Angler's Tunnel",
+   "group": "dungeons",
+   "folder": "dungeons/D4_anglers_tunnel"
+  },
+  "04": {
+   "const": "MAP_CATFISHS_MAW",
+   "name": "Catfish's Maw",
+   "group": "dungeons",
+   "folder": "dungeons/D5_catfishs_maw"
+  },
+  "05": {
+   "const": "MAP_FACE_SHRINE",
+   "name": "Face Shrine",
+   "group": "dungeons",
+   "folder": "dungeons/D6_face_shrine"
+  },
+  "06": {
+   "const": "MAP_EAGLES_TOWER",
+   "name": "Eagle's Tower",
+   "group": "dungeons",
+   "folder": "dungeons/D7_eagles_tower"
+  },
+  "07": {
+   "const": "MAP_TURTLE_ROCK",
+   "name": "Turtle Rock",
+   "group": "dungeons",
+   "folder": "dungeons/D8_turtle_rock"
+  },
+  "08": {
+   "const": "MAP_WINDFISHS_EGG",
+   "name": "Wind Fish's Egg",
+   "group": "dungeons",
+   "folder": "dungeons/D9_windfishs_egg"
+  },
+  "09": {
+   "const": "MAP_09_UNUSED",
+   "name": "09 Unused",
+   "group": "indoor",
+   "folder": "indoor/09_unused"
+  },
+  "0A": {
+   "const": "MAP_CAVE_B",
+   "name": "Cave B",
+   "group": "indoor",
+   "folder": "indoor/cave_b"
+  },
+  "0B": {
+   "const": "MAP_DUNGEON_G1",
+   "name": "Dungeon G1",
+   "group": "indoor",
+   "folder": "indoor/dungeon_g1"
+  },
+  "0C": {
+   "const": "MAP_EAGLES_TOWER_ALT",
+   "name": "Eagles Tower Alt",
+   "group": "indoor",
+   "folder": "indoor/eagles_tower_alt"
+  },
+  "0D": {
+   "const": "MAP_DUNGEON_G3",
+   "name": "Dungeon G3",
+   "group": "indoor",
+   "folder": "indoor/dungeon_g3"
+  },
+  "0E": {
+   "const": "MAP_SHOP",
+   "name": "Shop",
+   "group": "indoor",
+   "folder": "indoor/shop"
+  },
+  "0F": {
+   "const": "MAP_MINIGAME",
+   "name": "Minigame",
+   "group": "indoor",
+   "folder": "indoor/minigame"
+  },
+  "10": {
+   "const": "MAP_HOUSE",
+   "name": "House",
+   "group": "indoor",
+   "folder": "indoor/house"
+  },
+  "11": {
+   "const": "MAP_CAVE_C",
+   "name": "Cave C",
+   "group": "indoor",
+   "folder": "indoor/cave_c"
+  },
+  "12": {
+   "const": "MAP_DOGHOUSE",
+   "name": "Doghouse",
+   "group": "indoor",
+   "folder": "indoor/doghouse"
+  },
+  "13": {
+   "const": "MAP_DREAM_SHRINE",
+   "name": "Dream Shrine",
+   "group": "indoor",
+   "folder": "indoor/dream_shrine"
+  },
+  "14": {
+   "const": "MAP_KANALET",
+   "name": "Kanalet",
+   "group": "indoor",
+   "folder": "indoor/kanalet"
+  },
+  "15": {
+   "const": "MAP_BOWWOW_HIDEOUT",
+   "name": "Bowwow Hideout",
+   "group": "indoor",
+   "folder": "indoor/bowwow_hideout"
+  },
+  "16": {
+   "const": "MAP_S_FACE_SHRINE",
+   "name": "S Face Shrine",
+   "group": "indoor",
+   "folder": "indoor/s_face_shrine"
+  },
+  "17": {
+   "const": "MAP_UNKNOWN_17",
+   "name": "Unknown 17",
+   "group": "indoor",
+   "folder": "indoor/unknown_17"
+  },
+  "18": {
+   "const": "MAP_UNKNOWN_18",
+   "name": "Unknown 18",
+   "group": "indoor",
+   "folder": "indoor/unknown_18"
+  },
+  "19": {
+   "const": "MAP_UNKNOWN_19",
+   "name": "Unknown 19",
+   "group": "indoor",
+   "folder": "indoor/unknown_19"
+  },
+  "1A": {
+   "const": "MAP_UNKNOWN_1A",
+   "name": "Unknown 1A",
+   "group": "indoor",
+   "folder": "indoor/unknown_1a"
+  },
+  "1B": {
+   "const": "MAP_UNKNOWN_1B",
+   "name": "Unknown 1B",
+   "group": "indoor",
+   "folder": "indoor/unknown_1b"
+  },
+  "1C": {
+   "const": "MAP_UNKNOWN_1C",
+   "name": "Unknown 1C",
+   "group": "indoor",
+   "folder": "indoor/unknown_1c"
+  },
+  "1D": {
+   "const": "MAP_LIBRARY",
+   "name": "Library",
+   "group": "indoor",
+   "folder": "indoor/library"
+  },
+  "1E": {
+   "const": "MAP_GHOST_HOUSE",
+   "name": "Ghost House",
+   "group": "indoor",
+   "folder": "indoor/ghost_house"
+  },
+  "1F": {
+   "const": "MAP_CAVE_WATER",
+   "name": "Cave Water",
+   "group": "indoor",
+   "folder": "indoor/cave_water"
+  },
+  "FF": {
+   "const": "MAP_COLOR_DUNGEON",
+   "name": "Color Dungeon",
+   "group": "dungeons",
+   "folder": "dungeons/D0_color_dungeon"
+  }
+ }
+}

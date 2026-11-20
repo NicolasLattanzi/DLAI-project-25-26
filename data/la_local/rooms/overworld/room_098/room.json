@@ -1,0 +1,841 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "098",
+ "region": "overworld",
+ "group": "overworld",
+ "group_name": "Overworld (Koholint)",
+ "map_id": null,
+ "position": {
+  "table": {
+   "x": 8,
+   "y": 9
+  },
+  "layout": null,
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "valid": true,
+ "discard_reasons": [],
+ "notes": [],
+ "grid_ascii": [
+  "####...###",
+  "..M#.....#",
+  "...#...#.#",
+  ".#.#.M~..#",
+  "##.#.....#",
+  "##......M#",
+  "#...P....#",
+  "####.#####"
+ ],
+ "grid_no_entities_ascii": [
+  "####...###",
+  "...#.....#",
+  "...#...#.#",
+  ".#.#..~..#",
+  "##.#.....#",
+  "##.......#",
+  "#........#",
+  "####.#####"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 4,
+   "y": 6,
+   "source": "border_opening"
+  }
+ ],
+ "openings": [
+  {
+   "x": 4,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 5,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 6,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 0,
+   "y": 1,
+   "side": "left",
+   "kind": "corridor"
+  },
+  {
+   "x": 0,
+   "y": 2,
+   "side": "left",
+   "kind": "corridor"
+  },
+  {
+   "x": 4,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  }
+ ],
+ "doors": 0,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   2,
+   2,
+   10,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   2,
+   1,
+   2,
+   1,
+   2,
+   10,
+   3,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   10,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   9,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   2,
+   1,
+   2,
+   1,
+   2,
+   2,
+   3,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   2,
+   2,
+   10,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   2,
+   1,
+   2,
+   1,
+   2,
+   10,
+   3,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   10,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   2,
+   1,
+   2,
+   1,
+   2,
+   2,
+   3,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "2C",
+   "2C",
+   "2C",
+   "2D",
+   "04",
+   "0B",
+   "04",
+   "27",
+   "28",
+   "27"
+  ],
+  [
+   "04",
+   "44",
+   "04",
+   "38",
+   "04",
+   "0B",
+   "04",
+   "04",
+   "04",
+   "25"
+  ],
+  [
+   "04",
+   "04",
+   "04",
+   "38",
+   "04",
+   "0B",
+   "0B",
+   "D4",
+   "04",
+   "27"
+  ],
+  [
+   "04",
+   "3D",
+   "E0",
+   "4E",
+   "04",
+   "04",
+   "E8",
+   "04",
+   "04",
+   "25"
+  ],
+  [
+   "2F",
+   "4E",
+   "E0",
+   "3B",
+   "04",
+   "04",
+   "0B",
+   "44",
+   "04",
+   "27"
+  ],
+  [
+   "3A",
+   "3B",
+   "0B",
+   "0B",
+   "0B",
+   "0B",
+   "0B",
+   "04",
+   "04",
+   "25"
+  ],
+  [
+   "26",
+   "44",
+   "04",
+   "04",
+   "0B",
+   "04",
+   "04",
+   "04",
+   "04",
+   "27"
+  ],
+  [
+   "29",
+   "26",
+   "25",
+   "26",
+   "0B",
+   "25",
+   "26",
+   "25",
+   "26",
+   "25"
+  ]
+ ],
+ "physics": [
+  [
+   "01",
+   "01",
+   "01",
+   "01",
+   "00",
+   "00",
+   "00",
+   "01",
+   "01",
+   "01"
+  ],
+  [
+   "00",
+   "00",
+   "00",
+   "01",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "01"
+  ],
+  [
+   "00",
+   "00",
+   "00",
+   "01",
+   "00",
+   "00",
+   "00",
+   "60",
+   "00",
+   "01"
+  ],
+  [
+   "00",
+   "01",
+   "02",
+   "01",
+   "00",
+   "00",
+   "50",
+   "00",
+   "00",
+   "01"
+  ],
+  [
+   "01",
+   "01",
+   "02",
+   "01",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "01"
+  ],
+  [
+   "01",
+   "01",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "01"
+  ],
+  [
+   "01",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "01"
+  ],
+  [
+   "01",
+   "01",
+   "01",
+   "01",
+   "00",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 2,
+   "y": 1,
+   "entity_id": "AE",
+   "name": "WINGED_OCTOROK",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 5,
+   "y": 3,
+   "entity_id": "AE",
+   "name": "WINGED_OCTOROK",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 8,
+   "y": 5,
+   "entity_id": "BA",
+   "name": "BOMBER",
+   "class": "enemy",
+   "placed_as": 10
+  }
+ ],
+ "key_sources": [],
+ "chest": null,
+ "warps": [],
+ "arrivals": [],
+ "stats": {
+  "category_counts": {
+   "wall": 33,
+   "floor": 42,
+   "water": 1,
+   "player": 1,
+   "enemy": 3
+  },
+  "num_room_objects": 27,
+  "num_entities": 3,
+  "num_enemies": 3,
+  "tags": {
+   "cliff": 13,
+   "tree": 19,
+   "steps": 2,
+   "pit": 1
+  }
+ },
+ "render": {
+  "animation_id": 3,
+  "floor_object": "04"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

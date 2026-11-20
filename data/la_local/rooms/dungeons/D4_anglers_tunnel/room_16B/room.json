@@ -1,0 +1,880 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "16B",
+ "region": "indoor",
+ "group": "dungeons/D4_anglers_tunnel",
+ "group_name": "Angler's Tunnel",
+ "map_id": "03",
+ "position": {
+  "table": {
+   "x": 11,
+   "y": 6
+  },
+  "layout": {
+   "layout": 3,
+   "x": 6,
+   "y": 3
+  },
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "valid": true,
+ "discard_reasons": [],
+ "notes": [
+  "entita' PEAHAT in (5,3) non messa in griglia: cella 'water' non sovrascrivibile",
+  "entita' WATER_TEKTITE in (3,4) non messa in griglia: cella 'water' non sovrascrivibile"
+ ],
+ "grid_ascii": [
+  " ####.####",
+  " #~~~....#",
+  " #~~~~~.M#",
+  " #~~~~~..#",
+  "##~~~~...#",
+  "#~~~...MB#",
+  "#P......B#",
+  "#........#"
+ ],
+ "grid_no_entities_ascii": [
+  " ####.####",
+  " #~~~....#",
+  " #~~~~~..#",
+  " #~~~~~..#",
+  "##~~~~...#",
+  "#~~~....B#",
+  "#.......B#",
+  "#........#"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 1,
+   "y": 6,
+   "source": "border_opening"
+  }
+ ],
+ "openings": [
+  {
+   "x": 5,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 1,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  },
+  {
+   "x": 2,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  },
+  {
+   "x": 3,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  },
+  {
+   "x": 4,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  },
+  {
+   "x": 5,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  },
+  {
+   "x": 6,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  },
+  {
+   "x": 7,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  }
+ ],
+ "doors": 0,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   0,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   0,
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   0,
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   2,
+   10,
+   1
+  ],
+  [
+   0,
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   3,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   10,
+   7,
+   1
+  ],
+  [
+   1,
+   9,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   7,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   0,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   0,
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   0,
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   2,
+   2,
+   1
+  ],
+  [
+   0,
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   3,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   7,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   7,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   0,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   0,
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   0,
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   2,
+   10,
+   1
+  ],
+  [
+   0,
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   3,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   10,
+   7,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   7,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   0,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   0,
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   0,
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   2,
+   2,
+   1
+  ],
+  [
+   0,
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   3,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   7,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   7,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "03",
+   "25",
+   "21",
+   "C7",
+   "29",
+   "1B",
+   "2A",
+   "C7",
+   "21",
+   "26"
+  ],
+  [
+   "03",
+   "23",
+   "0E",
+   "0E",
+   "0E",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "24"
+  ],
+  [
+   "03",
+   "23",
+   "0E",
+   "0E",
+   "0E",
+   "0E",
+   "0E",
+   "1B",
+   "1B",
+   "24"
+  ],
+  [
+   "03",
+   "23",
+   "0E",
+   "0E",
+   "0E",
+   "0E",
+   "0E",
+   "1B",
+   "1B",
+   "24"
+  ],
+  [
+   "25",
+   "29",
+   "0E",
+   "0E",
+   "0E",
+   "0E",
+   "1B",
+   "1B",
+   "1B",
+   "24"
+  ],
+  [
+   "23",
+   "0E",
+   "0E",
+   "0E",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "20",
+   "24"
+  ],
+  [
+   "23",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "20",
+   "24"
+  ],
+  [
+   "23",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "0D",
+   "24"
+  ]
+ ],
+ "physics": [
+  [
+   "00",
+   "01",
+   "D3",
+   "D3",
+   "01",
+   "05",
+   "01",
+   "D3",
+   "D3",
+   "01"
+  ],
+  [
+   "00",
+   "D0",
+   "07",
+   "07",
+   "07",
+   "05",
+   "05",
+   "05",
+   "05",
+   "D1"
+  ],
+  [
+   "00",
+   "D0",
+   "07",
+   "07",
+   "07",
+   "07",
+   "07",
+   "05",
+   "05",
+   "D1"
+  ],
+  [
+   "00",
+   "D0",
+   "07",
+   "07",
+   "07",
+   "07",
+   "07",
+   "05",
+   "05",
+   "D1"
+  ],
+  [
+   "01",
+   "01",
+   "07",
+   "07",
+   "07",
+   "07",
+   "05",
+   "05",
+   "05",
+   "D1"
+  ],
+  [
+   "D0",
+   "07",
+   "07",
+   "07",
+   "05",
+   "05",
+   "05",
+   "05",
+   "30",
+   "D1"
+  ],
+  [
+   "D0",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "30",
+   "D1"
+  ],
+  [
+   "D0",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "00",
+   "D1"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 8,
+   "y": 2,
+   "entity_id": "99",
+   "name": "WATER_TEKTITE",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 5,
+   "y": 3,
+   "entity_id": "A0",
+   "name": "PEAHAT",
+   "class": "enemy",
+   "placed_as": null,
+   "skipped": "cella 'water' non sovrascrivibile"
+  },
+  {
+   "x": 3,
+   "y": 4,
+   "entity_id": "99",
+   "name": "WATER_TEKTITE",
+   "class": "enemy",
+   "placed_as": null,
+   "skipped": "cella 'water' non sovrascrivibile"
+  },
+  {
+   "x": 7,
+   "y": 5,
+   "entity_id": "A0",
+   "name": "PEAHAT",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 8,
+   "y": 5,
+   "entity_id": "38",
+   "name": "DROPPABLE_BOMBS",
+   "class": "item",
+   "placed_as": null
+  }
+ ],
+ "key_sources": [],
+ "chest": null,
+ "warps": [],
+ "arrivals": [],
+ "stats": {
+  "category_counts": {
+   "void": 4,
+   "wall": 23,
+   "floor": 28,
+   "water": 20,
+   "block": 2,
+   "player": 1,
+   "enemy": 2
+  },
+  "num_room_objects": 22,
+  "num_entities": 5,
+  "num_enemies": 2,
+  "tags": {
+   "filler": 4,
+   "shallow_water": 30,
+   "deep_water": 20,
+   "liftable": 2
+  }
+ },
+ "render": {
+  "animation_id": 12,
+  "floor_object": "3E"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

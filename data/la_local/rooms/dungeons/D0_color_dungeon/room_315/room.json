@@ -1,0 +1,979 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "315",
+ "region": "color",
+ "group": "dungeons/D0_color_dungeon",
+ "group_name": "Color Dungeon",
+ "map_id": "FF",
+ "position": {
+  "table": {
+   "x": 5,
+   "y": 1
+  },
+  "layout": {
+   "layout": 11,
+   "x": 5,
+   "y": 7
+  },
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "valid": false,
+ "discard_reasons": [
+  "special:color_tile"
+ ],
+ "notes": [],
+ "grid_ascii": [
+  "####.#####",
+  "#BB....BB#",
+  "#.M....M.#",
+  ".P..~~...#",
+  "#...~~...#",
+  "#.M....M.#",
+  "#BB....BB#",
+  "##########"
+ ],
+ "grid_no_entities_ascii": [
+  "####.#####",
+  "#BB....BB#",
+  "#........#",
+  "....~~...#",
+  "#...~~...#",
+  "#........#",
+  "#BB....BB#",
+  "##########"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 1,
+   "y": 3,
+   "source": "border_opening"
+  }
+ ],
+ "openings": [
+  {
+   "x": 4,
+   "y": 0,
+   "side": "top",
+   "kind": "door"
+  },
+  {
+   "x": 0,
+   "y": 3,
+   "side": "left",
+   "kind": "door"
+  }
+ ],
+ "doors": 0,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   7,
+   7,
+   2,
+   2,
+   2,
+   2,
+   7,
+   7,
+   1
+  ],
+  [
+   1,
+   2,
+   10,
+   2,
+   2,
+   2,
+   2,
+   10,
+   2,
+   1
+  ],
+  [
+   2,
+   9,
+   2,
+   2,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   10,
+   2,
+   2,
+   2,
+   2,
+   10,
+   2,
+   1
+  ],
+  [
+   1,
+   7,
+   7,
+   2,
+   2,
+   2,
+   2,
+   7,
+   7,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   7,
+   7,
+   2,
+   2,
+   2,
+   2,
+   7,
+   7,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   7,
+   7,
+   2,
+   2,
+   2,
+   2,
+   7,
+   7,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   7,
+   7,
+   2,
+   2,
+   2,
+   2,
+   7,
+   7,
+   1
+  ],
+  [
+   1,
+   2,
+   10,
+   2,
+   2,
+   2,
+   2,
+   10,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   10,
+   2,
+   2,
+   2,
+   2,
+   10,
+   2,
+   1
+  ],
+  [
+   1,
+   7,
+   7,
+   2,
+   2,
+   2,
+   2,
+   7,
+   7,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   7,
+   7,
+   2,
+   2,
+   2,
+   2,
+   7,
+   7,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   7,
+   7,
+   2,
+   2,
+   2,
+   2,
+   7,
+   7,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "25",
+   "21",
+   "C7",
+   "21",
+   "35",
+   "36",
+   "21",
+   "C7",
+   "21",
+   "26"
+  ],
+  [
+   "23",
+   "20",
+   "20",
+   "51",
+   "0D",
+   "0D",
+   "51",
+   "20",
+   "20",
+   "24"
+  ],
+  [
+   "23",
+   "51",
+   "51",
+   "51",
+   "0D",
+   "0D",
+   "51",
+   "51",
+   "51",
+   "24"
+  ],
+  [
+   "39",
+   "0D",
+   "0D",
+   "0D",
+   "AF",
+   "AF",
+   "0D",
+   "0D",
+   "0D",
+   "24"
+  ],
+  [
+   "3A",
+   "0D",
+   "0D",
+   "0D",
+   "B0",
+   "B0",
+   "0D",
+   "0D",
+   "0D",
+   "24"
+  ],
+  [
+   "23",
+   "50",
+   "50",
+   "50",
+   "0D",
+   "0D",
+   "50",
+   "50",
+   "50",
+   "24"
+  ],
+  [
+   "23",
+   "20",
+   "20",
+   "50",
+   "0D",
+   "0D",
+   "50",
+   "20",
+   "20",
+   "24"
+  ],
+  [
+   "27",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "28"
+  ]
+ ],
+ "physics": [
+  [
+   "01",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "01"
+  ],
+  [
+   "D0",
+   "30",
+   "30",
+   "00",
+   "00",
+   "00",
+   "00",
+   "30",
+   "30",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "50",
+   "50",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "50",
+   "50",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "30",
+   "30",
+   "00",
+   "00",
+   "00",
+   "00",
+   "30",
+   "30",
+   "D1"
+  ],
+  [
+   "01",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   true,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   true,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [
+  {
+   "x": 3,
+   "y": 1,
+   "special": "color_tile",
+   "source": "object",
+   "object": "51",
+   "name": "color tile (changes color when stepped on)"
+  },
+  {
+   "x": 6,
+   "y": 1,
+   "special": "color_tile",
+   "source": "object",
+   "object": "51",
+   "name": "color tile (changes color when stepped on)"
+  },
+  {
+   "x": 1,
+   "y": 2,
+   "special": "color_tile",
+   "source": "object",
+   "object": "51",
+   "name": "color tile (changes color when stepped on)"
+  },
+  {
+   "x": 2,
+   "y": 2,
+   "special": "color_tile",
+   "source": "object",
+   "object": "51",
+   "name": "color tile (changes color when stepped on)"
+  },
+  {
+   "x": 3,
+   "y": 2,
+   "special": "color_tile",
+   "source": "object",
+   "object": "51",
+   "name": "color tile (changes color when stepped on)"
+  },
+  {
+   "x": 6,
+   "y": 2,
+   "special": "color_tile",
+   "source": "object",
+   "object": "51",
+   "name": "color tile (changes color when stepped on)"
+  },
+  {
+   "x": 7,
+   "y": 2,
+   "special": "color_tile",
+   "source": "object",
+   "object": "51",
+   "name": "color tile (changes color when stepped on)"
+  },
+  {
+   "x": 8,
+   "y": 2,
+   "special": "color_tile",
+   "source": "object",
+   "object": "51",
+   "name": "color tile (changes color when stepped on)"
+  },
+  {
+   "x": 1,
+   "y": 5,
+   "special": "color_tile",
+   "source": "object",
+   "object": "50",
+   "name": "color tile (changes color when stepped on)"
+  },
+  {
+   "x": 2,
+   "y": 5,
+   "special": "color_tile",
+   "source": "object",
+   "object": "50",
+   "name": "color tile (changes color when stepped on)"
+  },
+  {
+   "x": 3,
+   "y": 5,
+   "special": "color_tile",
+   "source": "object",
+   "object": "50",
+   "name": "color tile (changes color when stepped on)"
+  },
+  {
+   "x": 6,
+   "y": 5,
+   "special": "color_tile",
+   "source": "object",
+   "object": "50",
+   "name": "color tile (changes color when stepped on)"
+  },
+  {
+   "x": 7,
+   "y": 5,
+   "special": "color_tile",
+   "source": "object",
+   "object": "50",
+   "name": "color tile (changes color when stepped on)"
+  },
+  {
+   "x": 8,
+   "y": 5,
+   "special": "color_tile",
+   "source": "object",
+   "object": "50",
+   "name": "color tile (changes color when stepped on)"
+  },
+  {
+   "x": 3,
+   "y": 6,
+   "special": "color_tile",
+   "source": "object",
+   "object": "50",
+   "name": "color tile (changes color when stepped on)"
+  },
+  {
+   "x": 6,
+   "y": 6,
+   "special": "color_tile",
+   "source": "object",
+   "object": "50",
+   "name": "color tile (changes color when stepped on)"
+  }
+ ],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 2,
+   "y": 2,
+   "entity_id": "EC",
+   "name": "COLOR_GHOUL_RED",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 7,
+   "y": 2,
+   "entity_id": "EC",
+   "name": "COLOR_GHOUL_RED",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 2,
+   "y": 5,
+   "entity_id": "ED",
+   "name": "COLOR_GHOUL_GREEN",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 7,
+   "y": 5,
+   "entity_id": "ED",
+   "name": "COLOR_GHOUL_GREEN",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 8,
+   "y": 1,
+   "entity_id": "3B",
+   "name": "DROPPABLE_MAGIC_POWDER",
+   "class": "item",
+   "placed_as": null
+  },
+  {
+   "x": 1,
+   "y": 6,
+   "entity_id": "2E",
+   "name": "DROPPABLE_RUPEE",
+   "class": "item",
+   "placed_as": null
+  }
+ ],
+ "key_sources": [],
+ "chest": null,
+ "warps": [],
+ "arrivals": [],
+ "stats": {
+  "category_counts": {
+   "wall": 30,
+   "floor": 33,
+   "water": 4,
+   "block": 8,
+   "player": 1,
+   "enemy": 4
+  },
+  "num_room_objects": 18,
+  "num_entities": 6,
+  "num_enemies": 4,
+  "tags": {
+   "shutter_door": 4,
+   "door_half1": 2,
+   "door_half2": 2,
+   "liftable": 8,
+   "color_tile": 16,
+   "pit": 4
+  }
+ },
+ "render": {
+  "animation_id": 4,
+  "floor_object": "0D"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

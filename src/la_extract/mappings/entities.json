@@ -1,0 +1,1658 @@
+{
+ "schema": "leveledit_entities/1",
+ "description": "Entita' delle stanze (nemici, NPC, oggetti, meccanismi). Chiave = entity id esadecimale; nomi da LADXR entityData.NAME.",
+ "classes": {
+  "enemy": "nemico -> M",
+  "miniboss": "miniboss -> M",
+  "boss": "boss -> M",
+  "enemy_part": "parte di un altro nemico, ignorata",
+  "solid_object": "oggetto solido (statua, telefono...) -> muro",
+  "liftable_object": "oggetto sollevabile/spingibile -> blocco",
+  "key_source": "fonte di chiave: annotata nei metadati, non messa in griglia",
+  "item": "oggetto raccoglibile: ignorato",
+  "npc": "personaggio non ostile: ignorato (annotato)",
+  "mechanism": "meccanismo; se ha 'special' vale la special_policy",
+  "event": "trigger di eventi: ignorato",
+  "sidescroll": "solo stanze a scorrimento laterale",
+  "technical": "proiettili/effetti/id non usati nelle stanze"
+ },
+ "entities": {
+  "00": {
+   "name": "ARROW",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "01": {
+   "name": "BOOMERANG",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "02": {
+   "name": "BOMB",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "03": {
+   "name": "HOOKSHOT_CHAIN",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "04": {
+   "name": "HOOKSHOT_HIT",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "05": {
+   "name": "LIFTABLE_ROCK",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "06": {
+   "name": "PUSHED_BLOCK",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "07": {
+   "name": "CHEST_WITH_ITEM",
+   "class": "item",
+   "category": null,
+   "count_in_game": 0
+  },
+  "08": {
+   "name": "MAGIC_POWDER_SPRINKLE",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "09": {
+   "name": "OCTOROCK",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 19
+  },
+  "0A": {
+   "name": "OCTOROCK_ROCK",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "0B": {
+   "name": "MOBLIN",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 72
+  },
+  "0C": {
+   "name": "MOBLIN_ARROW",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "0D": {
+   "name": "TEKTITE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 19
+  },
+  "0E": {
+   "name": "LEEVER",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 18
+  },
+  "0F": {
+   "name": "ARMOS_STATUE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 21
+  },
+  "10": {
+   "name": "HIDING_GHINI",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 11
+  },
+  "11": {
+   "name": "GIANT_GHINI",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "12": {
+   "name": "GHINI",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 4
+  },
+  "13": {
+   "name": "BROKEN_HEART_CONTAINER",
+   "class": "item",
+   "category": null,
+   "count_in_game": 0
+  },
+  "14": {
+   "name": "MOBLIN_SWORD",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 21
+  },
+  "15": {
+   "name": "ANTI_FAIRY",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 13
+  },
+  "16": {
+   "name": "SPARK_COUNTER_CLOCKWISE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 31
+  },
+  "17": {
+   "name": "SPARK_CLOCKWISE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 25
+  },
+  "18": {
+   "name": "POLS_VOICE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 6
+  },
+  "19": {
+   "name": "KEESE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 81
+  },
+  "1A": {
+   "name": "STALFOS_AGGRESSIVE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 12
+  },
+  "1B": {
+   "name": "GEL",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 42
+  },
+  "1C": {
+   "name": "MINI_GEL",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 12
+  },
+  "1D": {
+   "name": "DISABLED",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "1E": {
+   "name": "STALFOS_EVASIVE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 15
+  },
+  "1F": {
+   "name": "GIBDO",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 5
+  },
+  "20": {
+   "name": "HARDHAT_BEETLE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 14
+  },
+  "21": {
+   "name": "WIZROBE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 18
+  },
+  "22": {
+   "name": "WIZROBE_PROJECTILE",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "23": {
+   "name": "LIKE_LIKE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 14
+  },
+  "24": {
+   "name": "IRON_MASK",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 16
+  },
+  "25": {
+   "name": "SMALL_EXPLOSION_ENEMY",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "26": {
+   "name": "SMALL_EXPLOSION_ENEMY_2",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "27": {
+   "name": "SPIKE_TRAP",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 36
+  },
+  "28": {
+   "name": "MIMIC",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 18
+  },
+  "29": {
+   "name": "MINI_MOLDORM",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 9
+  },
+  "2A": {
+   "name": "LASER",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 10
+  },
+  "2B": {
+   "name": "LASER_BEAM",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "2C": {
+   "name": "SPIKED_BEETLE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 10
+  },
+  "2D": {
+   "name": "DROPPABLE_HEART",
+   "class": "item",
+   "category": null,
+   "count_in_game": 53
+  },
+  "2E": {
+   "name": "DROPPABLE_RUPEE",
+   "class": "item",
+   "category": null,
+   "count_in_game": 17
+  },
+  "2F": {
+   "name": "DROPPABLE_FAIRY",
+   "class": "item",
+   "category": null,
+   "count_in_game": 14
+  },
+  "30": {
+   "name": "KEY_DROP_POINT",
+   "class": "key_source",
+   "category": null,
+   "count_in_game": 3
+  },
+  "31": {
+   "name": "SWORD",
+   "class": "item",
+   "category": null,
+   "count_in_game": 1
+  },
+  "32": {
+   "name": "32",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "33": {
+   "name": "PIECE_OF_POWER",
+   "class": "item",
+   "category": null,
+   "count_in_game": 0
+  },
+  "34": {
+   "name": "GUARDIAN_ACORN",
+   "class": "item",
+   "category": null,
+   "count_in_game": 0
+  },
+  "35": {
+   "name": "HEART_PIECE",
+   "class": "item",
+   "category": null,
+   "count_in_game": 9
+  },
+  "36": {
+   "name": "HEART_CONTAINER",
+   "class": "item",
+   "category": null,
+   "count_in_game": 0
+  },
+  "37": {
+   "name": "DROPPABLE_ARROWS",
+   "class": "item",
+   "category": null,
+   "count_in_game": 8
+  },
+  "38": {
+   "name": "DROPPABLE_BOMBS",
+   "class": "item",
+   "category": null,
+   "count_in_game": 17
+  },
+  "39": {
+   "name": "INSTRUMENT_OF_THE_SIRENS",
+   "class": "item",
+   "category": null,
+   "count_in_game": 8
+  },
+  "3A": {
+   "name": "SLEEPY_TOADSTOOL",
+   "class": "item",
+   "category": null,
+   "count_in_game": 1
+  },
+  "3B": {
+   "name": "DROPPABLE_MAGIC_POWDER",
+   "class": "item",
+   "category": null,
+   "count_in_game": 4
+  },
+  "3C": {
+   "name": "HIDING_SLIME_KEY",
+   "class": "key_source",
+   "category": null,
+   "count_in_game": 1
+  },
+  "3D": {
+   "name": "DROPPABLE_SECRET_SEASHELL",
+   "class": "item",
+   "category": null,
+   "count_in_game": 16
+  },
+  "3E": {
+   "name": "MARIN",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 3
+  },
+  "3F": {
+   "name": "RACOON",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 2
+  },
+  "40": {
+   "name": "WITCH",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "41": {
+   "name": "OWL_EVENT",
+   "class": "event",
+   "category": null,
+   "count_in_game": 15
+  },
+  "42": {
+   "name": "OWL_STATUE",
+   "class": "solid_object",
+   "category": 1,
+   "ascii": "#",
+   "count_in_game": 25
+  },
+  "43": {
+   "name": "SEASHELL_MANSION_TREES",
+   "class": "mechanism",
+   "category": null,
+   "count_in_game": 2
+  },
+  "44": {
+   "name": "YARNA_TALKING_BONES",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 2
+  },
+  "45": {
+   "name": "BOULDERS",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 2
+  },
+  "46": {
+   "name": "MOVING_BLOCK_LEFT_TOP",
+   "class": "mechanism",
+   "category": null,
+   "special": "moving_block",
+   "count_in_game": 2
+  },
+  "47": {
+   "name": "MOVING_BLOCK_LEFT_BOTTOM",
+   "class": "mechanism",
+   "category": null,
+   "special": "moving_block",
+   "count_in_game": 2
+  },
+  "48": {
+   "name": "MOVING_BLOCK_BOTTOM_LEFT",
+   "class": "mechanism",
+   "category": null,
+   "special": "moving_block",
+   "count_in_game": 1
+  },
+  "49": {
+   "name": "MOVING_BLOCK_BOTTOM_RIGHT",
+   "class": "mechanism",
+   "category": null,
+   "special": "moving_block",
+   "count_in_game": 1
+  },
+  "4A": {
+   "name": "COLOR_DUNGEON_BOOK",
+   "class": "mechanism",
+   "category": null,
+   "count_in_game": 1
+  },
+  "4B": {
+   "name": "POT",
+   "class": "liftable_object",
+   "category": 7,
+   "ascii": "B",
+   "count_in_game": 0
+  },
+  "4C": {
+   "name": "DISABLED",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "4D": {
+   "name": "SHOP_OWNER",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "4E": {
+   "name": "4D",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "4F": {
+   "name": "TRENDY_GAME_OWNER",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "50": {
+   "name": "BOO_BUDDY",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 2
+  },
+  "51": {
+   "name": "KNIGHT",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "52": {
+   "name": "TRACTOR_DEVICE",
+   "class": "mechanism",
+   "category": null,
+   "special": "tractor_device",
+   "count_in_game": 3
+  },
+  "53": {
+   "name": "TRACTOR_DEVICE_REVERSE",
+   "class": "mechanism",
+   "category": null,
+   "special": "tractor_device",
+   "count_in_game": 1
+  },
+  "54": {
+   "name": "FISHERMAN_FISHING_GAME",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 2
+  },
+  "55": {
+   "name": "BOUNCING_BOMBITE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 7
+  },
+  "56": {
+   "name": "TIMER_BOMBITE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 3
+  },
+  "57": {
+   "name": "PAIRODD",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 9
+  },
+  "58": {
+   "name": "PAIRODD_PROJECTILE",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "59": {
+   "name": "MOLDORM",
+   "class": "boss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "5A": {
+   "name": "FACADE",
+   "class": "boss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "5B": {
+   "name": "SLIME_EYE",
+   "class": "boss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "5C": {
+   "name": "GENIE",
+   "class": "boss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "5D": {
+   "name": "SLIME_EEL",
+   "class": "boss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "5E": {
+   "name": "GHOMA",
+   "class": "miniboss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 2
+  },
+  "5F": {
+   "name": "MASTER_STALFOS",
+   "class": "miniboss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 4
+  },
+  "60": {
+   "name": "DODONGO_SNAKE",
+   "class": "miniboss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 6
+  },
+  "61": {
+   "name": "WARP",
+   "class": "mechanism",
+   "category": null,
+   "special": "teleport",
+   "count_in_game": 21
+  },
+  "62": {
+   "name": "HOT_HEAD",
+   "class": "boss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "63": {
+   "name": "EVIL_EAGLE",
+   "class": "boss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "64": {
+   "name": "SOUTH_FACE_SHRINE_DOOR",
+   "class": "mechanism",
+   "category": null,
+   "count_in_game": 0
+  },
+  "65": {
+   "name": "ANGLER_FISH",
+   "class": "boss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "66": {
+   "name": "CRYSTAL_SWITCH",
+   "class": "mechanism",
+   "category": null,
+   "special": "switch",
+   "count_in_game": 18
+  },
+  "67": {
+   "name": "67",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "68": {
+   "name": "68",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "69": {
+   "name": "MOVING_BLOCK_MOVER",
+   "class": "mechanism",
+   "category": null,
+   "special": "moving_block",
+   "count_in_game": 2
+  },
+  "6A": {
+   "name": "RAFT_RAFT_OWNER",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 2
+  },
+  "6B": {
+   "name": "TEXT_DEBUGGER",
+   "class": "event",
+   "category": null,
+   "count_in_game": 0
+  },
+  "6C": {
+   "name": "CUCCO",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 8
+  },
+  "6D": {
+   "name": "BOW_WOW",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 2
+  },
+  "6E": {
+   "name": "BUTTERFLY",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 39
+  },
+  "6F": {
+   "name": "DOG",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 3
+  },
+  "70": {
+   "name": "KID_70",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "71": {
+   "name": "KID_71",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "72": {
+   "name": "KID_72",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "73": {
+   "name": "KID_73",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 2
+  },
+  "74": {
+   "name": "PAPAHLS_WIFE",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "75": {
+   "name": "GRANDMA_ULRIRA",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 2
+  },
+  "76": {
+   "name": "MR_WRITE",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 2
+  },
+  "77": {
+   "name": "GRANDPA_ULRIRA",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "78": {
+   "name": "YIP_YIP",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 2
+  },
+  "79": {
+   "name": "MADAM_MEOWMEOW",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "7A": {
+   "name": "CROW",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 13
+  },
+  "7B": {
+   "name": "CRAZY_TRACY",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "7C": {
+   "name": "GIANT_GOPONGA_FLOWER",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 2
+  },
+  "7D": {
+   "name": "GOPONGA_FLOWER_PROJECTILE",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "7E": {
+   "name": "GOPONGA_FLOWER",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 8
+  },
+  "7F": {
+   "name": "TURTLE_ROCK_HEAD",
+   "class": "miniboss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "80": {
+   "name": "TELEPHONE",
+   "class": "solid_object",
+   "category": 1,
+   "ascii": "#",
+   "count_in_game": 9
+  },
+  "81": {
+   "name": "ROLLING_BONES",
+   "class": "miniboss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 2
+  },
+  "82": {
+   "name": "ROLLING_BONES_BAR",
+   "class": "enemy_part",
+   "category": null,
+   "count_in_game": 2
+  },
+  "83": {
+   "name": "DREAM_SHRINE_BED",
+   "class": "solid_object",
+   "category": 1,
+   "ascii": "#",
+   "count_in_game": 1
+  },
+  "84": {
+   "name": "BIG_FAIRY",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 5
+  },
+  "85": {
+   "name": "MR_WRITES_BIRD",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 2
+  },
+  "86": {
+   "name": "FLOATING_ITEM",
+   "class": "item",
+   "category": null,
+   "count_in_game": 47
+  },
+  "87": {
+   "name": "DESERT_LANMOLA",
+   "class": "miniboss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "88": {
+   "name": "ARMOS_KNIGHT",
+   "class": "miniboss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "89": {
+   "name": "HINOX",
+   "class": "miniboss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 3
+  },
+  "8A": {
+   "name": "TILE_GLINT_SHOWN",
+   "class": "mechanism",
+   "category": null,
+   "count_in_game": 1
+  },
+  "8B": {
+   "name": "TILE_GLINT_HIDDEN",
+   "class": "mechanism",
+   "category": null,
+   "count_in_game": 1
+  },
+  "8C": {
+   "name": "8C",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "8D": {
+   "name": "8D",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "8E": {
+   "name": "CUE_BALL",
+   "class": "miniboss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 2
+  },
+  "8F": {
+   "name": "MASKED_MIMIC_GORIYA",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 5
+  },
+  "90": {
+   "name": "THREE_OF_A_KIND",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 9
+  },
+  "91": {
+   "name": "ANTI_KIRBY",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 2
+  },
+  "92": {
+   "name": "SMASHER",
+   "class": "miniboss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 2
+  },
+  "93": {
+   "name": "MAD_BOMBER",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "94": {
+   "name": "KANALET_BOMBABLE_WALL",
+   "class": "mechanism",
+   "category": null,
+   "count_in_game": 2
+  },
+  "95": {
+   "name": "RICHARD",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "96": {
+   "name": "RICHARD_FROG",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 4
+  },
+  "97": {
+   "name": "DIVE_SPOT",
+   "class": "mechanism",
+   "category": null,
+   "count_in_game": 3
+  },
+  "98": {
+   "name": "HORSE_PIECE",
+   "class": "liftable_object",
+   "category": 7,
+   "ascii": "B",
+   "count_in_game": 10
+  },
+  "99": {
+   "name": "WATER_TEKTITE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 34
+  },
+  "9A": {
+   "name": "FLYING_TILES",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 3
+  },
+  "9B": {
+   "name": "HIDING_GEL",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 172
+  },
+  "9C": {
+   "name": "STAR",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 14
+  },
+  "9D": {
+   "name": "LIFTABLE_STATUE",
+   "class": "liftable_object",
+   "category": 7,
+   "ascii": "B",
+   "count_in_game": 15
+  },
+  "9E": {
+   "name": "FIREBALL_SHOOTER",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 21
+  },
+  "9F": {
+   "name": "GOOMBA",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 33
+  },
+  "A0": {
+   "name": "PEAHAT",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 22
+  },
+  "A1": {
+   "name": "SNAKE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 15
+  },
+  "A2": {
+   "name": "PIRANHA_PLANT",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 4
+  },
+  "A3": {
+   "name": "SIDE_VIEW_PLATFORM_HORIZONTAL",
+   "class": "sidescroll",
+   "category": null,
+   "count_in_game": 4
+  },
+  "A4": {
+   "name": "SIDE_VIEW_PLATFORM_VERTICAL",
+   "class": "sidescroll",
+   "category": null,
+   "count_in_game": 4
+  },
+  "A5": {
+   "name": "SIDE_VIEW_PLATFORM",
+   "class": "sidescroll",
+   "category": null,
+   "count_in_game": 2
+  },
+  "A6": {
+   "name": "SIDE_VIEW_WEIGHTS",
+   "class": "sidescroll",
+   "category": null,
+   "count_in_game": 6
+  },
+  "A7": {
+   "name": "SMASHABLE_PILLAR",
+   "class": "solid_object",
+   "category": 1,
+   "ascii": "#",
+   "count_in_game": 4
+  },
+  "A8": {
+   "name": "WRECKING_BALL",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 0
+  },
+  "A9": {
+   "name": "BLOOPER",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 4
+  },
+  "AA": {
+   "name": "CHEEP_CHEEP_HORIZONTAL",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 2
+  },
+  "AB": {
+   "name": "CHEEP_CHEEP_VERTICAL",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 2
+  },
+  "AC": {
+   "name": "CHEEP_CHEEP_JUMPING",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 4
+  },
+  "AD": {
+   "name": "KIKI_THE_MONKEY",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "AE": {
+   "name": "WINGED_OCTOROK",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 13
+  },
+  "AF": {
+   "name": "TRADING_ITEM",
+   "class": "item",
+   "category": null,
+   "count_in_game": 2
+  },
+  "B0": {
+   "name": "PINCER",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 10
+  },
+  "B1": {
+   "name": "HOLE_FILLER",
+   "class": "mechanism",
+   "category": null,
+   "count_in_game": 4
+  },
+  "B2": {
+   "name": "BEETLE_SPAWNER",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "B3": {
+   "name": "HONEYCOMB",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "B4": {
+   "name": "TARIN",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "B5": {
+   "name": "BEAR",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "B6": {
+   "name": "PAPAHL",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 2
+  },
+  "B7": {
+   "name": "MERMAID",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "B8": {
+   "name": "FISHERMAN_UNDER_BRIDGE",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "B9": {
+   "name": "BUZZ_BLOB",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 13
+  },
+  "BA": {
+   "name": "BOMBER",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 14
+  },
+  "BB": {
+   "name": "BUSH_CRAWLER",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 18
+  },
+  "BC": {
+   "name": "GRIM_CREEPER",
+   "class": "miniboss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "BD": {
+   "name": "VIRE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 4
+  },
+  "BE": {
+   "name": "BLAINO",
+   "class": "miniboss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "BF": {
+   "name": "ZOMBIE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 3
+  },
+  "C0": {
+   "name": "MAZE_SIGNPOST",
+   "class": "solid_object",
+   "category": 1,
+   "ascii": "#",
+   "count_in_game": 5
+  },
+  "C1": {
+   "name": "MARIN_AT_THE_SHORE",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "C2": {
+   "name": "MARIN_AT_TAL_TAL_HEIGHTS",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "C3": {
+   "name": "MAMU_AND_FROGS",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 3
+  },
+  "C4": {
+   "name": "WALRUS",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "C5": {
+   "name": "URCHIN",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 6
+  },
+  "C6": {
+   "name": "SAND_CRAB",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 3
+  },
+  "C7": {
+   "name": "MANBO_AND_FISHES",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 3
+  },
+  "C8": {
+   "name": "BUNNY_CALLING_MARIN",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 0
+  },
+  "C9": {
+   "name": "MUSICAL_NOTE",
+   "class": "event",
+   "category": null,
+   "count_in_game": 0
+  },
+  "CA": {
+   "name": "MAD_BATTER",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 3
+  },
+  "CB": {
+   "name": "ZORA",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 13
+  },
+  "CC": {
+   "name": "FISH",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 16
+  },
+  "CD": {
+   "name": "BANANAS_SCHULE_SALE",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 6
+  },
+  "CE": {
+   "name": "MERMAID_STATUE",
+   "class": "solid_object",
+   "category": 1,
+   "ascii": "#",
+   "count_in_game": 1
+  },
+  "CF": {
+   "name": "SEASHELL_MANSION",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "D0": {
+   "name": "ANIMAL_D0",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 3
+  },
+  "D1": {
+   "name": "ANIMAL_D1",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "D2": {
+   "name": "ANIMAL_D2",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "D3": {
+   "name": "BUNNY_D3",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 4
+  },
+  "D4": {
+   "name": "GHOST",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 0
+  },
+  "D5": {
+   "name": "ROOSTER",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 0
+  },
+  "D6": {
+   "name": "SIDE_VIEW_POT",
+   "class": "sidescroll",
+   "category": null,
+   "count_in_game": 3
+  },
+  "D7": {
+   "name": "THWIMP",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 7
+  },
+  "D8": {
+   "name": "THWOMP",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 2
+  },
+  "D9": {
+   "name": "THWOMP_RAMMABLE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "DA": {
+   "name": "PODOBOO",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 11
+  },
+  "DB": {
+   "name": "GIANT_BUBBLE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 2
+  },
+  "DC": {
+   "name": "FLYING_ROOSTER_EVENTS",
+   "class": "event",
+   "category": null,
+   "count_in_game": 3
+  },
+  "DD": {
+   "name": "BOOK",
+   "class": "mechanism",
+   "category": null,
+   "count_in_game": 8
+  },
+  "DE": {
+   "name": "EGG_SONG_EVENT",
+   "class": "event",
+   "category": null,
+   "count_in_game": 1
+  },
+  "DF": {
+   "name": "SWORD_BEAM",
+   "class": "technical",
+   "category": null,
+   "count_in_game": 0
+  },
+  "E0": {
+   "name": "MONKEY",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 1
+  },
+  "E1": {
+   "name": "WITCH_RAT",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 3
+  },
+  "E2": {
+   "name": "FLAME_SHOOTER",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "E3": {
+   "name": "POKEY",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 4
+  },
+  "E4": {
+   "name": "MOBLIN_KING",
+   "class": "miniboss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "E5": {
+   "name": "FLOATING_ITEM_2",
+   "class": "item",
+   "category": null,
+   "count_in_game": 38
+  },
+  "E6": {
+   "name": "FINAL_NIGHTMARE",
+   "class": "boss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "E7": {
+   "name": "KANALET_CASTLE_GATE_SWITCH",
+   "class": "mechanism",
+   "category": null,
+   "special": "switch",
+   "count_in_game": 1
+  },
+  "E8": {
+   "name": "ENDING_OWL_STAIR_CLIMBING",
+   "class": "event",
+   "category": null,
+   "count_in_game": 0
+  },
+  "E9": {
+   "name": "COLOR_SHELL_RED",
+   "class": "liftable_object",
+   "category": 7,
+   "ascii": "B",
+   "count_in_game": 2
+  },
+  "EA": {
+   "name": "COLOR_SHELL_GREEN",
+   "class": "liftable_object",
+   "category": 7,
+   "ascii": "B",
+   "count_in_game": 3
+  },
+  "EB": {
+   "name": "COLOR_SHELL_BLUE",
+   "class": "liftable_object",
+   "category": 7,
+   "ascii": "B",
+   "count_in_game": 1
+  },
+  "EC": {
+   "name": "COLOR_GHOUL_RED",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 4
+  },
+  "ED": {
+   "name": "COLOR_GHOUL_GREEN",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 5
+  },
+  "EE": {
+   "name": "COLOR_GHOUL_BLUE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "EF": {
+   "name": "ROTOSWITCH_RED",
+   "class": "mechanism",
+   "category": null,
+   "special": "switch",
+   "count_in_game": 7
+  },
+  "F0": {
+   "name": "ROTOSWITCH_YELLOW",
+   "class": "mechanism",
+   "category": null,
+   "special": "switch",
+   "count_in_game": 1
+  },
+  "F1": {
+   "name": "ROTOSWITCH_BLUE",
+   "class": "mechanism",
+   "category": null,
+   "special": "switch",
+   "count_in_game": 9
+  },
+  "F2": {
+   "name": "FLYING_HOPPER_BOMBS",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 4
+  },
+  "F3": {
+   "name": "HOPPER",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 3
+  },
+  "F4": {
+   "name": "AVALAUNCH",
+   "class": "miniboss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "F5": {
+   "name": "BOUNCING_BOULDER",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 0
+  },
+  "F6": {
+   "name": "COLOR_GUARDIAN_BLUE",
+   "class": "boss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "F7": {
+   "name": "COLOR_GUARDIAN_RED",
+   "class": "boss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "F8": {
+   "name": "GIANT_BUZZ_BLOB",
+   "class": "miniboss",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "F9": {
+   "name": "HARDHIT_BEETLE",
+   "class": "enemy",
+   "category": 10,
+   "ascii": "M",
+   "count_in_game": 1
+  },
+  "FA": {
+   "name": "PHOTOGRAPHER",
+   "class": "npc",
+   "category": null,
+   "count_in_game": 5
+  }
+ }
+}

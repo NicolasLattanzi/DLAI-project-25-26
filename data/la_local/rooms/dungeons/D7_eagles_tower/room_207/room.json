@@ -1,0 +1,1021 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "207",
+ "region": "indoor",
+ "group": "dungeons/D7_eagles_tower",
+ "group_name": "Eagle's Tower",
+ "map_id": "06",
+ "position": {
+  "table": {
+   "x": 7,
+   "y": 0
+  },
+  "layout": {
+   "layout": 6,
+   "x": 2,
+   "y": 5
+  },
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "valid": false,
+ "discard_reasons": [
+  "special:switch_block"
+ ],
+ "notes": [],
+ "grid_ascii": [
+  "##########",
+  "##P.....##",
+  "......M...",
+  "#........#",
+  "#.M..M...#",
+  "####.#####",
+  "####.#####",
+  "...#.#####"
+ ],
+ "grid_no_entities_ascii": [
+  "##########",
+  "##......##",
+  "..........",
+  "#........#",
+  "#........#",
+  "####.#####",
+  "####.#####",
+  "...#.#####"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 2,
+   "y": 1,
+   "source": "warp_arrival"
+  }
+ ],
+ "openings": [
+  {
+   "x": 0,
+   "y": 2,
+   "side": "left",
+   "kind": "corridor"
+  },
+  {
+   "x": 9,
+   "y": 2,
+   "side": "right",
+   "kind": "corridor"
+  },
+  {
+   "x": 4,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  }
+ ],
+ "doors": 0,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   9,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   10,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   10,
+   2,
+   2,
+   10,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   10,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   10,
+   2,
+   2,
+   10,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "25",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "26"
+  ],
+  [
+   "29",
+   "AC",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "AC",
+   "2A"
+  ],
+  [
+   "DB",
+   "DB",
+   "DB",
+   "DB",
+   "DB",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D"
+  ],
+  [
+   "2B",
+   "0D",
+   "0D",
+   "0D",
+   "DB",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "2C"
+  ],
+  [
+   "29",
+   "0D",
+   "0D",
+   "0D",
+   "DB",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "2A"
+  ],
+  [
+   "DC",
+   "DC",
+   "DC",
+   "DC",
+   "DB",
+   "DC",
+   "DC",
+   "DC",
+   "DC",
+   "DC"
+  ],
+  [
+   "22",
+   "22",
+   "22",
+   "2B",
+   "DB",
+   "DC",
+   "DC",
+   "DC",
+   "AC",
+   "2C"
+  ],
+  [
+   "0F",
+   "0F",
+   "0F",
+   "23",
+   "DB",
+   "DC",
+   "2C",
+   "22",
+   "22",
+   "28"
+  ]
+ ],
+ "physics": [
+  [
+   "01",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "01"
+  ],
+  [
+   "01",
+   "01",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "01",
+   "01"
+  ],
+  [
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00"
+  ],
+  [
+   "01",
+   "00",
+   "00",
+   "00",
+   "04",
+   "00",
+   "00",
+   "00",
+   "00",
+   "01"
+  ],
+  [
+   "01",
+   "00",
+   "00",
+   "00",
+   "04",
+   "00",
+   "00",
+   "00",
+   "00",
+   "01"
+  ],
+  [
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04"
+  ],
+  [
+   "D2",
+   "D2",
+   "D2",
+   "01",
+   "04",
+   "04",
+   "04",
+   "04",
+   "01",
+   "01"
+  ],
+  [
+   "00",
+   "00",
+   "00",
+   "D0",
+   "04",
+   "04",
+   "01",
+   "D2",
+   "D2",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [
+  {
+   "x": 0,
+   "y": 2,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 1,
+   "y": 2,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 2,
+   "y": 2,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 3,
+   "y": 2,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 4,
+   "y": 2,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 4,
+   "y": 3,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 4,
+   "y": 4,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 0,
+   "y": 5,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 1,
+   "y": 5,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 2,
+   "y": 5,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 3,
+   "y": 5,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 4,
+   "y": 5,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 5,
+   "y": 5,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 6,
+   "y": 5,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 7,
+   "y": 5,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 8,
+   "y": 5,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 9,
+   "y": 5,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 4,
+   "y": 6,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 5,
+   "y": 6,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 6,
+   "y": 6,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 7,
+   "y": 6,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  },
+  {
+   "x": 4,
+   "y": 7,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DB",
+   "name": "switch block (lowered)"
+  },
+  {
+   "x": 5,
+   "y": 7,
+   "special": "switch_block",
+   "source": "object",
+   "object": "DC",
+   "name": "switch block (raised)"
+  }
+ ],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 5,
+   "y": 4,
+   "entity_id": "1E",
+   "name": "STALFOS_EVASIVE",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 6,
+   "y": 2,
+   "entity_id": "23",
+   "name": "LIKE_LIKE",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 2,
+   "y": 4,
+   "entity_id": "23",
+   "name": "LIKE_LIKE",
+   "class": "enemy",
+   "placed_as": 10
+  }
+ ],
+ "key_sources": [],
+ "chest": null,
+ "warps": [],
+ "arrivals": [
+  {
+   "from_room": "215",
+   "x_px": 0,
+   "y_px": 0,
+   "cell": [
+    0,
+    0
+   ]
+  }
+ ],
+ "stats": {
+  "category_counts": {
+   "wall": 42,
+   "floor": 34,
+   "player": 1,
+   "enemy": 3
+  },
+  "num_room_objects": 24,
+  "num_entities": 3,
+  "num_enemies": 3,
+  "tags": {
+   "torch": 3,
+   "switch_block": 23
+  }
+ },
+ "render": {
+  "animation_id": 4,
+  "floor_object": "0D"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

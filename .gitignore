@@ -1,0 +1,19 @@
+# --- Dati di gioco: MAI su GitHub (uso solo locale, ricerca privata) ---
+# ROM e salvataggi
+*.gb
+*.gbc
+*.sgb
+*.sav
+*.srm
+*.state
+src/rom/
+# Stanze estratte, ritagli, render e tabelle costruite dalla ROM
+# data/la_local/
+# Tool esterni clonati in locale (LADXR, disassembly, ...)
+third_party/
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/

@@ -1,0 +1,2242 @@
+{
+ "schema": "leveledit_objects/1",
+ "region": "overworld",
+ "description": "Oggetti (blocchi 16x16) delle 256 schermate dell'overworld. Chiave = object id esadecimale.",
+ "fields": "name, category (codice LevelEdit), ascii, tags, special (vedi special_policy), passage (varco verso un'altra stanza), physics (flag del gioco), disasm (nome nel disassembly), cells_in_game",
+ "objects": {
+  "00": {
+   "name": "sky",
+   "category": 0,
+   "ascii": " ",
+   "tags": [
+    "sky"
+   ],
+   "physics": "01",
+   "cells_in_game": 147
+  },
+  "03": {
+   "name": "dirt",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "disasm": "OBJECT_DIRT",
+   "cells_in_game": 1107
+  },
+  "04": {
+   "name": "short grass",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "disasm": "OBJECT_SHORT_GRASS",
+   "cells_in_game": 3771
+  },
+  "05": {
+   "name": "Wind Fish's Egg",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "egg"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "06": {
+   "name": "Wind Fish's Egg",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "egg"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "07": {
+   "name": "Wind Fish's Egg",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "egg"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "08": {
+   "name": "ground decoration (leaves/sand marks)",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 579
+  },
+  "09": {
+   "name": "rocky ground",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "disasm": "OBJECT_ROCKY_GROUND",
+   "cells_in_game": 177
+  },
+  "0A": {
+   "name": "tall grass (cuttable)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "grass"
+   ],
+   "physics": "06",
+   "disasm": "OBJECT_TALL_GRASS",
+   "cells_in_game": 957
+  },
+  "0B": {
+   "name": "path",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "disasm": "OBJECT_PATH",
+   "cells_in_game": 270
+  },
+  "0C": {
+   "name": "paved tiles",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "disasm": "OBJECT_TILES",
+   "cells_in_game": 144
+  },
+  "0D": {
+   "name": "decorative paving",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 77
+  },
+  "0E": {
+   "name": "deep water",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "deep_water"
+   ],
+   "physics": "07",
+   "cells_in_game": 1261
+  },
+  "0F": {
+   "name": "water bank (walkable shore edge)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shore"
+   ],
+   "physics": "00",
+   "disasm": "OBJECT_WATER_BANK_BOTTOM",
+   "cells_in_game": 28
+  },
+  "10": {
+   "name": "water bank (walkable shore edge)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shore"
+   ],
+   "physics": "00",
+   "disasm": "OBJECT_WATER_BANK_TOP",
+   "cells_in_game": 25
+  },
+  "11": {
+   "name": "water bank (walkable shore edge)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shore"
+   ],
+   "physics": "00",
+   "disasm": "OBJECT_WATER_BANK_RIGHT",
+   "cells_in_game": 27
+  },
+  "12": {
+   "name": "water bank (walkable shore edge)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shore"
+   ],
+   "physics": "00",
+   "cells_in_game": 31
+  },
+  "13": {
+   "name": "water bank (walkable shore edge)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shore"
+   ],
+   "physics": "00",
+   "disasm": "OBJECT_WATER_BANK_CORNER_TL",
+   "cells_in_game": 6
+  },
+  "14": {
+   "name": "water bank (walkable shore edge)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shore"
+   ],
+   "physics": "00",
+   "cells_in_game": 9
+  },
+  "15": {
+   "name": "water bank (walkable shore edge)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shore"
+   ],
+   "physics": "00",
+   "cells_in_game": 8
+  },
+  "16": {
+   "name": "water bank (walkable shore edge)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shore"
+   ],
+   "physics": "00",
+   "disasm": "OBJECT_WATER_BANK_CORNER_BR",
+   "cells_in_game": 11
+  },
+  "17": {
+   "name": "water bank (walkable shore edge)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shore"
+   ],
+   "physics": "00",
+   "disasm": "OBJECT_WATER_BANK_BR",
+   "cells_in_game": 10
+  },
+  "18": {
+   "name": "water bank (walkable shore edge)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shore"
+   ],
+   "physics": "00",
+   "disasm": "OBJECT_WATER_BANK_BL",
+   "cells_in_game": 11
+  },
+  "19": {
+   "name": "water bank (walkable shore edge)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shore"
+   ],
+   "physics": "00",
+   "disasm": "OBJECT_WATER_BANK_TR",
+   "cells_in_game": 12
+  },
+  "1A": {
+   "name": "water bank (walkable shore edge)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shore"
+   ],
+   "physics": "00",
+   "disasm": "OBJECT_WATER_BANK_TL",
+   "cells_in_game": 15
+  },
+  "1B": {
+   "name": "shallow water",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shallow_water"
+   ],
+   "physics": "05",
+   "disasm": "OBJECT_SHALLOW_WATER",
+   "cells_in_game": 289
+  },
+  "1C": {
+   "name": "sky above sea horizon",
+   "category": 0,
+   "ascii": " ",
+   "tags": [
+    "sky"
+   ],
+   "physics": "01",
+   "cells_in_game": 17
+  },
+  "1D": {
+   "name": "cliff dropping into the sea",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 21
+  },
+  "1E": {
+   "name": "shallow waves",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shallow_water"
+   ],
+   "physics": "05",
+   "cells_in_game": 50
+  },
+  "1F": {
+   "name": "sea (ocean edge)",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "sea"
+   ],
+   "physics": "04",
+   "cells_in_game": 108
+  },
+  "20": {
+   "name": "liftable rock",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "rock",
+    "liftable"
+   ],
+   "note": "il brief mette le rocce in 'muro'; funzionalmente e' rimovibile come un cespuglio (alternativa: blocco)",
+   "physics": "30",
+   "disasm": "OBJECT_LIFTABLE_ROCK",
+   "cells_in_game": 88
+  },
+  "21": {
+   "name": "dense foliage",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 8
+  },
+  "23": {
+   "name": "sand with decoration",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 3
+  },
+  "24": {
+   "name": "sand with decoration",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 19
+  },
+  "25": {
+   "name": "tree (top-left)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_TREE_TOP_LEFT",
+   "cells_in_game": 400
+  },
+  "26": {
+   "name": "tree (top-right)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_TREE_TOP_RIGHT",
+   "cells_in_game": 418
+  },
+  "27": {
+   "name": "tree (bottom-left)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_TREE_BOTTOM_LEFT",
+   "cells_in_game": 406
+  },
+  "28": {
+   "name": "tree (bottom-right)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_TREE_BOTTOM_RIGHT",
+   "cells_in_game": 413
+  },
+  "29": {
+   "name": "tree (overlap left)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_TREE_OVERLAP_LEFT",
+   "cells_in_game": 209
+  },
+  "2A": {
+   "name": "tree (overlap right)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_TREE_OVERLAP_RIGHT",
+   "cells_in_game": 191
+  },
+  "2B": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 70
+  },
+  "2C": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 408
+  },
+  "2D": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 71
+  },
+  "2E": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_CLIFF_CORNER_BL",
+   "cells_in_game": 94
+  },
+  "2F": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_CLIFF_BOTTOM",
+   "cells_in_game": 804
+  },
+  "30": {
+   "name": "swamp plants in shallow water",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "shallow_water"
+   ],
+   "physics": "05",
+   "cells_in_game": 23
+  },
+  "31": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 39
+  },
+  "32": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 37
+  },
+  "33": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 60
+  },
+  "34": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 58
+  },
+  "35": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 14
+  },
+  "36": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 14
+  },
+  "37": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_CLIFF_LEFT",
+   "cells_in_game": 518
+  },
+  "38": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_CLIFF_RIGHT",
+   "cells_in_game": 527
+  },
+  "39": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 82
+  },
+  "3A": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 1055
+  },
+  "3B": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 96
+  },
+  "3C": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 85
+  },
+  "3D": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 91
+  },
+  "3E": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 55
+  },
+  "3F": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 74
+  },
+  "40": {
+   "name": "shop / building front",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 3
+  },
+  "41": {
+   "name": "shop / building front",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 2
+  },
+  "42": {
+   "name": "shop / building front",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 3
+  },
+  "43": {
+   "name": "ledge (jump down only)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "ledge"
+   ],
+   "note": "unidirezionale: approssimato a muro",
+   "physics": "10",
+   "cells_in_game": 3
+  },
+  "44": {
+   "name": "flowers",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "disasm": "OBJECT_ANIMATED_FLOWERS",
+   "cells_in_game": 241
+  },
+  "45": {
+   "name": "phone booth (tree)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_PHONE_BOOTH_TOP",
+   "cells_in_game": 8
+  },
+  "48": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 63
+  },
+  "49": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 62
+  },
+  "4A": {
+   "name": "ledge (jump down only)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "ledge"
+   ],
+   "note": "unidirezionale: approssimato a muro",
+   "physics": "10",
+   "cells_in_game": 27
+  },
+  "4B": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 7
+  },
+  "4C": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 2
+  },
+  "4D": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_CLIFF_TOP",
+   "cells_in_game": 30
+  },
+  "4E": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 104
+  },
+  "4F": {
+   "name": "tree cluster",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 9
+  },
+  "50": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 60
+  },
+  "51": {
+   "name": "thorny vines",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 142
+  },
+  "52": {
+   "name": "fence / building wall",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 34
+  },
+  "54": {
+   "name": "keyhole (dungeon key slot)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "keyhole"
+   ],
+   "special": "keyhole",
+   "physics": "C0",
+   "cells_in_game": 2
+  },
+  "55": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 10
+  },
+  "56": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 10
+  },
+  "57": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 7
+  },
+  "58": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 7
+  },
+  "59": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 10
+  },
+  "5A": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 11
+  },
+  "5B": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 45
+  },
+  "5C": {
+   "name": "bush (cuttable)",
+   "category": 7,
+   "ascii": "B",
+   "tags": [
+    "bush"
+   ],
+   "physics": "30",
+   "disasm": "OBJECT_BUSH",
+   "cells_in_game": 307
+  },
+  "5D": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 14
+  },
+  "5E": {
+   "name": "weather vane base",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "disasm": "OBJECT_WEATHER_VANE_BASE",
+   "cells_in_game": 1
+  },
+  "5F": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 5
+  },
+  "60": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 10
+  },
+  "61": {
+   "name": "well",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "disasm": "OBJECT_WELL",
+   "cells_in_game": 4
+  },
+  "62": {
+   "name": "fence posts",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 65
+  },
+  "63": {
+   "name": "Wind Fish's Egg",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "egg"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "64": {
+   "name": "Wind Fish's Egg",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "egg"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "65": {
+   "name": "Wind Fish's Egg",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "egg"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "66": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 2
+  },
+  "67": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "68": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "69": {
+   "name": "cactus (hurts)",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "disasm": "OBJECT_HURT_TILE",
+   "cells_in_game": 17
+  },
+  "6A": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 2
+  },
+  "6B": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 2
+  },
+  "6C": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 3
+  },
+  "6E": {
+   "name": "rounded stone block",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "stone_block"
+   ],
+   "physics": "60",
+   "disasm": "OBJECT_ROUNDED_BLOCK",
+   "cells_in_game": 136
+  },
+  "6F": {
+   "name": "owl statue",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "statue"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_OWL_STATUE",
+   "cells_in_game": 9
+  },
+  "70": {
+   "name": "keyhole (dungeon key slot)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "keyhole"
+   ],
+   "special": "keyhole",
+   "physics": "C0",
+   "cells_in_game": 1
+  },
+  "71": {
+   "name": "Wind Fish's Egg",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "egg"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "72": {
+   "name": "castle wall",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 4
+  },
+  "73": {
+   "name": "castle wall",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 4
+  },
+  "74": {
+   "name": "castle wall",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 12
+  },
+  "75": {
+   "name": "castle wall",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "76": {
+   "name": "castle wall",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "78": {
+   "name": "wooden bridge",
+   "category": 4,
+   "ascii": "=",
+   "tags": [
+    "bridge"
+   ],
+   "physics": "08",
+   "cells_in_game": 11
+  },
+  "79": {
+   "name": "wooden bridge",
+   "category": 4,
+   "ascii": "=",
+   "tags": [
+    "bridge"
+   ],
+   "physics": "08",
+   "cells_in_game": 11
+  },
+  "7A": {
+   "name": "wooden bridge",
+   "category": 4,
+   "ascii": "=",
+   "tags": [
+    "bridge"
+   ],
+   "physics": "08",
+   "cells_in_game": 38
+  },
+  "7B": {
+   "name": "hole in bridge",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "pit"
+   ],
+   "physics": "50",
+   "cells_in_game": 9
+  },
+  "7C": {
+   "name": "clouds / sky over the sea",
+   "category": 0,
+   "ascii": " ",
+   "tags": [
+    "sky"
+   ],
+   "physics": "01",
+   "cells_in_game": 29
+  },
+  "7D": {
+   "name": "clouds / sky over the sea",
+   "category": 0,
+   "ascii": " ",
+   "tags": [
+    "sky"
+   ],
+   "physics": "01",
+   "cells_in_game": 29
+  },
+  "7E": {
+   "name": "clouds / sky over the sea",
+   "category": 0,
+   "ascii": " ",
+   "tags": [
+    "sky"
+   ],
+   "physics": "01",
+   "cells_in_game": 8
+  },
+  "7F": {
+   "name": "Wind Fish's Egg",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "egg"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "80": {
+   "name": "cliff corner (top-left)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_CLIFF_CORNER_TL",
+   "cells_in_game": 10
+  },
+  "81": {
+   "name": "cliff corner (top-right)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_CLIFF_CORNER_TR",
+   "cells_in_game": 10
+  },
+  "82": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_TREE_BUSHES_BOTTOM_LEFT",
+   "cells_in_game": 62
+  },
+  "83": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "disasm": "OBJECT_TREE_BUSHES_BOTTOM_RIGHT",
+   "cells_in_game": 48
+  },
+  "84": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 58
+  },
+  "85": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 58
+  },
+  "86": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 65
+  },
+  "87": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 71
+  },
+  "88": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 15
+  },
+  "89": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 13
+  },
+  "8A": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 9
+  },
+  "8B": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 9
+  },
+  "8C": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 18
+  },
+  "8D": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 17
+  },
+  "8E": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 15
+  },
+  "8F": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 15
+  },
+  "90": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 22
+  },
+  "91": {
+   "name": "weather vane top",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "disasm": "OBJECT_WEATHER_VANE_TOP",
+   "cells_in_game": 1
+  },
+  "92": {
+   "name": "forest tree part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "tree"
+   ],
+   "physics": "01",
+   "cells_in_game": 3
+  },
+  "93": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 50
+  },
+  "94": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 7
+  },
+  "95": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 7
+  },
+  "96": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 50
+  },
+  "97": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 7
+  },
+  "98": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 7
+  },
+  "99": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 69
+  },
+  "9A": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 64
+  },
+  "9B": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 11
+  },
+  "9C": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 11
+  },
+  "9D": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 11
+  },
+  "9E": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 11
+  },
+  "9F": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 2
+  },
+  "A0": {
+   "name": "stone face block",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "stone_block"
+   ],
+   "physics": "60",
+   "cells_in_game": 10
+  },
+  "A1": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "cells_in_game": 0
+  },
+  "A2": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 6
+  },
+  "A3": {
+   "name": "brick wall (village/castle)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 2
+  },
+  "A4": {
+   "name": "castle gateway floor",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 3
+  },
+  "A5": {
+   "name": "castle gate part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 3
+  },
+  "A6": {
+   "name": "castle gate part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 3
+  },
+  "A7": {
+   "name": "castle gate part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 3
+  },
+  "A8": {
+   "name": "castle gate part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 3
+  },
+  "A9": {
+   "name": "Wind Fish's Egg",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "egg"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "AA": {
+   "name": "Wind Fish's Egg",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "egg"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "AB": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 3
+  },
+  "AC": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 3
+  },
+  "AD": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 2
+  },
+  "AE": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 2
+  },
+  "AF": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 2
+  },
+  "B0": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 2
+  },
+  "B1": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 2
+  },
+  "B2": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 2
+  },
+  "B3": {
+   "name": "decorative floor tile",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 24
+  },
+  "B6": {
+   "name": "rock wall / statue",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 221
+  },
+  "B7": {
+   "name": "rock wall / statue",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 174
+  },
+  "B8": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 19
+  },
+  "B9": {
+   "name": "decorative floor tile",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "cells_in_game": 72
+  },
+  "BA": {
+   "name": "bombable cave wall",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "bombable"
+   ],
+   "passage": true,
+   "physics": "99",
+   "disasm": "OBJECT_BOMBABLE_CAVE_DOOR",
+   "cells_in_game": 7
+  },
+  "BB": {
+   "name": "giant skull rock",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "disasm": "OBJECT_GIANT_SKULL_TL",
+   "cells_in_game": 1
+  },
+  "BC": {
+   "name": "giant skull rock",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "disasm": "OBJECT_GIANT_SKULL_TR",
+   "cells_in_game": 1
+  },
+  "BD": {
+   "name": "giant skull rock",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "disasm": "OBJECT_GIANT_SKULL_BL",
+   "cells_in_game": 1
+  },
+  "BE": {
+   "name": "giant skull rock",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "disasm": "OBJECT_GIANT_SKULL_BR",
+   "cells_in_game": 1
+  },
+  "BF": {
+   "name": "Wind Fish's Egg",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "egg"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "C0": {
+   "name": "keyhole (dungeon key slot)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "keyhole"
+   ],
+   "special": "keyhole",
+   "physics": "C0",
+   "disasm": "OBJECT_TAIL_KEYHOLE",
+   "cells_in_game": 2
+  },
+  "C2": {
+   "name": "closed gate",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "disasm": "OBJECT_CLOSED_GATE",
+   "cells_in_game": 2
+  },
+  "C3": {
+   "name": "cave/tree entrance structure",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "C4": {
+   "name": "gravestone",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 16
+  },
+  "C5": {
+   "name": "gravestone",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 6
+  },
+  "C6": {
+   "name": "stairs in the ground",
+   "category": 8,
+   "ascii": "E",
+   "tags": [
+    "stairs_down"
+   ],
+   "physics": "09",
+   "disasm": "OBJECT_GROUND_STAIRS",
+   "cells_in_game": 13
+  },
+  "C8": {
+   "name": "stone pillar / rock",
+   "category": 1,
+   "ascii": "#",
+   "physics": "60",
+   "cells_in_game": 140
+  },
+  "CA": {
+   "name": "rocks in water",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 43
+  },
+  "CD": {
+   "name": "statue / big tree part",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 100
+  },
+  "CE": {
+   "name": "statue / big tree part",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 100
+  },
+  "CF": {
+   "name": "quicksand (pulls Link)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "quicksand"
+   ],
+   "special": "quicksand",
+   "physics": "F4",
+   "cells_in_game": 11
+  },
+  "D0": {
+   "name": "quicksand (pulls Link)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "quicksand"
+   ],
+   "special": "quicksand",
+   "physics": "F5",
+   "cells_in_game": 11
+  },
+  "D1": {
+   "name": "quicksand (pulls Link)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "quicksand"
+   ],
+   "special": "quicksand",
+   "physics": "F6",
+   "cells_in_game": 12
+  },
+  "D2": {
+   "name": "quicksand (pulls Link)",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "quicksand"
+   ],
+   "special": "quicksand",
+   "physics": "F7",
+   "cells_in_game": 12
+  },
+  "D3": {
+   "name": "bush hiding stairs",
+   "category": 7,
+   "ascii": "B",
+   "tags": [
+    "bush"
+   ],
+   "physics": "30",
+   "disasm": "OBJECT_BUSH_GROUND_STAIRS",
+   "cells_in_game": 73
+  },
+  "D4": {
+   "name": "signpost",
+   "category": 1,
+   "ascii": "#",
+   "physics": "60",
+   "disasm": "OBJECT_SIGNPOST",
+   "cells_in_game": 37
+  },
+  "D6": {
+   "name": "building part",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "building"
+   ],
+   "physics": "01",
+   "cells_in_game": 1
+  },
+  "D7": {
+   "name": "cave entrance structure",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 2
+  },
+  "D8": {
+   "name": "monkey bridge anchor (top)",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "disasm": "OBJECT_MONKEY_BRIDGE_TOP",
+   "cells_in_game": 1
+  },
+  "D9": {
+   "name": "monkey bridge gap (not built yet: water)",
+   "category": 3,
+   "ascii": "~",
+   "physics": "07",
+   "disasm": "OBJECT_MONKEY_BRIDGE_MIDDLE",
+   "cells_in_game": 1
+  },
+  "DA": {
+   "name": "monkey bridge anchor (bottom)",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "disasm": "OBJECT_MONKEY_BRIDGE_BOTTOM",
+   "cells_in_game": 1
+  },
+  "DB": {
+   "name": "monkey bridge (built)",
+   "category": 4,
+   "ascii": "=",
+   "tags": [
+    "bridge"
+   ],
+   "physics": "08",
+   "disasm": "OBJECT_MONKEY_BRIDGE_BUILT",
+   "cells_in_game": 5
+  },
+  "DC": {
+   "name": "ground under weather vane",
+   "category": 2,
+   "ascii": ".",
+   "physics": "00",
+   "disasm": "OBJECT_WEATHER_VANE_ABOVE",
+   "cells_in_game": 1
+  },
+  "DD": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 10
+  },
+  "DE": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 8
+  },
+  "E0": {
+   "name": "steps between cliff levels",
+   "category": 2,
+   "ascii": ".",
+   "tags": [
+    "steps"
+   ],
+   "note": "gradini percorribili, non un'uscita (alternativa: scale)",
+   "physics": "02",
+   "disasm": "OBJECT_STEPS",
+   "cells_in_game": 96
+  },
+  "E1": {
+   "name": "rocky cave entrance (exit)",
+   "category": 8,
+   "ascii": "E",
+   "tags": [
+    "exit",
+    "cave_door"
+   ],
+   "physics": "03",
+   "disasm": "OBJECT_ROCKY_CAVE_DOOR",
+   "cells_in_game": 49
+  },
+  "E2": {
+   "name": "house door (exit)",
+   "category": 8,
+   "ascii": "E",
+   "tags": [
+    "exit",
+    "house_door"
+   ],
+   "physics": "03",
+   "cells_in_game": 24
+  },
+  "E3": {
+   "name": "cave entrance (exit)",
+   "category": 8,
+   "ascii": "E",
+   "tags": [
+    "exit",
+    "cave_door"
+   ],
+   "physics": "03",
+   "disasm": "OBJECT_CAVE_DOOR",
+   "cells_in_game": 8
+  },
+  "E4": {
+   "name": "tree with face / stump",
+   "category": 1,
+   "ascii": "#",
+   "physics": "01",
+   "cells_in_game": 3
+  },
+  "E5": {
+   "name": "deep sea",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "sea"
+   ],
+   "physics": "01",
+   "cells_in_game": 101
+  },
+  "E6": {
+   "name": "rock edge (8x8 collision)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "fine_collision"
+   ],
+   "physics": "81",
+   "cells_in_game": 1
+  },
+  "E7": {
+   "name": "castle door (exit)",
+   "category": 8,
+   "ascii": "E",
+   "tags": [
+    "exit",
+    "house_door"
+   ],
+   "physics": "03",
+   "cells_in_game": 1
+  },
+  "E8": {
+   "name": "hole in the ground",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "pit"
+   ],
+   "physics": "50",
+   "disasm": "OBJECT_GROUND_HOLE",
+   "cells_in_game": 121
+  },
+  "E9": {
+   "name": "waterfall",
+   "category": 3,
+   "ascii": "~",
+   "physics": "01",
+   "disasm": "OBJECT_WATERFALL",
+   "cells_in_game": 81
+  },
+  "EA": {
+   "name": "cliff / raised ground edge",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 5
+  },
+  "EB": {
+   "name": "deep water (river)",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "deep_water"
+   ],
+   "physics": "07",
+   "cells_in_game": 314
+  },
+  "EC": {
+   "name": "deep water (river)",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "deep_water"
+   ],
+   "physics": "07",
+   "cells_in_game": 39
+  },
+  "ED": {
+   "name": "deep water (river)",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "deep_water"
+   ],
+   "physics": "07",
+   "cells_in_game": 166
+  },
+  "EE": {
+   "name": "deep water (river)",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "deep_water"
+   ],
+   "physics": "07",
+   "cells_in_game": 103
+  },
+  "EF": {
+   "name": "drop into the sea / pit",
+   "category": 3,
+   "ascii": "~",
+   "tags": [
+    "pit"
+   ],
+   "physics": "50",
+   "cells_in_game": 84
+  },
+  "F0": {
+   "name": "ledge (jump in one direction)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "ledge"
+   ],
+   "physics": "D1",
+   "cells_in_game": 7
+  },
+  "F1": {
+   "name": "rock / cliff piece",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 5
+  },
+  "F2": {
+   "name": "rock / cliff piece",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 5
+  },
+  "F3": {
+   "name": "ledge (jump in one direction)",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "ledge"
+   ],
+   "physics": "D0",
+   "cells_in_game": 7
+  },
+  "F4": {
+   "name": "rock / cliff piece",
+   "category": 1,
+   "ascii": "#",
+   "tags": [
+    "cliff"
+   ],
+   "physics": "01",
+   "cells_in_game": 5
+  }
+ }
+}

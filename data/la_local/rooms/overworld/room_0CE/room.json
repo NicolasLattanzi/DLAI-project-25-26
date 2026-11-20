@@ -1,0 +1,1185 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "0CE",
+ "region": "overworld",
+ "group": "overworld",
+ "group_name": "Overworld (Koholint)",
+ "map_id": null,
+ "position": {
+  "table": {
+   "x": 14,
+   "y": 12
+  },
+  "layout": null,
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "valid": false,
+ "discard_reasons": [
+  "special:quicksand",
+  "special:teleport"
+ ],
+ "notes": [],
+ "grid_ascii": [
+  ".########.",
+  "##......##",
+  "#........#",
+  "#.........",
+  "#..M.....#",
+  "#........#",
+  "#...P....#",
+  "####.#####"
+ ],
+ "grid_no_entities_ascii": [
+  ".########.",
+  "##......##",
+  "#........#",
+  "#.........",
+  "#........#",
+  "#........#",
+  "#........#",
+  "####.#####"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 4,
+   "y": 6,
+   "source": "border_opening"
+  }
+ ],
+ "openings": [
+  {
+   "x": 9,
+   "y": 3,
+   "side": "right",
+   "kind": "corridor"
+  },
+  {
+   "x": 4,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  }
+ ],
+ "doors": 0,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   2,
+   2,
+   10,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   9,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   2,
+   2,
+   10,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "09",
+   "3D",
+   "2F",
+   "2F",
+   "2F",
+   "2F",
+   "2F",
+   "2F",
+   "3C",
+   "09"
+  ],
+  [
+   "3D",
+   "34",
+   "CF",
+   "CF",
+   "CF",
+   "D0",
+   "D0",
+   "D0",
+   "33",
+   "3C"
+  ],
+  [
+   "38",
+   "CF",
+   "CF",
+   "CF",
+   "CF",
+   "D0",
+   "D0",
+   "D0",
+   "D0",
+   "33"
+  ],
+  [
+   "38",
+   "CF",
+   "CF",
+   "CF",
+   "CF",
+   "D0",
+   "D0",
+   "D0",
+   "D0",
+   "08"
+  ],
+  [
+   "38",
+   "D1",
+   "D1",
+   "D1",
+   "D1",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "2B"
+  ],
+  [
+   "38",
+   "D1",
+   "D1",
+   "D1",
+   "D1",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "37"
+  ],
+  [
+   "38",
+   "D1",
+   "D1",
+   "D1",
+   "D1",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "37"
+  ],
+  [
+   "32",
+   "2C",
+   "2C",
+   "2D",
+   "08",
+   "2B",
+   "2C",
+   "2C",
+   "2C",
+   "31"
+  ]
+ ],
+ "physics": [
+  [
+   "00",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "00"
+  ],
+  [
+   "01",
+   "01",
+   "F4",
+   "F4",
+   "F4",
+   "F5",
+   "F5",
+   "F5",
+   "01",
+   "01"
+  ],
+  [
+   "01",
+   "F4",
+   "F4",
+   "F4",
+   "F4",
+   "F5",
+   "F5",
+   "F5",
+   "F5",
+   "01"
+  ],
+  [
+   "01",
+   "F4",
+   "F4",
+   "F4",
+   "F4",
+   "F5",
+   "F5",
+   "F5",
+   "F5",
+   "00"
+  ],
+  [
+   "01",
+   "F6",
+   "F6",
+   "F6",
+   "F6",
+   "F7",
+   "F7",
+   "F7",
+   "F7",
+   "01"
+  ],
+  [
+   "01",
+   "F6",
+   "F6",
+   "F6",
+   "F6",
+   "F7",
+   "F7",
+   "F7",
+   "F7",
+   "01"
+  ],
+  [
+   "01",
+   "F6",
+   "F6",
+   "F6",
+   "F6",
+   "F7",
+   "F7",
+   "F7",
+   "F7",
+   "01"
+  ],
+  [
+   "01",
+   "01",
+   "01",
+   "01",
+   "00",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [
+  {
+   "x": 2,
+   "y": 1,
+   "special": "quicksand",
+   "source": "object",
+   "object": "CF",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 3,
+   "y": 1,
+   "special": "quicksand",
+   "source": "object",
+   "object": "CF",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 4,
+   "y": 1,
+   "special": "quicksand",
+   "source": "object",
+   "object": "CF",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 5,
+   "y": 1,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D0",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 6,
+   "y": 1,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D0",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 7,
+   "y": 1,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D0",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 1,
+   "y": 2,
+   "special": "quicksand",
+   "source": "object",
+   "object": "CF",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 2,
+   "y": 2,
+   "special": "quicksand",
+   "source": "object",
+   "object": "CF",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 3,
+   "y": 2,
+   "special": "quicksand",
+   "source": "object",
+   "object": "CF",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 4,
+   "y": 2,
+   "special": "quicksand",
+   "source": "object",
+   "object": "CF",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 5,
+   "y": 2,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D0",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 6,
+   "y": 2,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D0",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 7,
+   "y": 2,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D0",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 8,
+   "y": 2,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D0",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 1,
+   "y": 3,
+   "special": "quicksand",
+   "source": "object",
+   "object": "CF",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 2,
+   "y": 3,
+   "special": "quicksand",
+   "source": "object",
+   "object": "CF",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 3,
+   "y": 3,
+   "special": "quicksand",
+   "source": "object",
+   "object": "CF",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 4,
+   "y": 3,
+   "special": "quicksand",
+   "source": "object",
+   "object": "CF",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 5,
+   "y": 3,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D0",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 6,
+   "y": 3,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D0",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 7,
+   "y": 3,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D0",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 8,
+   "y": 3,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D0",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 1,
+   "y": 4,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D1",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 2,
+   "y": 4,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D1",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 3,
+   "y": 4,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D1",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 4,
+   "y": 4,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D1",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 5,
+   "y": 4,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D2",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 6,
+   "y": 4,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D2",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 7,
+   "y": 4,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D2",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 8,
+   "y": 4,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D2",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 1,
+   "y": 5,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D1",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 2,
+   "y": 5,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D1",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 3,
+   "y": 5,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D1",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 4,
+   "y": 5,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D1",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 5,
+   "y": 5,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D2",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 6,
+   "y": 5,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D2",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 7,
+   "y": 5,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D2",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 8,
+   "y": 5,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D2",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 1,
+   "y": 6,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D1",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 2,
+   "y": 6,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D1",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 3,
+   "y": 6,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D1",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 4,
+   "y": 6,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D1",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 5,
+   "y": 6,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D2",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 6,
+   "y": 6,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D2",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 7,
+   "y": 6,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D2",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 8,
+   "y": 6,
+   "special": "quicksand",
+   "source": "object",
+   "object": "D2",
+   "name": "quicksand (pulls Link)"
+  },
+  {
+   "x": 0,
+   "y": 0,
+   "special": "teleport",
+   "source": "entity",
+   "name": "WARP"
+  }
+ ],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 3,
+   "y": 4,
+   "entity_id": "87",
+   "name": "DESERT_LANMOLA",
+   "class": "miniboss",
+   "placed_as": 10
+  },
+  {
+   "x": 0,
+   "y": 0,
+   "entity_id": "61",
+   "name": "WARP",
+   "class": "mechanism",
+   "placed_as": null
+  }
+ ],
+ "key_sources": [],
+ "chest": null,
+ "warps": [],
+ "arrivals": [],
+ "stats": {
+  "category_counts": {
+   "wall": 30,
+   "floor": 48,
+   "player": 1,
+   "enemy": 1
+  },
+  "num_room_objects": 31,
+  "num_entities": 2,
+  "num_enemies": 1,
+  "tags": {
+   "cliff": 30,
+   "quicksand": 46
+  }
+ },
+ "render": {
+  "animation_id": 8,
+  "floor_object": "08"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

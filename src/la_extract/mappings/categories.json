@@ -1,0 +1,246 @@
+{
+  "schema": "leveledit_categories/1",
+  "description": "Categorie di tile LevelEdit (target della conversione) e regole di validita'.",
+  "categories": [
+    {
+      "code": 0,
+      "id": "void",
+      "name_it": "fuori mappa",
+      "ascii": " ",
+      "traversable": false,
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "from_game": "riempimento: cielo/orizzonte dell'overworld; riempimento a tinta unita (03) fuori dai muri delle stanze; buche attorno alle stanze piu' piccole dello schermo; roccia esterna delle caverne mai raggiungibile"
+    },
+    {
+      "code": 1,
+      "id": "wall",
+      "name_it": "muro",
+      "ascii": "#",
+      "traversable": false,
+      "color": [
+        96,
+        96,
+        104
+      ],
+      "from_game": "muri, statue, torce, colonne, forzieri, mobili, muri bombardabili; meta' 2 (destra/basso) di ogni porta o varco largo un blocco; all'aperto alberi, rocce, scogliere, case"
+    },
+    {
+      "code": 2,
+      "id": "floor",
+      "name_it": "pavimento",
+      "ascii": ".",
+      "traversable": true,
+      "color": [
+        222,
+        208,
+        170
+      ],
+      "from_game": "pavimento, gradini, acqua bassa; varchi aperti, porte a saracinesca e a senso unico, muri girevoli (meta' 1 del varco: una sola cella); all'aperto erba, sentieri"
+    },
+    {
+      "code": 3,
+      "id": "water",
+      "name_it": "acqua",
+      "ascii": "~",
+      "traversable": false,
+      "color": [
+        58,
+        112,
+        214
+      ],
+      "from_game": "acqua profonda, buche, lava (e spuntoni come pericolo)"
+    },
+    {
+      "code": 4,
+      "id": "bridge",
+      "name_it": "ponte",
+      "ascii": "=",
+      "traversable": true,
+      "color": [
+        168,
+        112,
+        56
+      ],
+      "from_game": "ponti di legno, ponte delle scimmie costruito"
+    },
+    {
+      "code": 5,
+      "id": "door",
+      "name_it": "porta chiusa",
+      "ascii": "D",
+      "traversable": "with_key",
+      "color": [
+        200,
+        40,
+        40
+      ],
+      "from_game": "porte con serratura, porta del boss, blocchi-serratura (una porta = una sola cella D: la meta' 2 e' muro)"
+    },
+    {
+      "code": 6,
+      "id": "key",
+      "name_it": "chiave",
+      "ascii": "K",
+      "traversable": true,
+      "color": [
+        250,
+        214,
+        0
+      ],
+      "from_game": "non visibile nelle stanze: le fonti di chiavi sono solo annotate nei metadati (key_sources)"
+    },
+    {
+      "code": 7,
+      "id": "block",
+      "name_it": "blocco",
+      "ascii": "B",
+      "traversable": false,
+      "color": [
+        130,
+        78,
+        34
+      ],
+      "from_game": "blocchi spingibili, vasi, cristalli; all'aperto cespugli"
+    },
+    {
+      "code": 8,
+      "id": "stairs",
+      "name_it": "scale",
+      "ascii": "E",
+      "traversable": true,
+      "color": [
+        40,
+        190,
+        90
+      ],
+      "from_game": "solo le scale/uscite presenti nel gioco (scale verso altri piani, scale nel muro, porte di caverne/case): mai aggiunte"
+    },
+    {
+      "code": 9,
+      "id": "player",
+      "name_it": "giocatore",
+      "ascii": "P",
+      "traversable": true,
+      "color": [
+        0,
+        190,
+        255
+      ],
+      "from_game": "non nei dati della stanza: unica aggiunta alla griglia, nel punto in cui il gioco fa entrare Link (arrivo da warp) o accanto al varco d'ingresso; assente in grid_no_entities"
+    },
+    {
+      "code": 10,
+      "id": "enemy",
+      "name_it": "nemico",
+      "ascii": "M",
+      "traversable": false,
+      "color": [
+        226,
+        0,
+        196
+      ],
+      "from_game": "nemici, miniboss e boss (dalle entita' della stanza); assenti in grid_no_entities"
+    }
+  ],
+  "validity": {
+    "close_border": false,
+    "_close_border_doc": "false = il layout originale resta intatto (porte e varchi sul bordo restano come nel gioco); true = regola del brief: ogni cella di bordo diversa da border_allowed diventa border_fill",
+    "one_player": true,
+    "min_stairs": 1,
+    "border_allowed": [
+      0,
+      1
+    ],
+    "border_fill": 1,
+    "max_doors": 2,
+    "_max_doors_doc": "una porta = gruppo di celle D adiacenti (le porte del gioco occupano 2 celle)",
+    "bfs": "4-connected; attraversabili = categorie con traversable=true (+ nemici se bfs_enemies_passable); porte = muro finche' non si raggiunge una chiave",
+    "bfs_enemies_passable": true,
+    "_bfs_enemies_doc": "i nemici si muovono e si possono sconfiggere: non bloccano la raggiungibilita'. Con false i nemici contano come muri (attraversabile=no della tabella)",
+    "add_player": "cella di pavimento accanto all'ingresso: arrivo da warp o cella interna accanto a un varco sul bordo; tra i candidati si sceglie quello che raggiunge l'area piu' grande",
+    "add_stairs": false,
+    "move_border_stairs_inward": true,
+    "enemy_overrides_only": [
+      2
+    ],
+    "object_entity_overrides_only": [
+      2
+    ],
+    "_add_stairs_doc": "false = le scale non vengono mai inventate (mappatura 1:1); true = regola del brief: scale sulla cella interna di pavimento raggiungibile piu' lontana",
+    "_valid_doc": "valid = stanza fedele e utilizzabile (non a scorrimento laterale, non vuota, senza tile speciali da scartare, con pavimento per il giocatore). Le regole del brief (scale, bordi chiusi, max 2 porte) sono in brief_checks / brief_valid."
+  },
+  "special_policy": {
+    "_doc": "discard = stanza non valida; flag = stanza valida ma segnalata nelle note",
+    "conveyor": "discard",
+    "quicksand": "discard",
+    "teleport": "discard",
+    "switch": "discard",
+    "switch_block": "discard",
+    "moving_block": "discard",
+    "tractor_device": "discard",
+    "color_tile": "discard",
+    "spikes": "flag",
+    "keyhole": "flag",
+    "hidden_stairs": "flag",
+    "unmapped": "discard"
+  },
+  "physics_fallback": {
+    "_doc": "Usata SOLO per oggetti assenti dai file objects_*.json (es. oggetti delle stanze a scorrimento laterale). Chiave = physics flag esadecimale (src/constants/physics.asm).",
+    "00": 2,
+    "01": 1,
+    "02": 2,
+    "03": 8,
+    "05": 2,
+    "06": 2,
+    "07": 3,
+    "08": 2,
+    "09": 8,
+    "0A": 2,
+    "0B": 3,
+    "10": 1,
+    "30": 7,
+    "50": 3,
+    "51": 3,
+    "60": 1,
+    "70-7F": 2,
+    "80-8F": 1,
+    "90-93": 5,
+    "98": 5,
+    "99-9C": 1,
+    "B0": 3,
+    "B1": 2,
+    "C0": 1,
+    "D0-D3": 1,
+    "E0": 3,
+    "F0-F7": 2,
+    "default": 1
+  },
+  "exterior": {
+    "_doc": "Celle di pavimento/acqua fuori dai muri della stanza, mai raggiungibili nel gioco (analisi di connettivita' tra stanze a partire dagli arrivi dei warp) e che toccano il bordo dello schermo -> fuori mappa. Applicata solo alle mappe elencate: nei dungeon molte zone si raggiungono con meccanismi non modellati (blocchi a interruttore, cadute dall'alto), quindi li' si usa solo il riempimento 03.",
+    "apply_to_maps": [
+      "0A",
+      "10",
+      "11",
+      "12",
+      "13",
+      "15",
+      "1D",
+      "1E",
+      "1F",
+      "0E",
+      "0F"
+    ],
+    "flood_extra_tags": [
+      "switch_block",
+      "fine_collision",
+      "bombable",
+      "one_way_door",
+      "shutter_door",
+      "flip_wall"
+    ]
+  }
+}

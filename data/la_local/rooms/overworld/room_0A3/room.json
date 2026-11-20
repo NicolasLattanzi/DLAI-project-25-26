@@ -1,0 +1,907 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "0A3",
+ "region": "overworld",
+ "group": "overworld",
+ "group_name": "Overworld (Koholint)",
+ "map_id": null,
+ "position": {
+  "table": {
+   "x": 3,
+   "y": 10
+  },
+  "layout": null,
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "valid": true,
+ "discard_reasons": [],
+ "notes": [],
+ "grid_ascii": [
+  ".........#",
+  ".........#",
+  "..BBBBBB.#",
+  "..BBBBBB.#",
+  "..BBBBBB.#",
+  "..BBBBBB.#",
+  ".PBBBBBB.#",
+  ".........#"
+ ],
+ "grid_no_entities_ascii": [
+  ".........#",
+  ".........#",
+  "..BBBBBB.#",
+  "..BBBBBB.#",
+  "..BBBBBB.#",
+  "..BBBBBB.#",
+  "..BBBBBB.#",
+  ".........#"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 1,
+   "y": 6,
+   "source": "border_opening"
+  }
+ ],
+ "openings": [
+  {
+   "x": 1,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 2,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 3,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 4,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 5,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 6,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 7,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 8,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 0,
+   "y": 1,
+   "side": "left",
+   "kind": "corridor"
+  },
+  {
+   "x": 0,
+   "y": 2,
+   "side": "left",
+   "kind": "corridor"
+  },
+  {
+   "x": 0,
+   "y": 3,
+   "side": "left",
+   "kind": "corridor"
+  },
+  {
+   "x": 0,
+   "y": 4,
+   "side": "left",
+   "kind": "corridor"
+  },
+  {
+   "x": 0,
+   "y": 5,
+   "side": "left",
+   "kind": "corridor"
+  },
+  {
+   "x": 0,
+   "y": 6,
+   "side": "left",
+   "kind": "corridor"
+  },
+  {
+   "x": 1,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  },
+  {
+   "x": 8,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  }
+ ],
+ "doors": 0,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   9,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "27"
+  ],
+  [
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "25"
+  ],
+  [
+   "0A",
+   "0A",
+   "5C",
+   "5C",
+   "5C",
+   "5C",
+   "5C",
+   "5C",
+   "0A",
+   "27"
+  ],
+  [
+   "0A",
+   "0A",
+   "5C",
+   "5C",
+   "5C",
+   "5C",
+   "5C",
+   "5C",
+   "0A",
+   "25"
+  ],
+  [
+   "0A",
+   "0A",
+   "5C",
+   "5C",
+   "5C",
+   "5C",
+   "5C",
+   "5C",
+   "0A",
+   "27"
+  ],
+  [
+   "0A",
+   "0A",
+   "5C",
+   "5C",
+   "5C",
+   "5C",
+   "5C",
+   "5C",
+   "0A",
+   "25"
+  ],
+  [
+   "0A",
+   "0A",
+   "5C",
+   "5C",
+   "5C",
+   "5C",
+   "5C",
+   "5C",
+   "0A",
+   "27"
+  ],
+  [
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "0A",
+   "25"
+  ]
+ ],
+ "physics": [
+  [
+   "06",
+   "06",
+   "06",
+   "06",
+   "06",
+   "06",
+   "06",
+   "06",
+   "06",
+   "01"
+  ],
+  [
+   "06",
+   "06",
+   "06",
+   "06",
+   "06",
+   "06",
+   "06",
+   "06",
+   "06",
+   "01"
+  ],
+  [
+   "06",
+   "06",
+   "30",
+   "30",
+   "30",
+   "30",
+   "30",
+   "30",
+   "06",
+   "01"
+  ],
+  [
+   "06",
+   "06",
+   "30",
+   "30",
+   "30",
+   "30",
+   "30",
+   "30",
+   "06",
+   "01"
+  ],
+  [
+   "06",
+   "06",
+   "30",
+   "30",
+   "30",
+   "30",
+   "30",
+   "30",
+   "06",
+   "01"
+  ],
+  [
+   "06",
+   "06",
+   "30",
+   "30",
+   "30",
+   "30",
+   "30",
+   "30",
+   "06",
+   "01"
+  ],
+  [
+   "06",
+   "06",
+   "30",
+   "30",
+   "30",
+   "30",
+   "30",
+   "30",
+   "06",
+   "01"
+  ],
+  [
+   "06",
+   "06",
+   "06",
+   "06",
+   "06",
+   "06",
+   "06",
+   "06",
+   "06",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 5,
+   "y": 3,
+   "entity_id": "3D",
+   "name": "DROPPABLE_SECRET_SEASHELL",
+   "class": "item",
+   "placed_as": null
+  },
+  {
+   "x": 3,
+   "y": 1,
+   "entity_id": "6E",
+   "name": "BUTTERFLY",
+   "class": "npc",
+   "placed_as": null
+  },
+  {
+   "x": 2,
+   "y": 3,
+   "entity_id": "6E",
+   "name": "BUTTERFLY",
+   "class": "npc",
+   "placed_as": null
+  },
+  {
+   "x": 7,
+   "y": 5,
+   "entity_id": "6E",
+   "name": "BUTTERFLY",
+   "class": "npc",
+   "placed_as": null
+  }
+ ],
+ "key_sources": [],
+ "chest": null,
+ "warps": [],
+ "arrivals": [],
+ "stats": {
+  "category_counts": {
+   "wall": 8,
+   "floor": 41,
+   "block": 30,
+   "player": 1
+  },
+  "num_room_objects": 7,
+  "num_entities": 4,
+  "num_enemies": 0,
+  "tags": {
+   "grass": 42,
+   "tree": 8,
+   "bush": 30
+  }
+ },
+ "render": {
+  "animation_id": 3,
+  "floor_object": "0A"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}
