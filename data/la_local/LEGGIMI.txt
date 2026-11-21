@@ -11,6 +11,7 @@ script in src/la_extract/ (dettagli in src/la_extract/README.md): non modificare
     review/              fogli di controllo visivo (grafica originale + codifica sovrapposta)
     legend/legend.html   legenda con immagini: categoria, simbolo e nome di ogni blocco del gioco
     census/              censimento grezzo degli oggetti della ROM (serve solo a rivedere i mapping)
+    tiles/               tutte le SINGOLE tile, divise per tipo ed ID. cartella usata da tile_library in src/testing per la conversione ascii immagine
 
 Contengono grafica del gioco: original.png, overview_original.png, review/, legend/, census/atlas_*.png.
 
