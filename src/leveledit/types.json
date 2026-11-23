@@ -1,0 +1,342 @@
+[
+ {
+  "code": "_V",
+  "cls": " ",
+  "name_it": "vuoto",
+  "sing": [],
+  "plur": [],
+  "kind": "fixed"
+ },
+ {
+  "code": "#W",
+  "cls": "#",
+  "name_it": "wall",
+  "sing": [
+   "wall"
+  ],
+  "plur": [
+   "walls"
+  ],
+  "kind": "fixed"
+ },
+ {
+  "code": "#C",
+  "cls": "#",
+  "name_it": "cliff",
+  "sing": [
+   "cliff"
+  ],
+  "plur": [
+   "cliffs"
+  ],
+  "kind": "fixed"
+ },
+ {
+  "code": "#T",
+  "cls": "#",
+  "name_it": "tree",
+  "sing": [
+   "tree"
+  ],
+  "plur": [
+   "trees"
+  ],
+  "kind": "fixed"
+ },
+ {
+  "code": "#H",
+  "cls": "#",
+  "name_it": "building",
+  "sing": [
+   "building"
+  ],
+  "plur": [
+   "buildings"
+  ],
+  "kind": "fixed"
+ },
+ {
+  "code": "#U",
+  "cls": "#",
+  "name_it": "cabinet",
+  "sing": [
+   "cabinet"
+  ],
+  "plur": [
+   "cabinets"
+  ],
+  "kind": "fixed"
+ },
+ {
+  "code": "#R",
+  "cls": "#",
+  "name_it": "boulder",
+  "sing": [
+   "boulder"
+  ],
+  "plur": [
+   "boulders"
+  ],
+  "kind": "fixed"
+ },
+ {
+  "code": "#P",
+  "cls": "#",
+  "name_it": "pillar",
+  "sing": [
+   "pillar",
+   "stone pillar"
+  ],
+  "plur": [
+   "pillars",
+   "stone pillars"
+  ],
+  "kind": "item"
+ },
+ {
+  "code": "#S",
+  "cls": "#",
+  "name_it": "statue",
+  "sing": [
+   "statue"
+  ],
+  "plur": [
+   "statues"
+  ],
+  "kind": "item"
+ },
+ {
+  "code": "#F",
+  "cls": "#",
+  "name_it": "torch",
+  "sing": [
+   "torch"
+  ],
+  "plur": [
+   "torches"
+  ],
+  "kind": "item"
+ },
+ {
+  "code": "#X",
+  "cls": "#",
+  "name_it": "chest",
+  "sing": [
+   "chest"
+  ],
+  "plur": [
+   "chests"
+  ],
+  "kind": "item"
+ },
+ {
+  "code": ".F",
+  "cls": ".",
+  "name_it": "floor",
+  "sing": [
+   "floor"
+  ],
+  "plur": null,
+  "kind": "region"
+ },
+ {
+  "code": ".G",
+  "cls": ".",
+  "name_it": "tall grass",
+  "sing": [
+   "tall grass"
+  ],
+  "plur": null,
+  "kind": "region"
+ },
+ {
+  "code": ".S",
+  "cls": ".",
+  "name_it": "shallow water",
+  "sing": [
+   "shallow water"
+  ],
+  "plur": null,
+  "kind": "region"
+ },
+ {
+  "code": ".T",
+  "cls": ".",
+  "name_it": "steps",
+  "sing": [
+   "steps"
+  ],
+  "plur": null,
+  "kind": "region"
+ },
+ {
+  "code": ".O",
+  "cls": ".",
+  "name_it": "doorway",
+  "sing": [
+   "doorway"
+  ],
+  "plur": [
+   "doorways"
+  ],
+  "kind": "item"
+ },
+ {
+  "code": "~W",
+  "cls": "~",
+  "name_it": "water",
+  "sing": [
+   "water"
+  ],
+  "plur": null,
+  "kind": "region"
+ },
+ {
+  "code": "~L",
+  "cls": "~",
+  "name_it": "lava",
+  "sing": [
+   "lava"
+  ],
+  "plur": null,
+  "kind": "region"
+ },
+ {
+  "code": "~H",
+  "cls": "~",
+  "name_it": "pit",
+  "sing": [
+   "pit",
+   "hole"
+  ],
+  "plur": [
+   "pits",
+   "holes"
+  ],
+  "kind": "region"
+ },
+ {
+  "code": "=B",
+  "cls": "=",
+  "name_it": "bridge",
+  "sing": [
+   "bridge"
+  ],
+  "plur": [
+   "bridges"
+  ],
+  "kind": "region"
+ },
+ {
+  "code": "DK",
+  "cls": "D",
+  "name_it": "locked door",
+  "sing": [
+   "locked door"
+  ],
+  "plur": [
+   "locked doors"
+  ],
+  "kind": "item"
+ },
+ {
+  "code": "KK",
+  "cls": "K",
+  "name_it": "key",
+  "sing": [
+   "key"
+  ],
+  "plur": [
+   "keys"
+  ],
+  "kind": "item"
+ },
+ {
+  "code": "BP",
+  "cls": "B",
+  "name_it": "block",
+  "sing": [
+   "block"
+  ],
+  "plur": [
+   "blocks"
+  ],
+  "kind": "item"
+ },
+ {
+  "code": "BV",
+  "cls": "B",
+  "name_it": "pot",
+  "sing": [
+   "pot",
+   "vase"
+  ],
+  "plur": [
+   "pots",
+   "vases"
+  ],
+  "kind": "item"
+ },
+ {
+  "code": "BU",
+  "cls": "B",
+  "name_it": "bush",
+  "sing": [
+   "bush"
+  ],
+  "plur": [
+   "bushes"
+  ],
+  "kind": "item"
+ },
+ {
+  "code": "BC",
+  "cls": "B",
+  "name_it": "crystal",
+  "sing": [
+   "crystal"
+  ],
+  "plur": [
+   "crystals"
+  ],
+  "kind": "item"
+ },
+ {
+  "code": "ES",
+  "cls": "E",
+  "name_it": "stairs",
+  "sing": [
+   "stairs"
+  ],
+  "plur": [
+   "stairs"
+  ],
+  "kind": "item"
+ },
+ {
+  "code": "ED",
+  "cls": "E",
+  "name_it": "entrance",
+  "sing": [
+   "entrance"
+  ],
+  "plur": [
+   "entrances"
+  ],
+  "kind": "item"
+ },
+ {
+  "code": "MM",
+  "cls": "M",
+  "name_it": "enemy",
+  "sing": [
+   "enemy",
+   "monster"
+  ],
+  "plur": [
+   "enemies",
+   "monsters"
+  ],
+  "kind": "item"
+ }
+]
