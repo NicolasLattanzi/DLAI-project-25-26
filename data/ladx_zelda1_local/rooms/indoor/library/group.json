@@ -1,0 +1,13 @@
+{
+ "group": "indoor/library",
+ "rooms": [
+  "1FA"
+ ],
+ "valid": 1,
+ "overview_positions": {
+  "1FA": [
+   0,
+   0
+  ]
+ }
+}

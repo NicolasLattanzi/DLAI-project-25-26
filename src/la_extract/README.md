@@ -39,12 +39,34 @@ python src/la_extract/census.py                  # (revisione) censimento + fogl
 | `mappings/objects_indoor.json` | object id interni → categoria (151 voci) + differenze della Color Dungeon |
 | `mappings/entities.json` | entity id → classe (nemico, boss, NPC, oggetto, meccanismo…) e categoria |
 | `mappings/maps.json` | map id → nome e cartella di output |
+| `mappings/maps_zelda1.json` | come `maps.json`, per la ROM LADX-Zelda1 (cartelle `dungeons/Z1_D1`…`Z1_D9`, `Z1_D0_color`) |
 | `validate.py` | regole 1–4, aggiunta giocatore/scale, chiusura bordi (modulo puro, senza ROM) |
 | `extract_rooms.py` | estrazione completa: cartelle, JSON, immagini, `dataset.npz`, report |
 | `make_legend.py` | legenda (immagine, simbolo, nome) di categorie, oggetti ed entità |
 | `census.py` | censimento degli oggetti usati e fogli di revisione visiva |
 | `review_sheets.py` | fogli di controllo: grafica originale con sovrapposta la codifica di ogni stanza |
 | `LEGEND.md` | legenda testuale generata (senza immagini) |
+
+### Stanze di LADX-Zelda1 (seconda fonte)
+
+[LADX-Zelda1](https://github.com/daid/LADX-Zelda1) è lo Zelda del NES ricostruito da daid nel motore di LADX.
+La ROM si costruisce con [LADX-Hackers-Toolbox](https://github.com/daid/LADX-Hackers-Toolbox) partendo dalla
+v1.0 (entrambi clonati in `third_party/`). L'estrazione va in una cartella separata, `data/ladx_zelda1_local/`:
+
+```powershell
+python src/la_extract/extract_rooms.py --rom third_party/LADX-Hackers-Toolbox/roms/zelda1_ladx.gbc --allow-modified-rom --maps maps_zelda1.json --reference data/la_local/rooms --out data/ladx_zelda1_local/rooms --clean
+python src/la_extract/review_sheets.py --rooms data/ladx_zelda1_local/rooms --out data/ladx_zelda1_local/review
+```
+
+- `--allow-modified-rom` accetta una ROM diversa dalla v1.0 (lo sha1 resta in `index.json`).
+- `--maps` sceglie il file con nomi e cartelle dei gruppi.
+- `--reference` confronta ogni stanza con tutte le stanze di un'estrazione precedente e scrive
+  `same_as_reference`, `reference_nearest` e `reference_min_diff`, anche in `index.json` e `dataset.npz`.
+  Serve perché la ROM contiene ancora molte stanze originali di Link's Awakening. Quando la mappa di una
+  stanza interna non si deduce dai warp, si usa quella della stessa stanza nell'estrazione di riferimento.
+
+Dettagli e numeri in `data/ladx_zelda1_local/LEGGIMI.txt`. Senza queste opzioni l'estrazione di Link's
+Awakening è identica a prima.
 
 ## Output (`data/la_local/rooms/`)
 

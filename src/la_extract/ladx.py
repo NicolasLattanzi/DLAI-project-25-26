@@ -77,11 +77,14 @@ def load_json(name: str):
 class Game:
     """Wrapper sulla ROM caricata con LADXR."""
 
-    def __init__(self, rom_path: Path | None = None, ladxr_path: Path | None = None):
+    def __init__(self, rom_path: Path | None = None, ladxr_path: Path | None = None, allow_modified: bool = False,
+                 map_id_fallback: dict | None = None):
+        """allow_modified=True accetta una ROM diversa dalla v1.0 originale, purche' costruita sullo stesso
+        motore (es. LADX-Zelda1, generata con LADX-Hackers-Toolbox a partire dalla v1.0)."""
         rom_path = Path(rom_path) if rom_path else find_rom()
         data = rom_path.read_bytes()
         sha1 = hashlib.sha1(data).hexdigest()
-        if sha1 != EXPECTED_SHA1:
+        if sha1 != EXPECTED_SHA1 and not allow_modified:
             raise ValueError(f"ROM inattesa (sha1 {sha1}); serve LADX (U) v1.0 {EXPECTED_SHA1}")
         self.rom_sha1 = sha1
         ladxr = Path(ladxr_path) if ladxr_path else DEFAULT_LADXR
@@ -101,6 +104,14 @@ class Game:
         self.rom = ROMWithTables(io.BytesIO(data))
         with contextlib.redirect_stdout(io.StringIO()):  # MapExport stampa avvisi "Missing map_id"
             self._me = MapExport(self.rom, overworld=False, underworld=False, dungeons=[], entities=False)
+        # In una ROM modificata alcune stanze interne non sono raggiunte dai warp che LADXR usa per
+        # dedurre la mappa: si usa la mappa della stessa stanza nell'estrazione di riferimento.
+        self.map_id_from_fallback = set()
+        for r, m in (map_id_fallback or {}).items():
+            info = self._me.room_map_info(r)
+            if info.map_id is None and m is not None:
+                info.map_id = m
+                self.map_id_from_fallback.add(r)
         self.entity_data = entityData.EntityData(self.rom)
 
         b8 = self.rom.banks[0x08]

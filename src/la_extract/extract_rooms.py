@@ -37,7 +37,7 @@ SCHEMA = "leveledit_la_room/1"
 
 # ----------------------------------------------------------------------------- mapping
 class Mapper:
-    def __init__(self):
+    def __init__(self, maps_file: str = "maps.json"):
         self.cats = ladx.load_json("categories.json")
         self.cat_by_code = {c["code"]: c for c in self.cats["categories"]}
         self.ascii = {c["code"]: c["ascii"] for c in self.cats["categories"]}
@@ -46,7 +46,7 @@ class Mapper:
         self.ind = ind["objects"]
         self.color_ovr = {k: v for k, v in ind["color_dungeon_overrides"].items() if not k.startswith("_")}
         self.ents = ladx.load_json("entities.json")["entities"]
-        self.maps = ladx.load_json("maps.json")
+        self.maps = ladx.load_json(maps_file)
         self.policy = {k: v for k, v in self.cats["special_policy"].items() if not k.startswith("_")}
         self.validity = dict(self.cats["validity"])
         self.validity["traversable"] = [c["code"] for c in self.cats["categories"] if c["traversable"] is True]
@@ -382,6 +382,13 @@ def main():
     ap.add_argument("--clean", action="store_true", help="svuota la cartella di output (solo se creata da questo script)")
     ap.add_argument("--no-images", action="store_true")
     ap.add_argument("--only", help="solo questi gruppi (es. 'dungeons/D1_tail_cave,overworld')")
+    ap.add_argument("--allow-modified-rom", action="store_true",
+                    help="accetta una ROM modificata costruita sulla v1.0 (es. LADX-Zelda1); lo sha1 resta in index.json")
+    ap.add_argument("--maps", default="maps.json",
+                    help="file in mappings/ con nomi e cartelle dei gruppi (es. maps_zelda1.json)")
+    ap.add_argument("--reference",
+                    help="cartella rooms/ di un'estrazione precedente (es. data/la_local/rooms): ogni stanza con gli "
+                         "stessi oggetti della stanza con lo stesso id viene segnata same_as_reference=true")
     args = ap.parse_args()
 
     t0 = time.time()
@@ -398,8 +405,16 @@ def main():
             print(f"attenzione: impossibile svuotare del tutto {out} (file in uso?): sovrascrivo")
     out.mkdir(parents=True, exist_ok=True)
 
-    g = ladx.Game(args.rom, args.ladxr)
-    mp = Mapper()
+    ref_objects, ref_map = {}, {}
+    if args.reference:
+        ref = Path(args.reference)
+        for e in json.load(open(ref / "index.json", encoding="utf-8"))["rooms"]:
+            rj = json.load(open(ref / e["path"] / "room.json", encoding="utf-8"))
+            ref_objects[e["room_id"]] = (e["region"] == "overworld", [v for row in rj["objects"] for v in row])
+            if rj.get("map_id") is not None:
+                ref_map[int(e["room_id"], 16)] = int(rj["map_id"], 16)
+    g = ladx.Game(args.rom, args.ladxr, allow_modified=args.allow_modified_rom, map_id_fallback=ref_map)
+    mp = Mapper(args.maps)
     only = set(args.only.split(",")) if args.only else None
 
     data = {r: g.room(r) for r in ladx.all_room_ids()}
@@ -449,6 +464,21 @@ def main():
         rdir = out / rel
         rdir.mkdir(parents=True, exist_ok=True)
 
+        objects_hex = [[f"{o:02X}" for o in d["objects"][y * W:(y + 1) * W]] for y in range(H)]
+        same_as_ref, ref_near, ref_diff = None, None, None
+        if args.reference:
+            # stanza di riferimento piu' simile (stessa regione overworld/interni), per trovare copie e quasi-copie
+            flat = [v for row in objects_hex for v in row]
+            is_ow = d["region"] == "overworld"
+            ref_diff, ref_near = min((sum(a != b for a, b in zip(flat, objs)), k)
+                                     for k, (ow, objs) in ref_objects.items() if ow == is_ow)
+            same_as_ref = ref_diff == 0
+            if same_as_ref:
+                notes.append(f"stessi oggetti della stanza {ref_near} di {args.reference}: non e' una stanza nuova")
+            elif ref_diff <= 3:
+                notes.append(f"quasi uguale alla stanza {ref_near} di {args.reference} ({ref_diff} celle diverse)")
+        if r in g.map_id_from_fallback:
+            notes.append("mappa non deducibile dai warp di questa ROM: presa dalla stessa stanza dell'estrazione di riferimento")
         ascii_rows = ["".join(mp.ascii[c] for c in row) for row in grid]
         ascii_noent = ["".join(mp.ascii[c] for c in row) for row in grid_noent]
         cat_counts = Counter(c for row in grid for c in row)
@@ -465,6 +495,9 @@ def main():
                 "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon",
             },
             "sidescroll": d["sidescroll"],
+            "same_as_reference": same_as_ref,
+            "reference_nearest": ref_near,
+            "reference_min_diff": ref_diff,
             "valid": valid,
             "discard_reasons": reasons,
             "notes": notes,
@@ -482,7 +515,7 @@ def main():
             "grid_no_entities": grid_noent,
             "grid_raw": conv["grid_raw"],
             "grid_tiles": conv["grid_tiles"],
-            "objects": [[f"{o:02X}" for o in d["objects"][y * W:(y + 1) * W]] for y in range(H)],
+            "objects": objects_hex,
             "physics": [[f"{p:02X}" for p in d["physics"][y * W:(y + 1) * W]] for y in range(H)],
             "passage": conv["passage"],
             "specials": conv["specials"],
@@ -509,7 +542,9 @@ def main():
                       "fixes": [fx["type"] for fx in fixes], "openings": len(res["openings"]),
                       "brief_valid": bool(valid and res["brief_checks"]["all_ok"]),
                       "brief_checks": res["brief_checks"],
-                      "table_pos": d["table_pos"], "layout_pos": d["layout_pos"]})
+                      "table_pos": d["table_pos"], "layout_pos": d["layout_pos"],
+                      "same_as_reference": same_as_ref, "reference_nearest": ref_near,
+                      "reference_min_diff": ref_diff})
         groups[folder].append((r, d, grid, valid))
         for k in reasons:
             reason_count[k] += 1
@@ -533,6 +568,8 @@ def main():
         npz["valid"].append(valid)
         npz["brief_valid"].append(bool(valid and res["brief_checks"]["all_ok"]))
         npz["notes"].append(" | ".join(reasons + notes))
+        npz["same_as_reference"].append(bool(same_as_ref))
+        npz["reference_min_diff"].append(-1 if ref_diff is None else ref_diff)
 
         if not args.no_images:
             save_png(g.render(r), rdir / "original.png")
@@ -589,6 +626,9 @@ def main():
         layout_x=np.array(npz["layout_x"], dtype=np.int8), layout_y=np.array(npz["layout_y"], dtype=np.int8),
         valid=np.array(npz["valid"], dtype=bool), brief_valid=np.array(npz["brief_valid"], dtype=bool), notes=np.array(npz["notes"]),
     )
+    if args.reference:
+        arrays["same_as_reference"] = np.array(npz["same_as_reference"], dtype=bool)
+        arrays["reference_min_diff"] = np.array(npz["reference_min_diff"], dtype=np.int16)
     _retry(write_npz, out / "dataset.npz")
     by_group = {}
     for folder, items in sorted(groups.items()):

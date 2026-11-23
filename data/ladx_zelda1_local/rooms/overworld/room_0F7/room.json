@@ -1,0 +1,833 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "0F7",
+ "region": "overworld",
+ "group": "overworld",
+ "group_name": "Overworld di Zelda 1 (in LADX)",
+ "map_id": null,
+ "position": {
+  "table": {
+   "x": 7,
+   "y": 15
+  },
+  "layout": null,
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "same_as_reference": false,
+ "reference_nearest": "020",
+ "reference_min_diff": 45,
+ "valid": true,
+ "discard_reasons": [],
+ "notes": [],
+ "grid_ascii": [
+  "#####..###",
+  "##E##..###",
+  "#.P....###",
+  "#.........",
+  "..........",
+  "#BB.....B#",
+  "###B...B##",
+  "##########"
+ ],
+ "grid_no_entities_ascii": [
+  "#####..###",
+  "##E##..###",
+  "#......###",
+  "#.........",
+  "..........",
+  "#BB.....B#",
+  "###B...B##",
+  "##########"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 2,
+   "y": 2,
+   "source": "warp_arrival"
+  }
+ ],
+ "openings": [
+  {
+   "x": 5,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 6,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 9,
+   "y": 3,
+   "side": "right",
+   "kind": "corridor"
+  },
+  {
+   "x": 0,
+   "y": 4,
+   "side": "left",
+   "kind": "corridor"
+  },
+  {
+   "x": 9,
+   "y": 4,
+   "side": "right",
+   "kind": "corridor"
+  }
+ ],
+ "doors": 0,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": true,
+  "stairs_reachable": true,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   8,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   9,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   7,
+   7,
+   2,
+   2,
+   2,
+   2,
+   2,
+   7,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   7,
+   2,
+   2,
+   2,
+   7,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   8,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   7,
+   7,
+   2,
+   2,
+   2,
+   2,
+   2,
+   7,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   7,
+   2,
+   2,
+   2,
+   7,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   8,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   7,
+   7,
+   2,
+   2,
+   2,
+   2,
+   2,
+   7,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   7,
+   2,
+   2,
+   2,
+   7,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   8,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   7,
+   7,
+   2,
+   2,
+   2,
+   2,
+   2,
+   7,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   7,
+   2,
+   2,
+   2,
+   7,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "3A",
+   "3A",
+   "3A",
+   "3A",
+   "3A",
+   "04",
+   "04",
+   "3A",
+   "3A",
+   "3A"
+  ],
+  [
+   "3A",
+   "3A",
+   "E1",
+   "3A",
+   "3A",
+   "04",
+   "04",
+   "3A",
+   "3A",
+   "3A"
+  ],
+  [
+   "3A",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "3A",
+   "3A",
+   "3A"
+  ],
+  [
+   "3A",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04"
+  ],
+  [
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04"
+  ],
+  [
+   "3A",
+   "5C",
+   "5C",
+   "04",
+   "04",
+   "04",
+   "04",
+   "04",
+   "5C",
+   "3A"
+  ],
+  [
+   "3A",
+   "20",
+   "20",
+   "5C",
+   "04",
+   "04",
+   "04",
+   "5C",
+   "20",
+   "3A"
+  ],
+  [
+   "3A",
+   "3A",
+   "3A",
+   "3A",
+   "3A",
+   "3A",
+   "3A",
+   "3A",
+   "3A",
+   "3A"
+  ]
+ ],
+ "physics": [
+  [
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "00",
+   "00",
+   "01",
+   "01",
+   "01"
+  ],
+  [
+   "01",
+   "01",
+   "03",
+   "01",
+   "01",
+   "00",
+   "00",
+   "01",
+   "01",
+   "01"
+  ],
+  [
+   "01",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "01",
+   "01",
+   "01"
+  ],
+  [
+   "01",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00"
+  ],
+  [
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00"
+  ],
+  [
+   "01",
+   "30",
+   "30",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "30",
+   "01"
+  ],
+  [
+   "01",
+   "30",
+   "30",
+   "30",
+   "00",
+   "00",
+   "00",
+   "30",
+   "30",
+   "01"
+  ],
+  [
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [],
+ "unmapped": [],
+ "entities": [],
+ "key_sources": [],
+ "chest": null,
+ "warps": [
+  {
+   "warp_type": 1,
+   "map_id": "10",
+   "target_room": "2A3",
+   "target_x": 80,
+   "target_y": 124
+  }
+ ],
+ "arrivals": [
+  {
+   "from_room": "2A3",
+   "x_px": 40,
+   "y_px": 34,
+   "cell": [
+    2,
+    1
+   ]
+  }
+ ],
+ "stats": {
+  "category_counts": {
+   "wall": 37,
+   "floor": 36,
+   "block": 5,
+   "stairs": 1,
+   "player": 1
+  },
+  "num_room_objects": 17,
+  "num_entities": 0,
+  "num_enemies": 0,
+  "tags": {
+   "cliff": 34,
+   "exit": 1,
+   "cave_door": 1,
+   "bush": 5,
+   "rock": 3,
+   "liftable": 3
+  }
+ },
+ "render": {
+  "animation_id": 10,
+  "floor_object": "04"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

@@ -1,0 +1,853 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "1C4",
+ "region": "indoor",
+ "group": "dungeons/Z1_D6",
+ "group_name": "Zelda 1 - dungeon nello slot D6 (Face Shrine)",
+ "map_id": "05",
+ "position": {
+  "table": {
+   "x": 4,
+   "y": 12
+  },
+  "layout": {
+   "layout": 5,
+   "x": 6,
+   "y": 2
+  },
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "same_as_reference": false,
+ "reference_nearest": "233",
+ "reference_min_diff": 52,
+ "valid": true,
+ "discard_reasons": [],
+ "notes": [],
+ "grid_ascii": [
+  "#~~#D##~~#",
+  "#~~~P.~~~~",
+  "#~~~..~~..",
+  "#~~~M.....",
+  "#~~~.M....",
+  "#~~~..~~~~",
+  "#~~....~~~",
+  "#~......~#"
+ ],
+ "grid_no_entities_ascii": [
+  "#~~#D##~~#",
+  "#~~~..~~~~",
+  "#~~~..~~..",
+  "#~~~......",
+  "#~~~......",
+  "#~~~..~~~~",
+  "#~~....~~~",
+  "#~......~#"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 4,
+   "y": 1,
+   "source": "border_opening"
+  }
+ ],
+ "openings": [
+  {
+   "x": 4,
+   "y": 0,
+   "side": "top",
+   "kind": "door"
+  },
+  {
+   "x": 9,
+   "y": 2,
+   "side": "right",
+   "kind": "corridor"
+  },
+  {
+   "x": 9,
+   "y": 3,
+   "side": "right",
+   "kind": "corridor"
+  },
+  {
+   "x": 9,
+   "y": 4,
+   "side": "right",
+   "kind": "corridor"
+  },
+  {
+   "x": 3,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  },
+  {
+   "x": 4,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  },
+  {
+   "x": 5,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  },
+  {
+   "x": 6,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  }
+ ],
+ "doors": 1,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   1,
+   3,
+   3,
+   1,
+   5,
+   1,
+   1,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   9,
+   2,
+   3,
+   3,
+   3,
+   3
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   3,
+   3,
+   2,
+   2
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   10,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   10,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3
+  ],
+  [
+   1,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   1,
+   3,
+   3,
+   1,
+   5,
+   1,
+   1,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   3,
+   3,
+   2,
+   2
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3
+  ],
+  [
+   1,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   1,
+   3,
+   3,
+   1,
+   5,
+   1,
+   1,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   3,
+   3,
+   2,
+   2
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   10,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   10,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3
+  ],
+  [
+   1,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   1,
+   3,
+   3,
+   1,
+   5,
+   1,
+   1,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   3,
+   3,
+   2,
+   2
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3
+  ],
+  [
+   1,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "23",
+   "06",
+   "06",
+   "2A",
+   "A4",
+   "A5",
+   "29",
+   "06",
+   "06",
+   "2A"
+  ],
+  [
+   "23",
+   "06",
+   "06",
+   "06",
+   "0F",
+   "0F",
+   "06",
+   "06",
+   "06",
+   "06"
+  ],
+  [
+   "23",
+   "06",
+   "06",
+   "06",
+   "0F",
+   "0F",
+   "06",
+   "06",
+   "0D",
+   "0D"
+  ],
+  [
+   "23",
+   "06",
+   "06",
+   "06",
+   "0F",
+   "0F",
+   "0F",
+   "0F",
+   "0F",
+   "0F"
+  ],
+  [
+   "23",
+   "06",
+   "06",
+   "06",
+   "0F",
+   "0F",
+   "0F",
+   "0F",
+   "0F",
+   "0F"
+  ],
+  [
+   "23",
+   "06",
+   "06",
+   "06",
+   "0F",
+   "0F",
+   "06",
+   "06",
+   "06",
+   "06"
+  ],
+  [
+   "23",
+   "06",
+   "06",
+   "0D",
+   "0F",
+   "0F",
+   "0D",
+   "06",
+   "06",
+   "06"
+  ],
+  [
+   "23",
+   "06",
+   "0D",
+   "0D",
+   "0F",
+   "0F",
+   "0D",
+   "0D",
+   "06",
+   "2C"
+  ]
+ ],
+ "physics": [
+  [
+   "D0",
+   "0B",
+   "0B",
+   "01",
+   "98",
+   "98",
+   "01",
+   "0B",
+   "0B",
+   "01"
+  ],
+  [
+   "D0",
+   "0B",
+   "0B",
+   "0B",
+   "00",
+   "00",
+   "0B",
+   "0B",
+   "0B",
+   "0B"
+  ],
+  [
+   "D0",
+   "0B",
+   "0B",
+   "0B",
+   "00",
+   "00",
+   "0B",
+   "0B",
+   "00",
+   "00"
+  ],
+  [
+   "D0",
+   "0B",
+   "0B",
+   "0B",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00"
+  ],
+  [
+   "D0",
+   "0B",
+   "0B",
+   "0B",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00"
+  ],
+  [
+   "D0",
+   "0B",
+   "0B",
+   "0B",
+   "00",
+   "00",
+   "0B",
+   "0B",
+   "0B",
+   "0B"
+  ],
+  [
+   "D0",
+   "0B",
+   "0B",
+   "00",
+   "00",
+   "00",
+   "00",
+   "0B",
+   "0B",
+   "0B"
+  ],
+  [
+   "D0",
+   "0B",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "0B",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   true,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 4,
+   "y": 3,
+   "entity_id": "21",
+   "name": "WIZROBE",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 5,
+   "y": 4,
+   "entity_id": "21",
+   "name": "WIZROBE",
+   "class": "enemy",
+   "placed_as": 10
+  }
+ ],
+ "key_sources": [],
+ "chest": null,
+ "warps": [],
+ "arrivals": [],
+ "stats": {
+  "category_counts": {
+   "wall": 13,
+   "floor": 27,
+   "water": 36,
+   "door": 1,
+   "player": 1,
+   "enemy": 2
+  },
+  "num_room_objects": 17,
+  "num_entities": 2,
+  "num_enemies": 2,
+  "tags": {
+   "lava": 36,
+   "boss_door": 2,
+   "door_half1": 1,
+   "door_half2": 1
+  }
+ },
+ "render": {
+  "animation_id": 6,
+  "floor_object": "56"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

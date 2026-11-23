@@ -1,0 +1,1329 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "2B1",
+ "region": "indoor",
+ "group": "indoor/minigame",
+ "group_name": "Minigame",
+ "map_id": "0F",
+ "position": {
+  "table": {
+   "x": 1,
+   "y": 11
+  },
+  "layout": null,
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": true,
+ "same_as_reference": true,
+ "reference_nearest": "2B1",
+ "reference_min_diff": 0,
+ "valid": false,
+ "discard_reasons": [
+  "sidescroll"
+ ],
+ "notes": [
+  "72 celle con oggetti non mappati (fallback da physics)",
+  "stessi oggetti della stanza 2B1 di data/la_local/rooms: non e' una stanza nuova"
+ ],
+ "grid_ascii": [
+  "..........",
+  "        P.",
+  "~~~~~~~~##",
+  "~~~~~~~~##",
+  "~~~~~~~~~#",
+  "~~~~~~~~##",
+  "~~~~~~~###",
+  "##########"
+ ],
+ "grid_no_entities_ascii": [
+  "..........",
+  "        ..",
+  "~~~~~~~~##",
+  "~~~~~~~~##",
+  "~~~~~~~~~#",
+  "~~~~~~~~##",
+  "~~~~~~~###",
+  "##########"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 8,
+   "y": 1,
+   "source": "warp_arrival"
+  }
+ ],
+ "openings": [
+  {
+   "x": 8,
+   "y": 0,
+   "side": "top",
+   "kind": "corridor"
+  },
+  {
+   "x": 9,
+   "y": 1,
+   "side": "right",
+   "kind": "corridor"
+  }
+ ],
+ "doors": 0,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   9,
+   2
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   2
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   2
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   2
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1
+  ],
+  [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "78",
+   "79",
+   "78",
+   "79",
+   "78",
+   "79",
+   "78",
+   "79",
+   "78",
+   "79"
+  ],
+  [
+   "03",
+   "03",
+   "03",
+   "03",
+   "03",
+   "03",
+   "03",
+   "03",
+   "7C",
+   "7C"
+  ],
+  [
+   "80",
+   "80",
+   "80",
+   "80",
+   "80",
+   "80",
+   "80",
+   "80",
+   "5F",
+   "60"
+  ],
+  [
+   "81",
+   "81",
+   "81",
+   "81",
+   "81",
+   "81",
+   "81",
+   "81",
+   "52",
+   "54"
+  ],
+  [
+   "81",
+   "81",
+   "81",
+   "81",
+   "81",
+   "81",
+   "81",
+   "81",
+   "81",
+   "51"
+  ],
+  [
+   "81",
+   "81",
+   "81",
+   "81",
+   "81",
+   "81",
+   "81",
+   "72",
+   "50",
+   "54"
+  ],
+  [
+   "81",
+   "72",
+   "81",
+   "81",
+   "81",
+   "81",
+   "72",
+   "50",
+   "54",
+   "54"
+  ],
+  [
+   "53",
+   "53",
+   "53",
+   "53",
+   "53",
+   "53",
+   "53",
+   "54",
+   "54",
+   "54"
+  ]
+ ],
+ "physics": [
+  [
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00"
+  ],
+  [
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00"
+  ],
+  [
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "01",
+   "01"
+  ],
+  [
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "01",
+   "01"
+  ],
+  [
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "01"
+  ],
+  [
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "01",
+   "01"
+  ],
+  [
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "01",
+   "01",
+   "01"
+  ],
+  [
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [],
+ "unmapped": [
+  {
+   "x": 0,
+   "y": 0,
+   "object": "78",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 1,
+   "y": 0,
+   "object": "79",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 2,
+   "y": 0,
+   "object": "78",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 3,
+   "y": 0,
+   "object": "79",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 4,
+   "y": 0,
+   "object": "78",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 5,
+   "y": 0,
+   "object": "79",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 6,
+   "y": 0,
+   "object": "78",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 7,
+   "y": 0,
+   "object": "79",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 8,
+   "y": 0,
+   "object": "78",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 9,
+   "y": 0,
+   "object": "79",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 8,
+   "y": 1,
+   "object": "7C",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 9,
+   "y": 1,
+   "object": "7C",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 0,
+   "y": 2,
+   "object": "80",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 1,
+   "y": 2,
+   "object": "80",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 2,
+   "y": 2,
+   "object": "80",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 3,
+   "y": 2,
+   "object": "80",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 4,
+   "y": 2,
+   "object": "80",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 5,
+   "y": 2,
+   "object": "80",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 6,
+   "y": 2,
+   "object": "80",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 7,
+   "y": 2,
+   "object": "80",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 8,
+   "y": 2,
+   "object": "5F",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 9,
+   "y": 2,
+   "object": "60",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 0,
+   "y": 3,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 1,
+   "y": 3,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 2,
+   "y": 3,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 3,
+   "y": 3,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 4,
+   "y": 3,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 5,
+   "y": 3,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 6,
+   "y": 3,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 7,
+   "y": 3,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 8,
+   "y": 3,
+   "object": "52",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 9,
+   "y": 3,
+   "object": "54",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 0,
+   "y": 4,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 1,
+   "y": 4,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 2,
+   "y": 4,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 3,
+   "y": 4,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 4,
+   "y": 4,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 5,
+   "y": 4,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 6,
+   "y": 4,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 7,
+   "y": 4,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 8,
+   "y": 4,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 9,
+   "y": 4,
+   "object": "51",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 0,
+   "y": 5,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 1,
+   "y": 5,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 2,
+   "y": 5,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 3,
+   "y": 5,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 4,
+   "y": 5,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 5,
+   "y": 5,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 6,
+   "y": 5,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 7,
+   "y": 5,
+   "object": "72",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 8,
+   "y": 5,
+   "object": "50",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 9,
+   "y": 5,
+   "object": "54",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 0,
+   "y": 6,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 1,
+   "y": 6,
+   "object": "72",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 2,
+   "y": 6,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 3,
+   "y": 6,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 4,
+   "y": 6,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 5,
+   "y": 6,
+   "object": "81",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 6,
+   "y": 6,
+   "object": "72",
+   "physics": "B0",
+   "fallback_category": 3
+  },
+  {
+   "x": 7,
+   "y": 6,
+   "object": "50",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 8,
+   "y": 6,
+   "object": "54",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 9,
+   "y": 6,
+   "object": "54",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 0,
+   "y": 7,
+   "object": "53",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 1,
+   "y": 7,
+   "object": "53",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 2,
+   "y": 7,
+   "object": "53",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 3,
+   "y": 7,
+   "object": "53",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 4,
+   "y": 7,
+   "object": "53",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 5,
+   "y": 7,
+   "object": "53",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 6,
+   "y": 7,
+   "object": "53",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 7,
+   "y": 7,
+   "object": "54",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 8,
+   "y": 7,
+   "object": "54",
+   "physics": "01",
+   "fallback_category": 1
+  },
+  {
+   "x": 9,
+   "y": 7,
+   "object": "54",
+   "physics": "01",
+   "fallback_category": 1
+  }
+ ],
+ "entities": [
+  {
+   "x": 7,
+   "y": 3,
+   "entity_id": "54",
+   "name": "FISHERMAN_FISHING_GAME",
+   "class": "npc",
+   "placed_as": null
+  }
+ ],
+ "key_sources": [],
+ "chest": null,
+ "warps": [
+  {
+   "warp_type": 0,
+   "map_id": "00",
+   "target_room": "081",
+   "target_x": 104,
+   "target_y": 96
+  }
+ ],
+ "arrivals": [
+  {
+   "from_room": "081",
+   "x_px": 140,
+   "y_px": 34,
+   "cell": [
+    8,
+    1
+   ]
+  }
+ ],
+ "stats": {
+  "category_counts": {
+   "void": 8,
+   "wall": 20,
+   "floor": 11,
+   "water": 40,
+   "player": 1
+  },
+  "num_room_objects": 26,
+  "num_entities": 1,
+  "num_enemies": 0,
+  "tags": {
+   "filler": 8
+  }
+ },
+ "render": {
+  "animation_id": 5,
+  "floor_object": "43"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

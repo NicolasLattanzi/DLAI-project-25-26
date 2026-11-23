@@ -1,0 +1,830 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "244",
+ "region": "indoor",
+ "group": "dungeons/Z1_D8",
+ "group_name": "Zelda 1 - dungeon nello slot D8 (Turtle Rock)",
+ "map_id": "07",
+ "position": {
+  "table": {
+   "x": 4,
+   "y": 4
+  },
+  "layout": {
+   "layout": 7,
+   "x": 6,
+   "y": 3
+  },
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "same_as_reference": true,
+ "reference_nearest": "244",
+ "reference_min_diff": 0,
+ "valid": true,
+ "discard_reasons": [],
+ "notes": [
+  "stessi oggetti della stanza 244 di data/la_local/rooms: non e' una stanza nuova"
+ ],
+ "grid_ascii": [
+  "##########",
+  "#...~.MM.#",
+  "#...~....#",
+  "#.##~~.#.#",
+  "#.M#~...P#",
+  "#.M#~....#",
+  ".D.#~~...#",
+  "##########"
+ ],
+ "grid_no_entities_ascii": [
+  "##########",
+  "#...~....#",
+  "#...~....#",
+  "#.##~~.#.#",
+  "#..#~....#",
+  "#..#~....#",
+  ".D.#~~...#",
+  "##########"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 8,
+   "y": 4,
+   "source": "border_opening"
+  }
+ ],
+ "openings": [
+  {
+   "x": 9,
+   "y": 4,
+   "side": "right",
+   "kind": "door"
+  }
+ ],
+ "doors": 1,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   3,
+   2,
+   10,
+   10,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   3,
+   3,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   10,
+   1,
+   3,
+   2,
+   2,
+   2,
+   9,
+   1
+  ],
+  [
+   1,
+   2,
+   10,
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   5,
+   2,
+   1,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   3,
+   3,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   5,
+   2,
+   1,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   3,
+   2,
+   10,
+   10,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   3,
+   3,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   10,
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   10,
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   5,
+   2,
+   1,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   3,
+   3,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   2,
+   5,
+   2,
+   1,
+   3,
+   3,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "25",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "26"
+  ],
+  [
+   "23",
+   "07",
+   "07",
+   "07",
+   "AF",
+   "07",
+   "07",
+   "07",
+   "07",
+   "24"
+  ],
+  [
+   "23",
+   "07",
+   "07",
+   "07",
+   "01",
+   "07",
+   "07",
+   "07",
+   "07",
+   "24"
+  ],
+  [
+   "23",
+   "07",
+   "AB",
+   "A6",
+   "01",
+   "AE",
+   "07",
+   "AB",
+   "07",
+   "24"
+  ],
+  [
+   "23",
+   "07",
+   "07",
+   "A6",
+   "01",
+   "07",
+   "07",
+   "07",
+   "07",
+   "42"
+  ],
+  [
+   "29",
+   "07",
+   "07",
+   "A6",
+   "01",
+   "07",
+   "07",
+   "07",
+   "07",
+   "24"
+  ],
+  [
+   "0D",
+   "DE",
+   "07",
+   "A6",
+   "B0",
+   "AE",
+   "07",
+   "07",
+   "07",
+   "24"
+  ],
+  [
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "28"
+  ]
+ ],
+ "physics": [
+  [
+   "01",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "01"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "50",
+   "00",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "50",
+   "00",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "01",
+   "60",
+   "50",
+   "50",
+   "00",
+   "01",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "60",
+   "50",
+   "00",
+   "00",
+   "00",
+   "00",
+   "9C"
+  ],
+  [
+   "01",
+   "00",
+   "00",
+   "60",
+   "50",
+   "00",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "00",
+   "01",
+   "00",
+   "60",
+   "50",
+   "50",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   true
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 6,
+   "y": 1,
+   "entity_id": "16",
+   "name": "SPARK_COUNTER_CLOCKWISE",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 7,
+   "y": 1,
+   "entity_id": "16",
+   "name": "SPARK_COUNTER_CLOCKWISE",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 2,
+   "y": 4,
+   "entity_id": "9B",
+   "name": "HIDING_GEL",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 2,
+   "y": 5,
+   "entity_id": "9B",
+   "name": "HIDING_GEL",
+   "class": "enemy",
+   "placed_as": 10
+  }
+ ],
+ "key_sources": [],
+ "chest": null,
+ "warps": [],
+ "arrivals": [],
+ "stats": {
+  "category_counts": {
+   "wall": 37,
+   "floor": 29,
+   "water": 8,
+   "door": 1,
+   "player": 1,
+   "enemy": 4
+  },
+  "num_room_objects": 13,
+  "num_entities": 4,
+  "num_enemies": 4,
+  "tags": {
+   "pit": 8,
+   "torch": 2,
+   "stone_block": 4,
+   "bombable": 1,
+   "keyhole_block": 1
+  }
+ },
+ "render": {
+  "animation_id": 6,
+  "floor_object": "07"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

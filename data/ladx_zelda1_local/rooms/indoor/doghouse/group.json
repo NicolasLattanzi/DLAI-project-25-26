@@ -1,0 +1,13 @@
+{
+ "group": "indoor/doghouse",
+ "rooms": [
+  "2B2"
+ ],
+ "valid": 1,
+ "overview_positions": {
+  "2B2": [
+   0,
+   0
+  ]
+ }
+}

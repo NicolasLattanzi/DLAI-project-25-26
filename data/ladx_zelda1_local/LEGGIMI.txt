@@ -1,0 +1,66 @@
+LEGGIMI - data/ladx_zelda1_local
+================================
+
+Stanze di LADX-Zelda1: lo Zelda del NES (1986) ricostruito da daid nel motore di Link's Awakening DX,
+con la grafica di Link's Awakening (tutto l'overworld e i dungeon 1-8). Sono convertite nelle stesse
+categorie LevelEdit e con lo STESSO formato di data/la_local (vedi data/la_local/LEGGIMI.txt per tutti i campi).
+Tutto quello che c'e' qui e' GENERATO: non modificare a mano, rigenerare.
+
+  data/ladx_zelda1_local/
+    LEGGIMI.txt   questo file
+    rooms/        le stanze: stessa struttura di data/la_local/rooms (index.json, dataset.npz, report, gruppi)
+    review/       fogli di controllo visivo (grafica + codifica sovrapposta)
+
+Le immagini dei due giochi restano in cartelle separate: data/la_local (Link's Awakening) e questa.
+
+
+1. DA DOVE VIENE LA ROM
+-----------------------
+  - third_party/LADX-Zelda1          sorgente di daid (commit 4854999), stanze in formato Tiled (rooms/*.json)
+  - third_party/LADX-Hackers-Toolbox strumento di daid per costruire la ROM (commit 78b5d64)
+  - ROM costruita: third_party/LADX-Hackers-Toolbox/roms/zelda1_ladx.gbc  (sha1 a1b89c32...)
+    a partire da una COPIA della ROM LADX (U) v1.0 del gruppo (roms/origonal.gbc).
+
+  Ricostruire la ROM (dalla cartella third_party/LADX-Hackers-Toolbox):
+    python src/main.py roms/origonal.gbc --path ../LADX-Zelda1 --build roms/zelda1_ladx.gbc
+
+
+2. COME SI ESTRAE (dalla radice del repository)
+-----------------------------------------------
+  python src/la_extract/extract_rooms.py --rom third_party/LADX-Hackers-Toolbox/roms/zelda1_ladx.gbc ^
+         --allow-modified-rom --maps maps_zelda1.json --reference data/la_local/rooms ^
+         --out data/ladx_zelda1_local/rooms --clean
+  python src/la_extract/review_sheets.py --rooms data/ladx_zelda1_local/rooms --out data/ladx_zelda1_local/review
+
+  --allow-modified-rom  accetta la ROM modificata (lo sha1 resta in index.json)
+  --maps                nomi e cartelle dei gruppi: i dungeon di Zelda 1 occupano gli slot dei dungeon di LA,
+                        quindi le cartelle si chiamano dungeons/Z1_D1 ... Z1_D9 e Z1_D0_color (= slot, non nome)
+  --reference           confronta ogni stanza con TUTTE le stanze di data/la_local (stessa regione)
+
+
+3. ATTENZIONE: MOLTE STANZE SONO COPIE DI LINK'S AWAKENING
+----------------------------------------------------------
+  La ROM contiene tutte le 789 posizioni del gioco: dove daid non ha messo Zelda 1, sono rimaste le stanze
+  originali di Link's Awakening (case, caverne, negozi...). Per ogni stanza:
+    same_as_reference    true = stessi oggetti di una stanza di data/la_local -> NON e' una stanza nuova
+    reference_nearest    la stanza di data/la_local piu' simile
+    reference_min_diff   quante celle (su 80) sono diverse da quella stanza
+
+  Numeri (22/11/2026):
+    copie esatte                  298
+    quasi-copie (1-3 celle)        10
+    stanze nuove (>3 celle)       481, di cui valide 394
+      overworld 219, dungeon Z1_D1..D9 170, Z1_D0_color 4, interni 7
+
+  Per usare solo le stanze nuove e valide:
+    import numpy as np
+    z = np.load("data/ladx_zelda1_local/rooms/dataset.npz")
+    keep = z["valid"] & (z["reference_min_diff"] > 3)
+
+
+4. STANZE SCARTATE PER OGGETTI NON MAPPATI
+------------------------------------------
+  25 stanze sono scartate (motivo special:unmapped) perche' usano oggetti che in Link's Awakening non
+  compaiono mai, quindi non hanno una categoria in src/la_extract/mappings/objects_*.json
+  (es. interni 04, 18, 68; overworld 01, 53, 47). Per recuperarle: assegnare una categoria a questi oggetti
+  nei JSON di mapping (con revisione visiva, come per gli altri) e rilanciare l'estrazione.

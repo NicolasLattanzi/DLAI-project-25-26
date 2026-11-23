@@ -1,0 +1,834 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "188",
+ "region": "indoor",
+ "group": "dungeons/Z1_D5",
+ "group_name": "Zelda 1 - dungeon nello slot D5 (Catfish's Maw)",
+ "map_id": "04",
+ "position": {
+  "table": {
+   "x": 8,
+   "y": 8
+  },
+  "layout": {
+   "layout": 4,
+   "x": 6,
+   "y": 1
+  },
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "same_as_reference": false,
+ "reference_nearest": "100",
+ "reference_min_diff": 11,
+ "valid": true,
+ "discard_reasons": [],
+ "notes": [],
+ "grid_ascii": [
+  "####D#####",
+  "#........#",
+  "#~~~~~~~~#",
+  "#..M.....#",
+  "#......M.#",
+  "#.M..M..P#",
+  "#........#",
+  "##########"
+ ],
+ "grid_no_entities_ascii": [
+  "####D#####",
+  "#........#",
+  "#~~~~~~~~#",
+  "#........#",
+  "#........#",
+  "#........#",
+  "#........#",
+  "##########"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 8,
+   "y": 5,
+   "source": "border_opening"
+  }
+ ],
+ "openings": [
+  {
+   "x": 4,
+   "y": 0,
+   "side": "top",
+   "kind": "door"
+  },
+  {
+   "x": 9,
+   "y": 5,
+   "side": "right",
+   "kind": "door"
+  }
+ ],
+ "doors": 1,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   1,
+   1,
+   1,
+   1,
+   5,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   10,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   10,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   10,
+   2,
+   2,
+   10,
+   2,
+   2,
+   9,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   1,
+   1,
+   1,
+   1,
+   5,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   1,
+   1,
+   1,
+   1,
+   5,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   10,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   10,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   10,
+   2,
+   2,
+   10,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   1,
+   1,
+   1,
+   1,
+   5,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "25",
+   "21",
+   "21",
+   "21",
+   "2D",
+   "2E",
+   "21",
+   "21",
+   "21",
+   "26"
+  ],
+  [
+   "23",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "24"
+  ],
+  [
+   "23",
+   "AE",
+   "AE",
+   "AE",
+   "AE",
+   "AE",
+   "AE",
+   "AE",
+   "AE",
+   "24"
+  ],
+  [
+   "23",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "24"
+  ],
+  [
+   "23",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "24"
+  ],
+  [
+   "23",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "42"
+  ],
+  [
+   "23",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "0D",
+   "24"
+  ],
+  [
+   "27",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "28"
+  ]
+ ],
+ "physics": [
+  [
+   "01",
+   "D3",
+   "D3",
+   "D3",
+   "90",
+   "90",
+   "D3",
+   "D3",
+   "D3",
+   "01"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "50",
+   "50",
+   "50",
+   "50",
+   "50",
+   "50",
+   "50",
+   "50",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "9C"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "01",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   true,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   true
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 3,
+   "y": 3,
+   "entity_id": "9C",
+   "name": "STAR",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 7,
+   "y": 4,
+   "entity_id": "9C",
+   "name": "STAR",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 5,
+   "y": 5,
+   "entity_id": "9C",
+   "name": "STAR",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 2,
+   "y": 5,
+   "entity_id": "9C",
+   "name": "STAR",
+   "class": "enemy",
+   "placed_as": 10
+  }
+ ],
+ "key_sources": [],
+ "chest": null,
+ "warps": [],
+ "arrivals": [],
+ "stats": {
+  "category_counts": {
+   "wall": 31,
+   "floor": 35,
+   "water": 8,
+   "door": 1,
+   "player": 1,
+   "enemy": 4
+  },
+  "num_room_objects": 3,
+  "num_entities": 4,
+  "num_enemies": 4,
+  "tags": {
+   "key_door": 2,
+   "door_half1": 1,
+   "door_half2": 1,
+   "pit": 8,
+   "bombable": 1
+  }
+ },
+ "render": {
+  "animation_id": 12,
+  "floor_object": "0D"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

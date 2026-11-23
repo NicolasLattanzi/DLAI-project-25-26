@@ -1,0 +1,156 @@
+{
+ "rooms_total": 789,
+ "rooms_valid": 622,
+ "rooms_discarded": 167,
+ "rooms_brief_valid": 7,
+ "brief_rule_failures_on_valid_rooms": {
+  "border_closed": 611,
+  "stairs_reachable": 486,
+  "has_stairs": 475,
+  "max_doors_ok": 2
+ },
+ "discard_reasons": {
+  "sidescroll": 56,
+  "special:unmapped": 25,
+  "no_floor_for_player": 22,
+  "special:teleport": 19,
+  "special:switch": 18,
+  "special:switch_block": 12,
+  "empty_room": 11,
+  "special:color_tile": 10,
+  "special:conveyor": 6,
+  "special:tractor_device": 3,
+  "special:moving_block": 1
+ },
+ "flags_on_rooms": {
+  "special:hidden_stairs": 5,
+  "special:keyhole": 3,
+  "special:spikes": 3
+ },
+ "fixes_applied": {
+  "add_player": 767
+ },
+ "by_group": {
+  "dungeons/Z1_D0_color": {
+   "rooms": 22,
+   "valid": 9,
+   "brief_valid": 0
+  },
+  "dungeons/Z1_D1": {
+   "rooms": 29,
+   "valid": 23,
+   "brief_valid": 0
+  },
+  "dungeons/Z1_D2": {
+   "rooms": 33,
+   "valid": 22,
+   "brief_valid": 0
+  },
+  "dungeons/Z1_D3": {
+   "rooms": 33,
+   "valid": 23,
+   "brief_valid": 0
+  },
+  "dungeons/Z1_D4": {
+   "rooms": 36,
+   "valid": 25,
+   "brief_valid": 0
+  },
+  "dungeons/Z1_D5": {
+   "rooms": 45,
+   "valid": 30,
+   "brief_valid": 1
+  },
+  "dungeons/Z1_D6": {
+   "rooms": 49,
+   "valid": 33,
+   "brief_valid": 0
+  },
+  "dungeons/Z1_D7": {
+   "rooms": 49,
+   "valid": 32,
+   "brief_valid": 0
+  },
+  "dungeons/Z1_D8": {
+   "rooms": 55,
+   "valid": 35,
+   "brief_valid": 0
+  },
+  "dungeons/Z1_D9": {
+   "rooms": 12,
+   "valid": 11,
+   "brief_valid": 0
+  },
+  "indoor/bowwow_hideout": {
+   "rooms": 4,
+   "valid": 4,
+   "brief_valid": 0
+  },
+  "indoor/cave_b": {
+   "rooms": 63,
+   "valid": 61,
+   "brief_valid": 0
+  },
+  "indoor/cave_c": {
+   "rooms": 18,
+   "valid": 16,
+   "brief_valid": 3
+  },
+  "indoor/cave_water": {
+   "rooms": 28,
+   "valid": 24,
+   "brief_valid": 3
+  },
+  "indoor/doghouse": {
+   "rooms": 1,
+   "valid": 1,
+   "brief_valid": 0
+  },
+  "indoor/dream_shrine": {
+   "rooms": 5,
+   "valid": 5,
+   "brief_valid": 0
+  },
+  "indoor/ghost_house": {
+   "rooms": 1,
+   "valid": 1,
+   "brief_valid": 0
+  },
+  "indoor/house": {
+   "rooms": 24,
+   "valid": 23,
+   "brief_valid": 0
+  },
+  "indoor/kanalet": {
+   "rooms": 10,
+   "valid": 9,
+   "brief_valid": 0
+  },
+  "indoor/library": {
+   "rooms": 1,
+   "valid": 1,
+   "brief_valid": 0
+  },
+  "indoor/minigame": {
+   "rooms": 3,
+   "valid": 0,
+   "brief_valid": 0
+  },
+  "indoor/s_face_shrine": {
+   "rooms": 6,
+   "valid": 6,
+   "brief_valid": 0
+  },
+  "indoor/shop": {
+   "rooms": 6,
+   "valid": 6,
+   "brief_valid": 0
+  },
+  "overworld": {
+   "rooms": 256,
+   "valid": 222,
+   "brief_valid": 0
+  }
+ },
+ "seconds": 17.0
+}

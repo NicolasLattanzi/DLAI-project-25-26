@@ -1,0 +1,835 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "178",
+ "region": "indoor",
+ "group": "dungeons/Z1_D4",
+ "group_name": "Zelda 1 - dungeon nello slot D4 (Angler's Tunnel)",
+ "map_id": "03",
+ "position": {
+  "table": {
+   "x": 8,
+   "y": 7
+  },
+  "layout": {
+   "layout": 3,
+   "x": 4,
+   "y": 6
+  },
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "same_as_reference": false,
+ "reference_nearest": "164",
+ "reference_min_diff": 25,
+ "valid": true,
+ "discard_reasons": [],
+ "notes": [],
+ "grid_ascii": [
+  "##########",
+  "#.#.#..#.#",
+  "#.#M#M.#.#",
+  "#.#.##.#.#",
+  ".P...#...#",
+  "#.##.#.M.#",
+  "#.M......#",
+  "##########"
+ ],
+ "grid_no_entities_ascii": [
+  "##########",
+  "#.#.#..#.#",
+  "#.#.#..#.#",
+  "#.#.##.#.#",
+  ".....#...#",
+  "#.##.#...#",
+  "#........#",
+  "##########"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 1,
+   "y": 4,
+   "source": "border_opening"
+  }
+ ],
+ "openings": [
+  {
+   "x": 0,
+   "y": 4,
+   "side": "left",
+   "kind": "door"
+  }
+ ],
+ "doors": 0,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   1,
+   2,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   10,
+   1,
+   10,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   2,
+   9,
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   2,
+   10,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   10,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   1,
+   2,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   1,
+   2,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   1,
+   2,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   10,
+   1,
+   10,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   2,
+   10,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   10,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   1,
+   2,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   1,
+   2,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "25",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "26"
+  ],
+  [
+   "23",
+   "1B",
+   "A6",
+   "1B",
+   "A6",
+   "1B",
+   "1B",
+   "A6",
+   "1B",
+   "24"
+  ],
+  [
+   "23",
+   "1B",
+   "A6",
+   "1B",
+   "A6",
+   "1B",
+   "1B",
+   "A6",
+   "1B",
+   "24"
+  ],
+  [
+   "23",
+   "1B",
+   "A6",
+   "1B",
+   "A6",
+   "A6",
+   "1B",
+   "A0",
+   "1B",
+   "24"
+  ],
+  [
+   "09",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "A6",
+   "1B",
+   "1B",
+   "1B",
+   "24"
+  ],
+  [
+   "0A",
+   "1B",
+   "A6",
+   "A6",
+   "1B",
+   "A6",
+   "1B",
+   "1B",
+   "1B",
+   "24"
+  ],
+  [
+   "23",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "1B",
+   "24"
+  ],
+  [
+   "27",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "28"
+  ]
+ ],
+ "physics": [
+  [
+   "01",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "01"
+  ],
+  [
+   "D0",
+   "05",
+   "60",
+   "05",
+   "60",
+   "05",
+   "05",
+   "60",
+   "05",
+   "D1"
+  ],
+  [
+   "D0",
+   "05",
+   "60",
+   "05",
+   "60",
+   "05",
+   "05",
+   "60",
+   "05",
+   "D1"
+  ],
+  [
+   "D0",
+   "05",
+   "60",
+   "05",
+   "60",
+   "60",
+   "05",
+   "60",
+   "05",
+   "D1"
+  ],
+  [
+   "7E",
+   "05",
+   "05",
+   "05",
+   "05",
+   "60",
+   "05",
+   "05",
+   "05",
+   "D1"
+  ],
+  [
+   "7F",
+   "05",
+   "60",
+   "60",
+   "05",
+   "60",
+   "05",
+   "05",
+   "05",
+   "D1"
+  ],
+  [
+   "D0",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "D1"
+  ],
+  [
+   "01",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   true,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 5,
+   "y": 2,
+   "entity_id": "24",
+   "name": "IRON_MASK",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 3,
+   "y": 2,
+   "entity_id": "24",
+   "name": "IRON_MASK",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 7,
+   "y": 5,
+   "entity_id": "24",
+   "name": "IRON_MASK",
+   "class": "enemy",
+   "placed_as": 10
+  },
+  {
+   "x": 2,
+   "y": 6,
+   "entity_id": "24",
+   "name": "IRON_MASK",
+   "class": "enemy",
+   "placed_as": 10
+  }
+ ],
+ "key_sources": [],
+ "chest": {
+  "item": "COMPASS",
+  "cells": [
+   [
+    7,
+    3
+   ]
+  ]
+ },
+ "warps": [],
+ "arrivals": [],
+ "stats": {
+  "category_counts": {
+   "wall": 45,
+   "floor": 30,
+   "player": 1,
+   "enemy": 4
+  },
+  "num_room_objects": 17,
+  "num_entities": 4,
+  "num_enemies": 4,
+  "tags": {
+   "shallow_water": 34,
+   "stone_block": 13,
+   "chest": 1,
+   "open_door": 2,
+   "door_half1": 1,
+   "door_half2": 1
+  }
+ },
+ "render": {
+  "animation_id": 12,
+  "floor_object": "09"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

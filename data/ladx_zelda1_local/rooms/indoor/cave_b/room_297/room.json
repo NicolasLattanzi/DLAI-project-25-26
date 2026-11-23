@@ -1,0 +1,858 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "297",
+ "region": "indoor",
+ "group": "indoor/cave_b",
+ "group_name": "Cave B",
+ "map_id": "0A",
+ "position": {
+  "table": {
+   "x": 7,
+   "y": 9
+  },
+  "layout": {
+   "layout": 10,
+   "x": 0,
+   "y": 5
+  },
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "same_as_reference": true,
+ "reference_nearest": "297",
+ "reference_min_diff": 0,
+ "valid": true,
+ "discard_reasons": [],
+ "notes": [
+  "2 celle fuori dai muri della stanza, mai raggiungibili nel gioco (analisi di connettivita' tra stanze) -> fuori mappa",
+  "stessi oggetti della stanza 297 di data/la_local/rooms: non e' una stanza nuova"
+ ],
+ "grid_ascii": [
+  "##########",
+  "#B##..##B#",
+  "#B##..##B#",
+  "#B##..##B#",
+  "#..#..#..#",
+  "#........#",
+  "##..P...##",
+  " ###..### "
+ ],
+ "grid_no_entities_ascii": [
+  "##########",
+  "#B##..##B#",
+  "#B##..##B#",
+  "#B##..##B#",
+  "#..#..#..#",
+  "#........#",
+  "##......##",
+  " ###..### "
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 4,
+   "y": 6,
+   "source": "border_opening"
+  }
+ ],
+ "openings": [
+  {
+   "x": 4,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  },
+  {
+   "x": 5,
+   "y": 7,
+   "side": "bottom",
+   "kind": "corridor"
+  }
+ ],
+ "doors": 0,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   7,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   7,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   7,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   9,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   0,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1,
+   0
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   7,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   7,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   7,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   0,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1,
+   0
+  ]
+ ],
+ "grid_raw": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   7,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   7,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   7,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   0,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1,
+   0
+  ]
+ ],
+ "grid_tiles": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   7,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   7,
+   1
+  ],
+  [
+   1,
+   7,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   7,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   0,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1,
+   0
+  ]
+ ],
+ "objects": [
+  [
+   "25",
+   "21",
+   "26",
+   "2A",
+   "21",
+   "21",
+   "29",
+   "25",
+   "21",
+   "26"
+  ],
+  [
+   "23",
+   "20",
+   "24",
+   "AC",
+   "0D",
+   "0D",
+   "AC",
+   "23",
+   "20",
+   "24"
+  ],
+  [
+   "23",
+   "20",
+   "24",
+   "AC",
+   "0D",
+   "0D",
+   "AC",
+   "23",
+   "20",
+   "24"
+  ],
+  [
+   "23",
+   "20",
+   "2A",
+   "26",
+   "0D",
+   "0D",
+   "25",
+   "29",
+   "20",
+   "24"
+  ],
+  [
+   "23",
+   "05",
+   "05",
+   "2A",
+   "97",
+   "97",
+   "29",
+   "05",
+   "05",
+   "24"
+  ],
+  [
+   "23",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "24"
+  ],
+  [
+   "27",
+   "2B",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "05",
+   "2C",
+   "28"
+  ],
+  [
+   "DF",
+   "27",
+   "22",
+   "2B",
+   "05",
+   "05",
+   "2C",
+   "22",
+   "28",
+   "DF"
+  ]
+ ],
+ "physics": [
+  [
+   "01",
+   "D3",
+   "01",
+   "01",
+   "D3",
+   "D3",
+   "01",
+   "01",
+   "D3",
+   "01"
+  ],
+  [
+   "D0",
+   "30",
+   "D1",
+   "01",
+   "00",
+   "00",
+   "01",
+   "D0",
+   "30",
+   "D1"
+  ],
+  [
+   "D0",
+   "30",
+   "D1",
+   "01",
+   "00",
+   "00",
+   "01",
+   "D0",
+   "30",
+   "D1"
+  ],
+  [
+   "D0",
+   "30",
+   "01",
+   "01",
+   "00",
+   "00",
+   "01",
+   "01",
+   "30",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "01",
+   "0A",
+   "0A",
+   "01",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "01",
+   "01",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "01",
+   "01"
+  ],
+  [
+   "00",
+   "01",
+   "D2",
+   "01",
+   "00",
+   "00",
+   "01",
+   "D2",
+   "01",
+   "00"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 4,
+   "y": 1,
+   "entity_id": "AF",
+   "name": "TRADING_ITEM",
+   "class": "item",
+   "placed_as": null
+  },
+  {
+   "x": 1,
+   "y": 1,
+   "entity_id": "2D",
+   "name": "DROPPABLE_HEART",
+   "class": "item",
+   "placed_as": null
+  },
+  {
+   "x": 1,
+   "y": 2,
+   "entity_id": "2D",
+   "name": "DROPPABLE_HEART",
+   "class": "item",
+   "placed_as": null
+  },
+  {
+   "x": 1,
+   "y": 3,
+   "entity_id": "2D",
+   "name": "DROPPABLE_HEART",
+   "class": "item",
+   "placed_as": null
+  },
+  {
+   "x": 8,
+   "y": 1,
+   "entity_id": "2D",
+   "name": "DROPPABLE_HEART",
+   "class": "item",
+   "placed_as": null
+  },
+  {
+   "x": 8,
+   "y": 2,
+   "entity_id": "2D",
+   "name": "DROPPABLE_HEART",
+   "class": "item",
+   "placed_as": null
+  },
+  {
+   "x": 8,
+   "y": 3,
+   "entity_id": "2D",
+   "name": "DROPPABLE_HEART",
+   "class": "item",
+   "placed_as": null
+  }
+ ],
+ "key_sources": [],
+ "chest": null,
+ "warps": [],
+ "arrivals": [],
+ "stats": {
+  "category_counts": {
+   "void": 2,
+   "wall": 44,
+   "floor": 27,
+   "block": 6,
+   "player": 1
+  },
+  "num_room_objects": 30,
+  "num_entities": 7,
+  "num_enemies": 0,
+  "tags": {
+   "liftable": 6,
+   "torch": 4,
+   "steps": 2
+  }
+ },
+ "render": {
+  "animation_id": 4,
+  "floor_object": "05"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

@@ -1,0 +1,838 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "2AA",
+ "region": "indoor",
+ "group": "indoor/dream_shrine",
+ "group_name": "Dream Shrine",
+ "map_id": "13",
+ "position": {
+  "table": {
+   "x": 10,
+   "y": 10
+  },
+  "layout": null,
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "same_as_reference": true,
+ "reference_nearest": "2AA",
+ "reference_min_diff": 0,
+ "valid": true,
+ "discard_reasons": [],
+ "notes": [
+  "stessi oggetti della stanza 2AA di data/la_local/rooms: non e' una stanza nuova"
+ ],
+ "grid_ascii": [
+  "##########",
+  "##......##",
+  "#.######.#",
+  "#.######.#",
+  "#.##.###.#",
+  "#.##.###.#",
+  "##...P..##",
+  "####.#####"
+ ],
+ "grid_no_entities_ascii": [
+  "##########",
+  "##......##",
+  "#.######.#",
+  "#.######.#",
+  "#.##.###.#",
+  "#.##.###.#",
+  "##......##",
+  "####.#####"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 5,
+   "y": 6,
+   "source": "warp_arrival"
+  }
+ ],
+ "openings": [
+  {
+   "x": 4,
+   "y": 7,
+   "side": "bottom",
+   "kind": "door"
+  }
+ ],
+ "doors": 0,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   9,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "25",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "26"
+  ],
+  [
+   "23",
+   "AC",
+   "0F",
+   "0F",
+   "0F",
+   "0F",
+   "0F",
+   "0F",
+   "AC",
+   "24"
+  ],
+  [
+   "23",
+   "0F",
+   "2C",
+   "22",
+   "22",
+   "22",
+   "22",
+   "2B",
+   "0F",
+   "24"
+  ],
+  [
+   "23",
+   "0F",
+   "24",
+   "17",
+   "12",
+   "C5",
+   "16",
+   "23",
+   "0F",
+   "24"
+  ],
+  [
+   "23",
+   "0F",
+   "24",
+   "15",
+   "0D",
+   "C6",
+   "14",
+   "23",
+   "0F",
+   "24"
+  ],
+  [
+   "23",
+   "0F",
+   "2A",
+   "21",
+   "98",
+   "21",
+   "21",
+   "29",
+   "0F",
+   "24"
+  ],
+  [
+   "23",
+   "AC",
+   "0F",
+   "0F",
+   "0F",
+   "0F",
+   "0F",
+   "0F",
+   "AC",
+   "24"
+  ],
+  [
+   "27",
+   "22",
+   "22",
+   "22",
+   "C1",
+   "C2",
+   "22",
+   "22",
+   "22",
+   "28"
+  ]
+ ],
+ "physics": [
+  [
+   "01",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "01"
+  ],
+  [
+   "D0",
+   "01",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "01",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "01",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "01",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "D1",
+   "87",
+   "82",
+   "01",
+   "86",
+   "D0",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "D1",
+   "85",
+   "00",
+   "01",
+   "84",
+   "D0",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "01",
+   "D3",
+   "02",
+   "D3",
+   "D3",
+   "01",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "01",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "01",
+   "D1"
+  ],
+  [
+   "01",
+   "D2",
+   "D2",
+   "D2",
+   "7C",
+   "7D",
+   "D2",
+   "D2",
+   "D2",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   true,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 5,
+   "y": 3,
+   "entity_id": "83",
+   "name": "DREAM_SHRINE_BED",
+   "class": "solid_object",
+   "placed_as": 1,
+   "note": "cella gia' occupata dalla stessa categoria"
+  }
+ ],
+ "key_sources": [],
+ "chest": null,
+ "warps": [
+  {
+   "warp_type": 0,
+   "map_id": "00",
+   "target_room": "0A6",
+   "target_x": 40,
+   "target_y": 18
+  }
+ ],
+ "arrivals": [
+  {
+   "from_room": "083",
+   "x_px": 80,
+   "y_px": 124,
+   "cell": [
+    5,
+    7
+   ]
+  },
+  {
+   "from_room": "0A6",
+   "x_px": 80,
+   "y_px": 124,
+   "cell": [
+    5,
+    7
+   ]
+  },
+  {
+   "from_room": "2CE",
+   "x_px": 72,
+   "y_px": 72,
+   "cell": [
+    4,
+    4
+   ]
+  }
+ ],
+ "stats": {
+  "category_counts": {
+   "wall": 57,
+   "floor": 22,
+   "player": 1
+  },
+  "num_room_objects": 23,
+  "num_entities": 1,
+  "num_enemies": 0,
+  "tags": {
+   "torch": 4,
+   "fine_collision": 5,
+   "furniture": 2,
+   "steps": 1,
+   "exit_door": 2,
+   "door_half1": 1,
+   "door_half2": 1
+  }
+ },
+ "render": {
+  "animation_id": 4,
+  "floor_object": "0F"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

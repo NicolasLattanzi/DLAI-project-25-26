@@ -1,0 +1,860 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "1C2",
+ "region": "indoor",
+ "group": "dungeons/Z1_D6",
+ "group_name": "Zelda 1 - dungeon nello slot D6 (Face Shrine)",
+ "map_id": "05",
+ "position": {
+  "table": {
+   "x": 2,
+   "y": 12
+  },
+  "layout": {
+   "layout": 5,
+   "x": 2,
+   "y": 4
+  },
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "same_as_reference": false,
+ "reference_nearest": "130",
+ "reference_min_diff": 18,
+ "valid": true,
+ "discard_reasons": [],
+ "notes": [
+  "entita' SPIKE_TRAP in (1,1) non messa in griglia: cella 'water' non sovrascrivibile",
+  "entita' SPIKE_TRAP in (1,6) non messa in griglia: cella 'water' non sovrascrivibile",
+  "entita' SPIKE_TRAP in (8,6) non messa in griglia: cella 'water' non sovrascrivibile",
+  "entita' SPIKE_TRAP in (8,1) non messa in griglia: cella 'water' non sovrascrivibile"
+ ],
+ "grid_ascii": [
+  "####.#####",
+  "#~.....P~#",
+  "#.#....#.#",
+  "#........#",
+  "#........#",
+  "#.#.##.#.#",
+  "#~......~#",
+  "####.#####"
+ ],
+ "grid_no_entities_ascii": [
+  "####.#####",
+  "#~......~#",
+  "#.#....#.#",
+  "#........#",
+  "#........#",
+  "#.#.##.#.#",
+  "#~......~#",
+  "####.#####"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 7,
+   "y": 1,
+   "source": "warp_arrival"
+  }
+ ],
+ "openings": [
+  {
+   "x": 4,
+   "y": 0,
+   "side": "top",
+   "kind": "door"
+  },
+  {
+   "x": 4,
+   "y": 7,
+   "side": "bottom",
+   "kind": "door"
+  }
+ ],
+ "doors": 0,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": false,
+  "stairs_reachable": null,
+  "border_closed": false,
+  "max_doors_ok": true,
+  "all_ok": false
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   9,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   2,
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "25",
+   "21",
+   "21",
+   "21",
+   "43",
+   "44",
+   "21",
+   "21",
+   "21",
+   "26"
+  ],
+  [
+   "23",
+   "AE",
+   "07",
+   "07",
+   "07",
+   "07",
+   "07",
+   "07",
+   "AE",
+   "24"
+  ],
+  [
+   "23",
+   "07",
+   "A6",
+   "07",
+   "07",
+   "07",
+   "07",
+   "A6",
+   "07",
+   "24"
+  ],
+  [
+   "23",
+   "07",
+   "07",
+   "07",
+   "07",
+   "07",
+   "07",
+   "07",
+   "07",
+   "24"
+  ],
+  [
+   "23",
+   "07",
+   "07",
+   "07",
+   "07",
+   "07",
+   "07",
+   "07",
+   "07",
+   "24"
+  ],
+  [
+   "23",
+   "07",
+   "A6",
+   "07",
+   "AB",
+   "AB",
+   "07",
+   "A6",
+   "07",
+   "24"
+  ],
+  [
+   "23",
+   "AE",
+   "07",
+   "07",
+   "07",
+   "07",
+   "07",
+   "07",
+   "AE",
+   "24"
+  ],
+  [
+   "27",
+   "22",
+   "22",
+   "22",
+   "8C",
+   "08",
+   "22",
+   "22",
+   "22",
+   "28"
+  ]
+ ],
+ "physics": [
+  [
+   "01",
+   "D3",
+   "D3",
+   "D3",
+   "7C",
+   "7D",
+   "D3",
+   "D3",
+   "D3",
+   "01"
+  ],
+  [
+   "D0",
+   "50",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "50",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "60",
+   "00",
+   "00",
+   "00",
+   "00",
+   "60",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "60",
+   "00",
+   "01",
+   "01",
+   "00",
+   "60",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "50",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "50",
+   "D1"
+  ],
+  [
+   "01",
+   "D2",
+   "D2",
+   "D2",
+   "7C",
+   "7D",
+   "D2",
+   "D2",
+   "D2",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   true,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   true,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [],
+ "unmapped": [],
+ "entities": [
+  {
+   "x": 1,
+   "y": 1,
+   "entity_id": "27",
+   "name": "SPIKE_TRAP",
+   "class": "enemy",
+   "placed_as": null,
+   "skipped": "cella 'water' non sovrascrivibile"
+  },
+  {
+   "x": 1,
+   "y": 6,
+   "entity_id": "27",
+   "name": "SPIKE_TRAP",
+   "class": "enemy",
+   "placed_as": null,
+   "skipped": "cella 'water' non sovrascrivibile"
+  },
+  {
+   "x": 8,
+   "y": 6,
+   "entity_id": "27",
+   "name": "SPIKE_TRAP",
+   "class": "enemy",
+   "placed_as": null,
+   "skipped": "cella 'water' non sovrascrivibile"
+  },
+  {
+   "x": 8,
+   "y": 1,
+   "entity_id": "27",
+   "name": "SPIKE_TRAP",
+   "class": "enemy",
+   "placed_as": null,
+   "skipped": "cella 'water' non sovrascrivibile"
+  }
+ ],
+ "key_sources": [],
+ "chest": null,
+ "warps": [
+  {
+   "warp_type": 2,
+   "map_id": "05",
+   "target_room": "1D9",
+   "target_x": 136,
+   "target_y": 16
+  }
+ ],
+ "arrivals": [
+  {
+   "from_room": "1D9",
+   "x_px": 136,
+   "y_px": 32,
+   "cell": [
+    8,
+    1
+   ]
+  }
+ ],
+ "stats": {
+  "category_counts": {
+   "wall": 36,
+   "floor": 39,
+   "water": 4,
+   "player": 1
+  },
+  "num_room_objects": 12,
+  "num_entities": 4,
+  "num_enemies": 0,
+  "tags": {
+   "open_door": 4,
+   "door_half1": 2,
+   "door_half2": 2,
+   "pit": 4,
+   "stone_block": 4,
+   "torch": 2
+  }
+ },
+ "render": {
+  "animation_id": 7,
+  "floor_object": "07"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}

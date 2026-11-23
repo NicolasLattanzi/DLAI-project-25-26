@@ -1,0 +1,990 @@
+{
+ "schema": "leveledit_la_room/1",
+ "room_id": "22B",
+ "region": "indoor",
+ "group": "dungeons/Z1_D7",
+ "group_name": "Zelda 1 - dungeon nello slot D7 (Eagle's Tower)",
+ "map_id": "06",
+ "position": {
+  "table": {
+   "x": 11,
+   "y": 2
+  },
+  "layout": {
+   "layout": 6,
+   "x": 5,
+   "y": 0
+  },
+  "_doc": "table = posizione nella mappa 16x16 (overworld o tabella interni A/B); layout = posizione nella minimappa 8x8 del dungeon"
+ },
+ "sidescroll": false,
+ "same_as_reference": false,
+ "reference_nearest": "232",
+ "reference_min_diff": 46,
+ "valid": false,
+ "discard_reasons": [
+  "special:unmapped",
+  "special:tractor_device"
+ ],
+ "notes": [
+  "19 celle con oggetti non mappati (fallback da physics)"
+ ],
+ "grid_ascii": [
+  "##########",
+  "#.~~~~~~~#",
+  "#~...~~~~#",
+  "#..~...PE#",
+  "#..~.....#",
+  "#~...~~~~#",
+  "#.~~~~~~~#",
+  "##########"
+ ],
+ "grid_no_entities_ascii": [
+  "##########",
+  "#.~~~~~~~#",
+  "#~...~~~~#",
+  "#..~....E#",
+  "#..~.....#",
+  "#~...~~~~#",
+  "#.~~~~~~~#",
+  "##########"
+ ],
+ "_grids_doc": "grid = layout originale 1:1 + nemici (M) + giocatore (P, nel punto d'ingresso); grid_no_entities = stessa griglia senza giocatore e nemici; grid_raw = tile + entita' prima di P/E; grid_tiles = solo i tile del gioco",
+ "fixes": [
+  {
+   "type": "add_player",
+   "x": 7,
+   "y": 3,
+   "source": "warp_arrival"
+  }
+ ],
+ "openings": [
+  {
+   "x": 0,
+   "y": 3,
+   "side": "left",
+   "kind": "door"
+  }
+ ],
+ "doors": 0,
+ "brief_checks": {
+  "one_player": true,
+  "has_stairs": true,
+  "stairs_reachable": true,
+  "border_closed": true,
+  "max_doors_ok": true,
+  "all_ok": true
+ },
+ "brief_valid": false,
+ "grid": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   9,
+   8,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_no_entities": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   2,
+   8,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_raw": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   2,
+   8,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "grid_tiles": [
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   1,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   2,
+   8,
+   1
+  ],
+  [
+   1,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   3,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ ],
+ "objects": [
+  [
+   "25",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "21",
+   "26"
+  ],
+  [
+   "23",
+   "0D",
+   "AE",
+   "AE",
+   "AE",
+   "AF",
+   "AF",
+   "AF",
+   "AF",
+   "24"
+  ],
+  [
+   "23",
+   "AE",
+   "18",
+   "18",
+   "18",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "24"
+  ],
+  [
+   "41",
+   "18",
+   "18",
+   "AF",
+   "18",
+   "18",
+   "18",
+   "18",
+   "BE",
+   "24"
+  ],
+  [
+   "23",
+   "18",
+   "18",
+   "B0",
+   "18",
+   "18",
+   "18",
+   "18",
+   "18",
+   "24"
+  ],
+  [
+   "23",
+   "AE",
+   "18",
+   "18",
+   "18",
+   "AF",
+   "AF",
+   "AF",
+   "AF",
+   "24"
+  ],
+  [
+   "23",
+   "0D",
+   "AE",
+   "AE",
+   "AE",
+   "B0",
+   "B0",
+   "B0",
+   "B0",
+   "24"
+  ],
+  [
+   "27",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "22",
+   "28"
+  ]
+ ],
+ "physics": [
+  [
+   "01",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "D3",
+   "01"
+  ],
+  [
+   "D0",
+   "00",
+   "50",
+   "50",
+   "50",
+   "50",
+   "50",
+   "50",
+   "50",
+   "D1"
+  ],
+  [
+   "D0",
+   "50",
+   "00",
+   "00",
+   "00",
+   "50",
+   "50",
+   "50",
+   "50",
+   "D1"
+  ],
+  [
+   "9B",
+   "00",
+   "00",
+   "50",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "00",
+   "50",
+   "00",
+   "00",
+   "00",
+   "00",
+   "00",
+   "D1"
+  ],
+  [
+   "D0",
+   "50",
+   "00",
+   "00",
+   "00",
+   "50",
+   "50",
+   "50",
+   "50",
+   "D1"
+  ],
+  [
+   "D0",
+   "00",
+   "50",
+   "50",
+   "50",
+   "50",
+   "50",
+   "50",
+   "50",
+   "D1"
+  ],
+  [
+   "01",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "D2",
+   "01"
+  ]
+ ],
+ "passage": [
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   true,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false
+  ]
+ ],
+ "specials": [
+  {
+   "x": 1,
+   "y": 1,
+   "special": "tractor_device",
+   "source": "entity",
+   "name": "TRACTOR_DEVICE"
+  },
+  {
+   "x": 1,
+   "y": 6,
+   "special": "tractor_device",
+   "source": "entity",
+   "name": "TRACTOR_DEVICE"
+  }
+ ],
+ "unmapped": [
+  {
+   "x": 2,
+   "y": 2,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 3,
+   "y": 2,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 4,
+   "y": 2,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 1,
+   "y": 3,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 2,
+   "y": 3,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 4,
+   "y": 3,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 5,
+   "y": 3,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 6,
+   "y": 3,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 7,
+   "y": 3,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 1,
+   "y": 4,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 2,
+   "y": 4,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 4,
+   "y": 4,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 5,
+   "y": 4,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 6,
+   "y": 4,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 7,
+   "y": 4,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 8,
+   "y": 4,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 2,
+   "y": 5,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 3,
+   "y": 5,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  },
+  {
+   "x": 4,
+   "y": 5,
+   "object": "18",
+   "physics": "00",
+   "fallback_category": 2
+  }
+ ],
+ "entities": [
+  {
+   "x": 1,
+   "y": 1,
+   "entity_id": "52",
+   "name": "TRACTOR_DEVICE",
+   "class": "mechanism",
+   "placed_as": null
+  },
+  {
+   "x": 1,
+   "y": 6,
+   "entity_id": "52",
+   "name": "TRACTOR_DEVICE",
+   "class": "mechanism",
+   "placed_as": null
+  }
+ ],
+ "key_sources": [],
+ "chest": null,
+ "warps": [
+  {
+   "warp_type": 1,
+   "map_id": "06",
+   "target_room": "22D",
+   "target_x": 88,
+   "target_y": 112
+  }
+ ],
+ "arrivals": [
+  {
+   "from_room": "223",
+   "x_px": 24,
+   "y_px": 16,
+   "cell": [
+    1,
+    0
+   ]
+  },
+  {
+   "from_room": "22D",
+   "x_px": 134,
+   "y_px": 64,
+   "cell": [
+    8,
+    3
+   ]
+  }
+ ],
+ "stats": {
+  "category_counts": {
+   "wall": 32,
+   "floor": 20,
+   "water": 26,
+   "stairs": 1,
+   "player": 1
+  },
+  "num_room_objects": 21,
+  "num_entities": 2,
+  "num_enemies": 0,
+  "tags": {
+   "pit": 26,
+   "bombable": 1,
+   "stairs_down": 1
+  }
+ },
+ "render": {
+  "animation_id": 4,
+  "floor_object": "0D"
+ },
+ "images": {
+  "original": "original.png",
+  "mapped": "mapped.png"
+ }
+}
