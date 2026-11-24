@@ -4,14 +4,15 @@ export_tiles.py - salva su disco le tile 16x16 di tutto il gioco, una per ogni I
 Legge le stanze gia' estratte (data/la_local/rooms: original.png + room.json) e, per ogni
 coppia (tileset, ID oggetto), ritaglia le celle 16x16 e le salva come PNG.
 
-Output (default data/la_local/tiles/):
+Output (default data/tiles/):
   index.json            tutte le tile: file, nome, categoria, simbolo ASCII, conteggi, varianti
   context_stats.json    statistiche "categoria + vicinato -> ID" per passare da ASCII a ID
                         (usate da src/testing/tile_library.py, non servono per usare gli ID diretti)
   <gruppo>/<ID>.png     la tile piu' frequente di quell'ID in quel tileset (es. overworld/37.png)
   <gruppo>/<ID>_v2.png  eventuali varianti (stesso ID con palette diversa), dalla piu' alla meno frequente
-  <gruppo>/sidescroll/  tile delle stanze a scorrimento laterale: stessi ID ma significato diverso
   _atlas/<gruppo>.png   foglio con tutte le tile del gruppo e il loro ID, per consultazione
+
+Le stanze a scorrimento laterale (sidescroll) sono IGNORATE: non producono ne' tile ne' statistiche.
 
 Il "gruppo" e' il tileset: overworld, dungeons/D1_tail_cave ... D0_color_dungeon, indoor/house, ...
 Lo stesso ID in gruppi diversi e' un'immagine diversa: per questo le tile sono divise per gruppo.
@@ -72,12 +73,13 @@ def collect(rooms_dir: Path, exclude: set[str]):
             continue
         folder = rooms_dir / e["path"]
         room = json.load(open(folder / "room.json", encoding="utf-8"))
+        if room["sidescroll"]:  # stanze 2D: gli ID hanno un altro significato, non fanno parte del dataset
+            continue
         img = Image.open(folder / "original.png").convert("RGB")
-        side = bool(room["sidescroll"])
-        group = e["group"] + ("/sidescroll" if side else "")
+        group = e["group"]
         region_of[group] = room["region"]
         ids, cats = room["objects"], room["grid_tiles"]
-        use_ctx = e["valid"] and not side  # statistiche ASCII->ID solo da stanze buone
+        use_ctx = e["valid"]  # statistiche ASCII->ID solo da stanze buone
         for y in range(ROWS):
             for x in range(COLS):
                 oid = str(ids[y][x]).upper().zfill(2)
@@ -85,10 +87,9 @@ def collect(rooms_dir: Path, exclude: set[str]):
                 slot = tiles[group][oid].setdefault(crop.tobytes(), {"img": crop, "count": 0, "rooms": set()})
                 slot["count"] += 1
                 slot["rooms"].add(e["room_id"])
-                if not side:
-                    cats_seen[group][oid][cats[y][x]] += 1
-                    if use_ctx:
-                        stats[group][ctx9(cats, y, x)][oid] += 1
+                cats_seen[group][oid][cats[y][x]] += 1
+                if use_ctx:
+                    stats[group][ctx9(cats, y, x)][oid] += 1
     return tiles, cats_seen, stats, region_of
 
 
@@ -121,7 +122,6 @@ def export(rooms_dir: Path, out: Path, exclude: set[str], clean: bool = True) ->
     for group in sorted(tiles):
         region = region_of[group]
         mapping = names["color" if region == "color" else region if region in names else "indoor"]
-        side = group.endswith("/sidescroll")
         entries_for_atlas = []
         gentry = {}
         for oid in sorted(tiles[group]):
@@ -136,14 +136,13 @@ def export(rooms_dir: Path, out: Path, exclude: set[str], clean: bool = True) ->
                               "rooms": sorted(v["rooms"])[:MAX_ROOMS_PER_VARIANT]})
             entries_for_atlas.append((oid, variants[0]["img"]))
             info = {"file": vlist[0]["file"], "count": sum(v["count"] for v in variants), "variants": vlist}
-            if not side:  # nelle stanze 2D gli ID hanno un altro significato: niente nome/categoria
-                m = mapping.get(oid, {})
-                cat = (cats_seen[group][oid].most_common(1) or [(m.get("category"), 0)])[0][0]
-                info.update({"name": m.get("name"), "category": cat,
-                             "symbol": CAT_TO_SYMBOL.get(cat) if cat is not None else None})
+            m = mapping.get(oid, {})
+            cat = (cats_seen[group][oid].most_common(1) or [(m.get("category"), 0)])[0][0]
+            info.update({"name": m.get("name"), "category": cat,
+                         "symbol": CAT_TO_SYMBOL.get(cat) if cat is not None else None})
             gentry[oid] = info
         index["groups"][group] = {"region": region, "family": group.split("/")[0],
-                                  "sidescroll": side, "tiles": gentry}
+                                  "sidescroll": False, "tiles": gentry}  # chiave mantenuta per compatibilita'
         atlas(group, entries_for_atlas, out / "_atlas" / (group.replace("/", "__") + ".png"))
 
     # statistiche categoria+vicinato -> ID (chiave = 9 simboli: centro + 8 vicini)
@@ -158,7 +157,7 @@ def export(rooms_dir: Path, out: Path, exclude: set[str], clean: bool = True) ->
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--rooms-dir", type=Path, default=ROOMS_DIR)
-    ap.add_argument("--out", type=Path, default=ROOT / "data" / "la_local" / "tiles")
+    ap.add_argument("--out", type=Path, default=ROOT / "data" / "tiles")
     ap.add_argument("--exclude", nargs="*", default=[], help="room_id da non usare (per valutazioni)")
     args = ap.parse_args()
     index = export(args.rooms_dir, args.out, set(args.exclude))
