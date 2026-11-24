@@ -7,6 +7,7 @@
 *.srm
 *.state
 src/rom/
+docs
 # Stanze estratte, ritagli, render e tabelle costruite dalla ROM
 # data/la_local/
 # Tool esterni clonati in locale (LADXR, disassembly, ...)

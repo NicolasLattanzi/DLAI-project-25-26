@@ -1,0 +1,4 @@
+# I file del dataset si salvano byte per byte: nessuna conversione degli a capo (core.autocrlf=true su Windows)
+# (dataset_train.jsonl ha \r\n, gli altri \n).
+dataset/** -text
+dataset/*.npz binary

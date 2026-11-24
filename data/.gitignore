@@ -1,1 +1,13 @@
-dataset_local/
+# Si tiene in git SOLO il dataset; tutto il resto di data/dataset e' ignorato (other/,
+# vettori .npy, checkpoint, *.tmp, file futuri).
+dataset/*
+!dataset/dataset_*.jsonl
+!dataset/rooms.jsonl
+!dataset/images.npz
+!dataset/split.json
+!dataset/LEGGIMI.txt
+!dataset/LEGGIMI_DINOv3.txt
+!dataset/features_dinov3_s16.json
+!dataset/tiles_trainval/
+# Tutto in other/ (log/, report/, review/, _archivio/, generated_rooms.jsonl) e' ignorato: non fa parte del dataset.
+dataset/other/

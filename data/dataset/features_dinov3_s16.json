@@ -1,0 +1,33 @@
+{
+  "model": "facebook/dinov3-vits16-pretrain-lvd1689m",
+  "revision": "114c1379950215c8b35dfcd4e90a5c251dde0d32",
+  "upscale": 1,
+  "dtype": "float16",
+  "shape": [
+    5485,
+    80,
+    384
+  ],
+  "ids_order": "data/dataset/images.npz (chiave ids)",
+  "n_ids": 5485,
+  "ids_sha256": "b238d5015864717e1db2095dfc1e96b58b7345189b09a342f70feab1eb4fc5d3",
+  "image_dtype": "uint8",
+  "image_shape": [
+    5485,
+    128,
+    160,
+    3
+  ],
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "mean_std_origine": "preprocessor",
+  "seconds": 19.2
+}
