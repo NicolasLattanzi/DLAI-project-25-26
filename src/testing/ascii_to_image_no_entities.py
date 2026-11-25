@@ -1,27 +1,14 @@
 """
 ascii_to_image_no_entities.py - ricostruisce l'immagine di una stanza di Link's Awakening (DX)
-prendendo, per ogni ID oggetto, la sua tile dalla cartella data/la_local/tiles. Niente altro.
+ricostruendo ogni tile a partire dal suo ID, salvato nel json della stanza corrispondente.
+Nemici e giocatore sono ignorati.
 
-  ID della cella + tileset (gruppo)  ->  tiles/<gruppo>/<ID>.png  ->  incollata in quella cella
+    Gioco di riferimento + tileset + stanza specifica + ID cella  ->  tile trovata
 
-Nessuna inferenza, nessun vicinato, nessuna statistica: ogni cella 16x16 e' il file PNG del suo ID.
-Giocatore e nemici non ci sono (`objects` di room.json non li contiene).
-
-Percorso di ogni tile:  tiles/<tipo>/<sottotipo>/<ID>.png   (tipo = overworld | dungeons | indoor)
-  tiles/overworld/37.png      tiles/dungeons/D1_tail_cave/2C.png      tiles/indoor/cave_b/0A.png
-Le stanze a scorrimento laterale hanno le loro tile in  tiles/<tipo>/<sottotipo>/sidescroll/<ID>.png
-Per costruire un'immagine servono SOLO queste cartelle di PNG: nessun json e' obbligatorio.
-
-Palette: lo stesso ID puo' avere piu' versioni di colore (<ID>.png, <ID>_v2.png, ...). Di default si usa
-<ID>.png (la piu' comune). Se si passa room_id E esiste tiles/rooms.json, ogni cella usa la versione che
-quella stanza usa davvero (immagine identica all'originale); se rooms.json manca si usa <ID>.png.
-
-DA PYTHON (le tre funzioni)
 ---------------------------
-  si può utilizzare il file MAIN in questa cartella per provare le varie funzioni
+si può utilizzare il file MAIN in questa cartella per provare le varie funzioni,
+in alternativa, alcunoi esempi da riga di comando:
 
-DA RIGA DI COMANDO (dalla radice del repository)
-------------------------------------------------
   python src/testing/ascii_to_image_no_entities.py --room 101 --compare         # per room_id
   python src/testing/ascii_to_image_no_entities.py --room data/la_local/rooms/overworld/room_000/room.json
   python src/testing/ascii_to_image_no_entities.py --ids ids.txt --group overworld [--room-id 000]
@@ -36,7 +23,7 @@ from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
-TILES_DIR = ROOT / "data" / "tiles"
+TILES_DIR = ROOT / "data" / "dataset" / "tiles_trainval" / "la"
 ROOMS_DIR = ROOT / "data" / "la_local" / "rooms"
 CELL = 16
 ROWS, COLS = 8, 10
@@ -256,13 +243,8 @@ def _parse_ascii(rows: str | list[str]) -> list[str]:
 
 def render_ascii(rows: str | list[str], group: str, symbol_ids: dict[str, str] | None = None,
                  tiles_dir: Path = TILES_DIR) -> Image.Image:
-    """Immagine 160x128 da una codifica ASCII (8 righe da 10 caratteri) e dal tileset `group`.
+    # Immagine 160x128 da una codifica ASCII (8 righe da 10 caratteri) e dal tileset `group`.
 
-    Ogni simbolo ASCII e' sostituito dalla tile del suo ID (tabella SYMBOL_TILES) e basta: nessuna ricerca di
-    stanze, nessun vicinato. Lo stesso simbolo da' quindi sempre la stessa tile (tutti i muri uguali, tutti
-    i pavimenti uguali): l'ASCII ha solo 11 simboli e non dice che tipo di muro o pavimento sia.
-    group: tileset obbligatorio ('overworld', 'dungeons/D1_tail_cave', 'indoor/house', ...): da solo l'ASCII
-      non lo dice. symbol_ids: per cambiare la tile di un simbolo, es. {"#": "37", ".": "04"}."""
     rows = _parse_ascii(rows)
     if group not in SYMBOL_TILES:
         raise SystemExit(f"tileset '{group}' sconosciuto. Disponibili: {', '.join(sorted(SYMBOL_TILES))}")
