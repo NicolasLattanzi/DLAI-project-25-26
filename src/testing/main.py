@@ -13,7 +13,7 @@ ids = [
   ["03", "27", "2B", "01", "AF", "AF", "AF", "01", "01", "24"],
   ["03", "03", "27", "22", "22", "22", "22", "22", "22", "28"],
 ]
-img = render_ids(ids, "dungeons/D1_tail_cave")
+img = render_ids(ids, "dungeons", "D1_tail_cave")
 
 img.save("./src/testing/out.png") # img è un'immagine PIL 160x128
 img.show()

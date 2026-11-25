@@ -14,7 +14,6 @@ in alternativa, alcunoi esempi da riga di comando:
   python src/testing/ascii_to_image_no_entities.py --ids ids.txt --group overworld [--room-id 000]
   python src/testing/ascii_to_image_no_entities.py --list [--group overworld]   # elenca le stanze
 """
-from __future__ import annotations
 
 import argparse
 import json
@@ -64,18 +63,10 @@ def room_group(room: dict) -> str:
 
 
 # --------------------------------------------------------------------------- immagine
-def tile_path(group: str, oid: str, tiles_dir: Path = TILES_DIR, variant: int = 1) -> Path:
-    """Percorso della tile di un ID:  tiles/<tipo>/<sottotipo>/<ID>.png
-       group = 'overworld' | 'dungeons/D1_tail_cave' | 'indoor/house' | ...  (+ '/sidescroll' per le stanze 2D)
-       esempi:  tiles/overworld/37.png   tiles/dungeons/D1_tail_cave/2C.png   tiles/indoor/cave_b/0A.png
-       variant 1 = <ID>.png (palette piu' comune); 2, 3... = <ID>_v2.png, <ID>_v3.png (altre palette)."""
-    oid = norm_id(oid)
-    return Path(tiles_dir) / group / (f"{oid}.png" if variant == 1 else f"{oid}_v{variant}.png")
 
-
-def list_tilesets(tiles_dir: Path = TILES_DIR) -> list[str]:
+def list_tilesets() -> list[str]:
     """Tileset disponibili = cartelle che contengono PNG (es. 'overworld', 'dungeons/D1_tail_cave')."""
-    root = Path(tiles_dir)
+    root = Path(TILES_DIR)
     return sorted({p.parent.relative_to(root).as_posix() for p in root.rglob("*.png")
                    if not p.relative_to(root).parts[0].startswith("_")})
 
@@ -83,46 +74,25 @@ def list_tilesets(tiles_dir: Path = TILES_DIR) -> list[str]:
 def norm_id(v) -> str | None:
     """ID di una cella -> 2 cifre esadecimali maiuscole.  '2c' / '0x2C' / 44 (intero, = 0x2C) -> '2C'.
     Le stringhe sono lette come esadecimale; gli interi (anche numpy) come numero. None resta None."""
-    if v is None:
-        return None
+    if v is None: return None
+    
     if isinstance(v, str):
         v = v.strip().upper()
         return (v[2:] if v.startswith("0X") else v).zfill(2)
     return f"{int(v):02X}"
 
 
-def _room_palette(tiles_dir: Path, group: str, room_id: str | None) -> dict[str, int] | None:
-    """FACOLTATIVO: per ogni ID, la variante di palette che usa quella stanza (da tiles/rooms.json, se c'e').
-    Senza rooms.json, o senza room_id, ogni ID usa <ID>.png (la palette piu' comune)."""
-    f = Path(tiles_dir) / "rooms.json"
-    if room_id is None or not f.exists():
-        return None
-    rooms = json.load(open(f, encoding="utf-8"))["groups"].get(group, [])
-    rec = next((r for r in rooms if r["room"] == str(room_id).upper()), None)
-    if rec is None:
-        return None
-    pal: dict[str, int] = {}
-    for i in range(ROWS * COLS):
-        pal.setdefault(rec["ids"][2 * i:2 * i + 2], int(rec["var"][i], 36))
-    return pal
-
-
-def render_ids(ids, group: str, room_id: str | None = None, tiles_dir: Path = TILES_DIR) -> Image.Image:
-    """Immagine 160x128 da una MATRICE DI ID: la cella (y, x) e' la tile  tiles_dir/<group>/<ID>.png.
-
-    ids: 8 righe x 10 colonne, lista di liste o array numpy. Ogni ID puo' essere una stringa esadecimale
-      ('2C', '2c', '0x2C') oppure un intero (44 = 0x2C). None = cella vuota (magenta).
-    group: tileset ('overworld', 'dungeons/D1_tail_cave', 'indoor/house', ... + '/sidescroll' per le stanze 2D).
-    room_id: facoltativo. Se lo passi e c'e' tiles/rooms.json, ogni ID usa la palette (colori) che quella
-      stanza gli da (<ID>_v2.png ecc.); senza, ogni ID usa <ID>.png.
-    Serve solo la cartella di PNG: nessun json e' obbligatorio."""
-    tiles_dir = Path(tiles_dir)
-    if not (tiles_dir / group).is_dir():
-        raise SystemExit(f"cartella '{tiles_dir / group}' non trovata. Tileset disponibili: {', '.join(list_tilesets(tiles_dir))}")
+def render_ids(ids, group: str, room_id: str) -> Image.Image:
+    """Immagine 160x128 da una MATRICE DI ID 8 righe x 10 colonne ('2C', '2c', '0x2C')
+    group: tileset ('overworld', 'dungeons/D1_tail_cave', 'indoor/house', ...).
+    room_id: stanza specifica nel dataset ('D1_tail_cave', 'D2_bottle_grotto', ...)"""
+    
+    tiles_dir = TILES_DIR / group / room_id
+    if not tiles_dir.is_dir():
+        raise SystemExit(f"cartella '{tiles_dir}' non trovata. Tileset disponibili: {', '.join(list_tilesets())}")
     if len(ids) != ROWS or any(len(row) != COLS for row in ids):
         raise ValueError(f"la matrice deve essere {ROWS} righe x {COLS} colonne, trovata "
                          f"{len(ids)} x {sorted({len(r) for r in ids})}")
-    palette = _room_palette(tiles_dir, group, room_id)
 
     img = Image.new("RGB", (COLS * CELL, ROWS * CELL), MISSING)
     missing = set()
@@ -131,9 +101,8 @@ def render_ids(ids, group: str, room_id: str | None = None, tiles_dir: Path = TI
             oid = norm_id(ids[y][x])
             if oid is None:  # cella senza tile (magenta voluta)
                 continue
-            path = tile_path(group, oid, tiles_dir, palette.get(oid, 1) if palette else 1)
-            if not path.exists():
-                path = tile_path(group, oid, tiles_dir)  # palette non presente: versione comune
+            
+            path = tiles_dir / f"{oid}.png"
             if not path.exists():
                 missing.add(oid)
                 continue
