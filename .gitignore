@@ -1,5 +1,3 @@
-# --- Dati di gioco: MAI su GitHub (uso solo locale, ricerca privata) ---
-# ROM e salvataggi
 *.gb
 *.gbc
 *.sgb
@@ -7,14 +5,22 @@
 *.srm
 *.state
 src/rom/
-docs
-# Stanze estratte, ritagli, render e tabelle costruite dalla ROM
-# data/la_local/
-# Tool esterni clonati in locale (LADXR, disassembly, ...)
 third_party/
+docs
 
-# --- Python ---
+data/dataset/*
+!data/dataset/dataset_*.jsonl
+!data/dataset/rooms.jsonl
+!data/dataset/images.npz
+!data/dataset/split.json
+!data/dataset/LEGGIMI.txt
+!data/dataset/LEGGIMI_DINOv3.txt
+!data/dataset/features_dinov3_s16.json
+!data/dataset/tiles_trainval/
+
 __pycache__/
 *.pyc
 .venv/
 venv/
+.pytest_cache/
+.superpowers/sdd/
