@@ -17,6 +17,7 @@ data/dataset/*
 !data/dataset/LEGGIMI_DINOv3.txt
 !data/dataset/features_dinov3_s16.json
 !data/dataset/tiles_trainval/
+runs/
 
 __pycache__/
 *.pyc
